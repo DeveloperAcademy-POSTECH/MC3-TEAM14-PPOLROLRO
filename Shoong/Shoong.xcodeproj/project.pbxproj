@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0306F8542A72C70A002EB30A /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8532A72C70A002EB30A /* Font+.swift */; };
+		0306F8602A72CA14002EB30A /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306F85F2A72CA13002EB30A /* SF-Pro.ttf */; };
 		ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611B2A72386300D31CCF /* ShoongApp.swift */; };
 		ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611D2A72386300D31CCF /* ContentView.swift */; };
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0306F8532A72C70A002EB30A /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		0306F85E2A72C920002EB30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0306F85F2A72CA13002EB30A /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		ACB061182A72386300D31CCF /* Shoong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB0611B2A72386300D31CCF /* ShoongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoongApp.swift; sourceTree = "<group>"; };
 		ACB0611D2A72386300D31CCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0306F8552A72C719002EB30A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0306F85F2A72CA13002EB30A /* SF-Pro.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		ACB0610F2A72386300D31CCF = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +86,7 @@
 		ACB0611A2A72386300D31CCF /* Shoong */ = {
 			isa = PBXGroup;
 			children = (
+				0306F85E2A72C920002EB30A /* Info.plist */,
 				ACB061352A7238E300D31CCF /* Extension+Modifier */,
 				ACB0612C2A72389100D31CCF /* Interaction */,
 				ACB061292A72387200D31CCF /* View */,
@@ -114,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB061382A723B5100D31CCF /* TextBoxModel.swift */,
+				0306F8552A72C719002EB30A /* Fonts */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */,
+				0306F8532A72C70A002EB30A /* Font+.swift */,
 			);
 			path = "Extension+Modifier";
 			sourceTree = "<group>";
@@ -254,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0306F8602A72CA14002EB30A /* SF-Pro.ttf in Resources */,
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 			);
@@ -272,6 +289,7 @@
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
+				0306F8542A72C70A002EB30A /* Font+.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
@@ -410,6 +428,7 @@
 				DEVELOPMENT_TEAM = Q83JD2ZC9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,6 +458,7 @@
 				DEVELOPMENT_TEAM = Q83JD2ZC9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

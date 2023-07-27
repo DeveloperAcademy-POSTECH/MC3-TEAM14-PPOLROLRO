@@ -11,7 +11,18 @@
 		ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611D2A72386300D31CCF /* ContentView.swift */; };
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
 		ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB061222A72386400D31CCF /* Preview Assets.xcassets */; };
-		ACB061372A72392200D31CCF /* DirTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061362A72392200D31CCF /* DirTestView.swift */; };
+		ACB061372A72392200D31CCF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061362A72392200D31CCF /* MainView.swift */; };
+		ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061382A723B5100D31CCF /* TextBoxModel.swift */; };
+		ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */; };
+		ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */; };
+		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
+		ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotView.swift */; };
+		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
+		ACB061452A723C3500D31CCF /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicView.swift */; };
+		ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061462A723C4300D31CCF /* DirTestView4.swift */; };
+		ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061482A723C4900D31CCF /* DirTestView5.swift */; };
+		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
+		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +31,18 @@
 		ACB0611D2A72386300D31CCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACB0611F2A72386400D31CCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACB061222A72386400D31CCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ACB061362A72392200D31CCF /* DirTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView.swift; sourceTree = "<group>"; };
+		ACB061362A72392200D31CCF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		ACB061382A723B5100D31CCF /* TextBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxModel.swift; sourceTree = "<group>"; };
+		ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView2.swift; sourceTree = "<group>"; };
+		ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorViewModel.swift; sourceTree = "<group>"; };
+		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
+		ACB061402A723C1E00D31CCF /* SlingShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotView.swift; sourceTree = "<group>"; };
+		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
+		ACB061442A723C3500D31CCF /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
+		ACB061462A723C4300D31CCF /* DirTestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView4.swift; sourceTree = "<group>"; };
+		ACB061482A723C4900D31CCF /* DirTestView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView5.swift; sourceTree = "<group>"; };
+		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
+		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +75,7 @@
 		ACB0611A2A72386300D31CCF /* Shoong */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061352A7238E300D31CCF /* Extension+Color */,
+				ACB061352A7238E300D31CCF /* Extension+Modifier */,
 				ACB0612C2A72389100D31CCF /* Interaction */,
 				ACB061292A72387200D31CCF /* View */,
 				ACB0612B2A72388800D31CCF /* Model */,
@@ -77,7 +99,7 @@
 		ACB061292A72387200D31CCF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061362A72392200D31CCF /* DirTestView.swift */,
+				ACB061362A72392200D31CCF /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -85,6 +107,7 @@
 		ACB0612A2A72387B00D31CCF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -92,6 +115,7 @@
 		ACB0612B2A72388800D31CCF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACB061382A723B5100D31CCF /* TextBoxModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,7 +134,9 @@
 		ACB0612D2A72389E00D31CCF /* Dart */ = {
 			isa = PBXGroup;
 			children = (
+				ACB0613E2A723C1200D31CCF /* DartView.swift */,
 				ACB0612E2A7238A500D31CCF /* DartAssets */,
+				ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -125,6 +151,7 @@
 		ACB0612F2A7238AC00D31CCF /* SlingShot */ = {
 			isa = PBXGroup;
 			children = (
+				ACB061402A723C1E00D31CCF /* SlingShotView.swift */,
 				ACB061302A7238B400D31CCF /* SlingShotAssets */,
 			);
 			path = SlingShot;
@@ -133,6 +160,7 @@
 		ACB061302A7238B400D31CCF /* SlingShotAssets */ = {
 			isa = PBXGroup;
 			children = (
+				ACB0614A2A723C5000D31CCF /* DirTestView6.swift */,
 			);
 			path = SlingShotAssets;
 			sourceTree = "<group>";
@@ -140,6 +168,7 @@
 		ACB061312A7238BC00D31CCF /* Bowling */ = {
 			isa = PBXGroup;
 			children = (
+				ACB061422A723C2A00D31CCF /* BowlingView.swift */,
 				ACB061322A7238C400D31CCF /* BowlingAseets */,
 			);
 			path = Bowling;
@@ -148,6 +177,7 @@
 		ACB061322A7238C400D31CCF /* BowlingAseets */ = {
 			isa = PBXGroup;
 			children = (
+				ACB061482A723C4900D31CCF /* DirTestView5.swift */,
 			);
 			path = BowlingAseets;
 			sourceTree = "<group>";
@@ -155,6 +185,7 @@
 		ACB061332A7238D000D31CCF /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				ACB061442A723C3500D31CCF /* BasicView.swift */,
 				ACB061342A7238D600D31CCF /* BasicAssets */,
 			);
 			path = Basic;
@@ -163,15 +194,17 @@
 		ACB061342A7238D600D31CCF /* BasicAssets */ = {
 			isa = PBXGroup;
 			children = (
+				ACB061462A723C4300D31CCF /* DirTestView4.swift */,
 			);
 			path = BasicAssets;
 			sourceTree = "<group>";
 		};
-		ACB061352A7238E300D31CCF /* Extension+Color */ = {
+		ACB061352A7238E300D31CCF /* Extension+Modifier */ = {
 			isa = PBXGroup;
 			children = (
+				ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */,
 			);
-			path = "Extension+Color";
+			path = "Extension+Modifier";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +277,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */,
+				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
+				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
+				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
+				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
+				ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */,
+				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
+				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
+				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
-				ACB061372A72392200D31CCF /* DirTestView.swift in Sources */,
+				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
+				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

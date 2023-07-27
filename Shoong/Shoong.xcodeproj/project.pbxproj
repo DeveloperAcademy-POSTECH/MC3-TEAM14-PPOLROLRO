@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A6EEE5C2A725DBF00FEE381 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE5B2A725DBF00FEE381 /* TemplateModel.swift */; };
 		ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611B2A72386300D31CCF /* ShoongApp.swift */; };
 		ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611D2A72386300D31CCF /* ContentView.swift */; };
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A6EEE5B2A725DBF00FEE381 /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		ACB061182A72386300D31CCF /* Shoong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB0611B2A72386300D31CCF /* ShoongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoongApp.swift; sourceTree = "<group>"; };
 		ACB0611D2A72386300D31CCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB061382A723B5100D31CCF /* TextBoxModel.swift */,
+				1A6EEE5B2A725DBF00FEE381 /* TemplateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
+				1A6EEE5C2A725DBF00FEE381 /* TemplateModel.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,

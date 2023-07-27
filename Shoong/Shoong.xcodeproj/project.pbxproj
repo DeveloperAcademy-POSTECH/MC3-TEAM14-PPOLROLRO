@@ -23,6 +23,7 @@
 		ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061482A723C4900D31CCF /* DirTestView5.swift */; };
 		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
+		ACB0614F2A72538B00D31CCF /* DirtViewAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		ACB061482A723C4900D31CCF /* DirTestView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView5.swift; sourceTree = "<group>"; };
 		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtViewAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +136,9 @@
 		ACB0612D2A72389E00D31CCF /* Dart */ = {
 			isa = PBXGroup;
 			children = (
+				ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */,
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
 				ACB0612E2A7238A500D31CCF /* DartAssets */,
-				ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 		ACB0612E2A7238A500D31CCF /* DartAssets */ = {
 			isa = PBXGroup;
 			children = (
+				ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */,
 			);
 			path = DartAssets;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
+				ACB0614F2A72538B00D31CCF /* DirtViewAssets.swift in Sources */,
 				ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,

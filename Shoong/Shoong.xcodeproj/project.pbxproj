@@ -24,6 +24,11 @@
 		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
 		ACB0614F2A72538B00D31CCF /* DirtViewAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */; };
+		ACD30BC52A7313FC000C4977 /* SelectedTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD30BC42A7313FC000C4977 /* SelectedTemplateView.swift */; };
+		ACD30BC72A731413000C4977 /* TemplatesEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD30BC62A731413000C4977 /* TemplatesEditorView.swift */; };
+		ACD30BC92A73152B000C4977 /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD30BC82A73152B000C4977 /* TextEditorView.swift */; };
+		ACD30BCB2A731760000C4977 /* TextDragGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD30BCA2A731760000C4977 /* TextDragGesture.swift */; };
+		ACD30BCD2A7318A7000C4977 /* TextColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD30BCC2A7318A7000C4977 /* TextColorPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,11 @@
 		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtViewAssets.swift; sourceTree = "<group>"; };
+		ACD30BC42A7313FC000C4977 /* SelectedTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTemplateView.swift; sourceTree = "<group>"; };
+		ACD30BC62A731413000C4977 /* TemplatesEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorView.swift; sourceTree = "<group>"; };
+		ACD30BC82A73152B000C4977 /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
+		ACD30BCA2A731760000C4977 /* TextDragGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDragGesture.swift; sourceTree = "<group>"; };
+		ACD30BCC2A7318A7000C4977 /* TextColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				ACB061362A72392200D31CCF /* MainView.swift */,
+				ACD30BC42A7313FC000C4977 /* SelectedTemplateView.swift */,
+				ACD30BC62A731413000C4977 /* TemplatesEditorView.swift */,
+				ACD30BC82A73152B000C4977 /* TextEditorView.swift */,
+				ACD30BCA2A731760000C4977 /* TextDragGesture.swift */,
+				ACD30BCC2A7318A7000C4977 /* TextColorPicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +300,9 @@
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				ACD30BC52A7313FC000C4977 /* SelectedTemplateView.swift in Sources */,
+				ACD30BC92A73152B000C4977 /* TextEditorView.swift in Sources */,
+				ACD30BC72A731413000C4977 /* TemplatesEditorView.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				ACB0614F2A72538B00D31CCF /* DirtViewAssets.swift in Sources */,
 				ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */,
@@ -295,6 +313,8 @@
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */,
+				ACD30BCD2A7318A7000C4977 /* TextColorPicker.swift in Sources */,
+				ACD30BCB2A731760000C4977 /* TextDragGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

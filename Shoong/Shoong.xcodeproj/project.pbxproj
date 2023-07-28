@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A6EEE5C2A725DBF00FEE381 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE5B2A725DBF00FEE381 /* TemplateModel.swift */; };
 		1A6EEE612A72F82800FEE381 /* TemplateCrumpleView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE602A72F82800FEE381 /* TemplateCrumpleView1.swift */; };
 		1A6EEE632A72F83100FEE381 /* TemplateCrumpleView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE622A72F83100FEE381 /* TemplateCrumpleView2.swift */; };
 		1A6EEE652A72F83A00FEE381 /* TemplateCrumpleView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE642A72F83A00FEE381 /* TemplateCrumpleView3.swift */; };
@@ -38,7 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A6EEE5B2A725DBF00FEE381 /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1A6EEE602A72F82800FEE381 /* TemplateCrumpleView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView1.swift; sourceTree = "<group>"; };
 		1A6EEE622A72F83100FEE381 /* TemplateCrumpleView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView2.swift; sourceTree = "<group>"; };
 		1A6EEE642A72F83A00FEE381 /* TemplateCrumpleView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView3.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				ACB061382A723B5100D31CCF /* TextBoxModel.swift */,
-				1A6EEE5B2A725DBF00FEE381 /* TemplateModel.swift */,
 				0306F8552A72C719002EB30A /* Fonts */,
 			);
 			path = Model;
@@ -346,7 +343,6 @@
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
-				1A6EEE5C2A725DBF00FEE381 /* TemplateModel.swift in Sources */,
 				1A6EEE652A72F83A00FEE381 /* TemplateCrumpleView3.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				1A6EEE672A72F84200FEE381 /* TemplateCrumpleView4.swift in Sources */,

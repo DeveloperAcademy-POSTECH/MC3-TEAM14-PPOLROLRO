@@ -12,10 +12,9 @@ struct TestNaviView: View {
         NavigationView {
             VStack {
                 NavigationLink {
-                    TemplateCrumpleView1()
+                    InteractionSelectView()
                 } label: {
                     Text("gogo")
-                        .font(.largeTitle)
                 }
             }
         }

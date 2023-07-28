@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A6EEE612A72F82800FEE381 /* TemplateCrumpleView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE602A72F82800FEE381 /* TemplateCrumpleView1.swift */; };
+		1A6EEE632A72F83100FEE381 /* TemplateCrumpleView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE622A72F83100FEE381 /* TemplateCrumpleView2.swift */; };
+		1A6EEE652A72F83A00FEE381 /* TemplateCrumpleView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE642A72F83A00FEE381 /* TemplateCrumpleView3.swift */; };
+		1A6EEE672A72F84200FEE381 /* TemplateCrumpleView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE662A72F84200FEE381 /* TemplateCrumpleView4.swift */; };
+		1A6EEE692A72FA5300FEE381 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE682A72FA5300FEE381 /* TestNaviView.swift */; };
+		1A6EEE6B2A73035A00FEE381 /* TemplateCrumpleScriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE6A2A73035A00FEE381 /* TemplateCrumpleScriptView.swift */; };
 		1A6EEE6E2A73097800FEE381 /* InteractionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */; };
 		1A6EEE722A73165E00FEE381 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE712A73165E00FEE381 /* TestNaviView.swift */; };
 		1A6EEE742A731B2C00FEE381 /* ToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */; };
@@ -31,6 +37,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A6EEE602A72F82800FEE381 /* TemplateCrumpleView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView1.swift; sourceTree = "<group>"; };
+		1A6EEE622A72F83100FEE381 /* TemplateCrumpleView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView2.swift; sourceTree = "<group>"; };
+		1A6EEE642A72F83A00FEE381 /* TemplateCrumpleView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView3.swift; sourceTree = "<group>"; };
+		1A6EEE662A72F84200FEE381 /* TemplateCrumpleView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView4.swift; sourceTree = "<group>"; };
+		1A6EEE682A72FA5300FEE381 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
+		1A6EEE6A2A73035A00FEE381 /* TemplateCrumpleScriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleScriptView.swift; sourceTree = "<group>"; };
 		1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionSelectView.swift; sourceTree = "<group>"; };
 		1A6EEE712A73165E00FEE381 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
 		1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyle.swift; sourceTree = "<group>"; };
@@ -67,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A6EEE5F2A72F80000FEE381 /* TemplateCrumpleView */ = {
+			isa = PBXGroup;
+			children = (
+				1A6EEE602A72F82800FEE381 /* TemplateCrumpleView1.swift */,
+				1A6EEE622A72F83100FEE381 /* TemplateCrumpleView2.swift */,
+				1A6EEE642A72F83A00FEE381 /* TemplateCrumpleView3.swift */,
+				1A6EEE662A72F84200FEE381 /* TemplateCrumpleView4.swift */,
+				1A6EEE6A2A73035A00FEE381 /* TemplateCrumpleScriptView.swift */,
+			);
+			path = TemplateCrumpleView;
 		1A6EEE6C2A73095D00FEE381 /* InteractionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +148,9 @@
 		ACB061292A72387200D31CCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A6EEE5F2A72F80000FEE381 /* TemplateCrumpleView */,
+				ACB061362A72392200D31CCF /* MainView.swift */,
+				1A6EEE682A72FA5300FEE381 /* TestNaviView.swift */,
 				1A6EEE6C2A73095D00FEE381 /* InteractionView */,
 				ACB061362A72392200D31CCF /* MainView.swift */,
 				1A6EEE712A73165E00FEE381 /* TestNaviView.swift */,
@@ -307,6 +332,9 @@
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
+				1A6EEE632A72F83100FEE381 /* TemplateCrumpleView2.swift in Sources */,
+				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				1A6EEE612A72F82800FEE381 /* TemplateCrumpleView1.swift in Sources */,
 				1A6EEE722A73165E00FEE381 /* TestNaviView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				1A6EEE742A731B2C00FEE381 /* ToggleStyle.swift in Sources */,
@@ -315,9 +343,13 @@
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
+				1A6EEE652A72F83A00FEE381 /* TemplateCrumpleView3.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
+				1A6EEE672A72F84200FEE381 /* TemplateCrumpleView4.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
+				1A6EEE6B2A73035A00FEE381 /* TemplateCrumpleScriptView.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
+				1A6EEE692A72FA5300FEE381 /* TestNaviView.swift in Sources */,
 				ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

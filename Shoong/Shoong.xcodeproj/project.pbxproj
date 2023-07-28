@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
+		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
+		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
+		1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A92A73A17D00923F2F /* InteractionSelectView.swift */; };
+		1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161AB2A73A1C000923F2F /* ToggleStyle.swift */; };
+		1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161AF2A73A5B200923F2F /* SelectedTemplateView.swift */; };
+		1AF161B22A73A5CB00923F2F /* TemplatesEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B12A73A5CB00923F2F /* TemplatesEditorView.swift */; };
+		1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B32A73A62400923F2F /* TextColorPickerView.swift */; };
+		1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */; };
+		1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B72A73A67E00923F2F /* TextEditorView.swift */; };
+		1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BA2A73A85300923F2F /* TemplateCrumpleScriptView.swift */; };
+		1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */; };
+		1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */; };
+		1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */; };
+		1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161C22A73A88200923F2F /* TemplateCrumpleView4.swift */; };
 		ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611B2A72386300D31CCF /* ShoongApp.swift */; };
 		ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611D2A72386300D31CCF /* ContentView.swift */; };
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
 		ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB061222A72386400D31CCF /* Preview Assets.xcassets */; };
 		ACB061372A72392200D31CCF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061362A72392200D31CCF /* MainView.swift */; };
 		ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061382A723B5100D31CCF /* TextBoxModel.swift */; };
-		ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */; };
 		ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */; };
 		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
 		ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotView.swift */; };
@@ -26,6 +40,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
+		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
+		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		1AF161A62A73A16B00923F2F /* InteractionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionCardView.swift; sourceTree = "<group>"; };
+		1AF161A92A73A17D00923F2F /* InteractionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionSelectView.swift; sourceTree = "<group>"; };
+		1AF161AB2A73A1C000923F2F /* ToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyle.swift; sourceTree = "<group>"; };
+		1AF161AD2A73A26B00923F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1AF161AF2A73A5B200923F2F /* SelectedTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTemplateView.swift; sourceTree = "<group>"; };
+		1AF161B12A73A5CB00923F2F /* TemplatesEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorView.swift; sourceTree = "<group>"; };
+		1AF161B32A73A62400923F2F /* TextColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorPickerView.swift; sourceTree = "<group>"; };
+		1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDragGestureView.swift; sourceTree = "<group>"; };
+		1AF161B72A73A67E00923F2F /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
+		1AF161BA2A73A85300923F2F /* TemplateCrumpleScriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleScriptView.swift; sourceTree = "<group>"; };
+		1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView1.swift; sourceTree = "<group>"; };
+		1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView2.swift; sourceTree = "<group>"; };
+		1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView3.swift; sourceTree = "<group>"; };
+		1AF161C22A73A88200923F2F /* TemplateCrumpleView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView4.swift; sourceTree = "<group>"; };
 		ACB061182A72386300D31CCF /* Shoong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB0611B2A72386300D31CCF /* ShoongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoongApp.swift; sourceTree = "<group>"; };
 		ACB0611D2A72386300D31CCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,7 +64,6 @@
 		ACB061222A72386400D31CCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACB061362A72392200D31CCF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ACB061382A723B5100D31CCF /* TextBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxModel.swift; sourceTree = "<group>"; };
-		ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView2.swift; sourceTree = "<group>"; };
 		ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorViewModel.swift; sourceTree = "<group>"; };
 		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
 		ACB061402A723C1E00D31CCF /* SlingShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotView.swift; sourceTree = "<group>"; };
@@ -56,6 +86,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AF161A22A739EEA00923F2F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1AF161A42A739F5600923F2F /* SF-Pro.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1AF161A52A73A15500923F2F /* InteractionView */ = {
+			isa = PBXGroup;
+			children = (
+				1AF161A62A73A16B00923F2F /* InteractionCardView.swift */,
+				1AF161A92A73A17D00923F2F /* InteractionSelectView.swift */,
+			);
+			path = InteractionView;
+			sourceTree = "<group>";
+		};
+		1AF161AE2A73A59600923F2F /* TemplateEditorView */ = {
+			isa = PBXGroup;
+			children = (
+				1AF161AF2A73A5B200923F2F /* SelectedTemplateView.swift */,
+				1AF161B12A73A5CB00923F2F /* TemplatesEditorView.swift */,
+				1AF161B32A73A62400923F2F /* TextColorPickerView.swift */,
+				1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */,
+				1AF161B72A73A67E00923F2F /* TextEditorView.swift */,
+			);
+			path = TemplateEditorView;
+			sourceTree = "<group>";
+		};
+		1AF161B92A73A83D00923F2F /* TemplateCrumpleView */ = {
+			isa = PBXGroup;
+			children = (
+				1AF161BA2A73A85300923F2F /* TemplateCrumpleScriptView.swift */,
+				1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */,
+				1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */,
+				1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */,
+				1AF161C22A73A88200923F2F /* TemplateCrumpleView4.swift */,
+			);
+			path = TemplateCrumpleView;
+			sourceTree = "<group>";
+		};
 		ACB0610F2A72386300D31CCF = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +146,7 @@
 		ACB0611A2A72386300D31CCF /* Shoong */ = {
 			isa = PBXGroup;
 			children = (
+				1AF161AD2A73A26B00923F2F /* Info.plist */,
 				ACB061352A7238E300D31CCF /* Extension+Modifier */,
 				ACB0612C2A72389100D31CCF /* Interaction */,
 				ACB061292A72387200D31CCF /* View */,
@@ -99,6 +171,9 @@
 		ACB061292A72387200D31CCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AF161B92A73A83D00923F2F /* TemplateCrumpleView */,
+				1AF161AE2A73A59600923F2F /* TemplateEditorView */,
+				1AF161A52A73A15500923F2F /* InteractionView */,
 				ACB061362A72392200D31CCF /* MainView.swift */,
 			);
 			path = View;
@@ -116,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB061382A723B5100D31CCF /* TextBoxModel.swift */,
+				1AF1619E2A739E3C00923F2F /* TemplateModel.swift */,
+				1AF161A22A739EEA00923F2F /* Fonts */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,17 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
-				ACB0612E2A7238A500D31CCF /* DartAssets */,
-				ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */,
 			);
 			path = Dart;
-			sourceTree = "<group>";
-		};
-		ACB0612E2A7238A500D31CCF /* DartAssets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DartAssets;
 			sourceTree = "<group>";
 		};
 		ACB0612F2A7238AC00D31CCF /* SlingShot */ = {
@@ -203,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */,
+				1AF161A02A739EB900923F2F /* Extension+Font.swift */,
+				1AF161AB2A73A1C000923F2F /* ToggleStyle.swift */,
 			);
 			path = "Extension+Modifier";
 			sourceTree = "<group>";
@@ -277,19 +347,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */,
+				1AF161B22A73A5CB00923F2F /* TemplatesEditorView.swift in Sources */,
+				1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */,
 				ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */,
+				1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
+				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
+				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
+				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
-				ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
+				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
+				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
+				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
+				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,
+				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
+				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,
+				1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */,
 				ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +506,7 @@
 				DEVELOPMENT_TEAM = Q83JD2ZC9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,6 +536,7 @@
 				DEVELOPMENT_TEAM = Q83JD2ZC9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

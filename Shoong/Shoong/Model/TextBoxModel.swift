@@ -5,17 +5,12 @@
 //  Created by Sup on 2023/07/27.
 //
 
+// Template에 글자를 위한 model
+
 import SwiftUI
 
-// brach Test
-struct DirTestView1: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct DirTestView1_Previews: PreviewProvider {
-    static var previews: some View {
-        DirTestView1()
-    }
+struct TextBoxModel: Identifiable {
+    var id = UUID().uuidString
+    var text: String = ""
+    var textColor: Color = .black
 }

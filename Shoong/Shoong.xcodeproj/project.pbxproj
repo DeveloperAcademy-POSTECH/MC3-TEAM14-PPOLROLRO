@@ -13,13 +13,18 @@
 		1A6EEE672A72F84200FEE381 /* TemplateCrumpleView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE662A72F84200FEE381 /* TemplateCrumpleView4.swift */; };
 		1A6EEE692A72FA5300FEE381 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE682A72FA5300FEE381 /* TestNaviView.swift */; };
 		1A6EEE6B2A73035A00FEE381 /* TemplateCrumpleScriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE6A2A73035A00FEE381 /* TemplateCrumpleScriptView.swift */; };
+		1A6EEE6E2A73097800FEE381 /* InteractionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */; };
+		1A6EEE722A73165E00FEE381 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE712A73165E00FEE381 /* TestNaviView.swift */; };
+		1A6EEE742A731B2C00FEE381 /* ToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */; };
+		1A6EEE762A731B6500FEE381 /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE752A731B6500FEE381 /* InteractionCardView.swift */; };
+		0306F8542A72C70A002EB30A /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8532A72C70A002EB30A /* Font+.swift */; };
+		0306F8602A72CA14002EB30A /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306F85F2A72CA13002EB30A /* SF-Pro.ttf */; };
 		ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611B2A72386300D31CCF /* ShoongApp.swift */; };
 		ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611D2A72386300D31CCF /* ContentView.swift */; };
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
 		ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB061222A72386400D31CCF /* Preview Assets.xcassets */; };
 		ACB061372A72392200D31CCF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061362A72392200D31CCF /* MainView.swift */; };
 		ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061382A723B5100D31CCF /* TextBoxModel.swift */; };
-		ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */; };
 		ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */; };
 		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
 		ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotView.swift */; };
@@ -29,7 +34,6 @@
 		ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061482A723C4900D31CCF /* DirTestView5.swift */; };
 		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
-		ACB0614F2A72538B00D31CCF /* DirtViewAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,13 @@
 		1A6EEE662A72F84200FEE381 /* TemplateCrumpleView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView4.swift; sourceTree = "<group>"; };
 		1A6EEE682A72FA5300FEE381 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
 		1A6EEE6A2A73035A00FEE381 /* TemplateCrumpleScriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleScriptView.swift; sourceTree = "<group>"; };
+		1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionSelectView.swift; sourceTree = "<group>"; };
+		1A6EEE712A73165E00FEE381 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
+		1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyle.swift; sourceTree = "<group>"; };
+		1A6EEE752A731B6500FEE381 /* InteractionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionCardView.swift; sourceTree = "<group>"; };
+		0306F8532A72C70A002EB30A /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		0306F85E2A72C920002EB30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0306F85F2A72CA13002EB30A /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		ACB061182A72386300D31CCF /* Shoong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB0611B2A72386300D31CCF /* ShoongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoongApp.swift; sourceTree = "<group>"; };
 		ACB0611D2A72386300D31CCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,7 +57,6 @@
 		ACB061222A72386400D31CCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACB061362A72392200D31CCF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ACB061382A723B5100D31CCF /* TextBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxModel.swift; sourceTree = "<group>"; };
-		ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView2.swift; sourceTree = "<group>"; };
 		ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorViewModel.swift; sourceTree = "<group>"; };
 		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
 		ACB061402A723C1E00D31CCF /* SlingShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotView.swift; sourceTree = "<group>"; };
@@ -56,7 +66,6 @@
 		ACB061482A723C4900D31CCF /* DirTestView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView5.swift; sourceTree = "<group>"; };
 		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
-		ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirtViewAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,19 @@
 				1A6EEE6A2A73035A00FEE381 /* TemplateCrumpleScriptView.swift */,
 			);
 			path = TemplateCrumpleView;
+		1A6EEE6C2A73095D00FEE381 /* InteractionView */ = {
+			isa = PBXGroup;
+			children = (
+				1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */,
+				1A6EEE752A731B6500FEE381 /* InteractionCardView.swift */,
+			);
+			path = InteractionView;
+		0306F8552A72C719002EB30A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0306F85F2A72CA13002EB30A /* SF-Pro.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		ACB0610F2A72386300D31CCF = {
@@ -101,6 +123,7 @@
 		ACB0611A2A72386300D31CCF /* Shoong */ = {
 			isa = PBXGroup;
 			children = (
+				0306F85E2A72C920002EB30A /* Info.plist */,
 				ACB061352A7238E300D31CCF /* Extension+Modifier */,
 				ACB0612C2A72389100D31CCF /* Interaction */,
 				ACB061292A72387200D31CCF /* View */,
@@ -128,6 +151,9 @@
 				1A6EEE5F2A72F80000FEE381 /* TemplateCrumpleView */,
 				ACB061362A72392200D31CCF /* MainView.swift */,
 				1A6EEE682A72FA5300FEE381 /* TestNaviView.swift */,
+				1A6EEE6C2A73095D00FEE381 /* InteractionView */,
+				ACB061362A72392200D31CCF /* MainView.swift */,
+				1A6EEE712A73165E00FEE381 /* TestNaviView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB061382A723B5100D31CCF /* TextBoxModel.swift */,
+				0306F8552A72C719002EB30A /* Fonts */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,19 +189,9 @@
 		ACB0612D2A72389E00D31CCF /* Dart */ = {
 			isa = PBXGroup;
 			children = (
-				ACB0613A2A723BEA00D31CCF /* DirTestView2.swift */,
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
-				ACB0612E2A7238A500D31CCF /* DartAssets */,
 			);
 			path = Dart;
-			sourceTree = "<group>";
-		};
-		ACB0612E2A7238A500D31CCF /* DartAssets */ = {
-			isa = PBXGroup;
-			children = (
-				ACB0614E2A72538B00D31CCF /* DirtViewAssets.swift */,
-			);
-			path = DartAssets;
 			sourceTree = "<group>";
 		};
 		ACB0612F2A7238AC00D31CCF /* SlingShot */ = {
@@ -232,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */,
+				1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */,
+				0306F8532A72C70A002EB30A /* Font+.swift */,
 			);
 			path = "Extension+Modifier";
 			sourceTree = "<group>";
@@ -294,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0306F8602A72CA14002EB30A /* SF-Pro.ttf in Resources */,
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 			);
@@ -307,15 +327,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */,
+				1A6EEE6E2A73097800FEE381 /* InteractionSelectView.swift in Sources */,
+				1A6EEE762A731B6500FEE381 /* InteractionCardView.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				1A6EEE632A72F83100FEE381 /* TemplateCrumpleView2.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				1A6EEE612A72F82800FEE381 /* TemplateCrumpleView1.swift in Sources */,
+				1A6EEE722A73165E00FEE381 /* TestNaviView.swift in Sources */,
+				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				1A6EEE742A731B2C00FEE381 /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
-				ACB0614F2A72538B00D31CCF /* DirtViewAssets.swift in Sources */,
-				ACB0613B2A723BEA00D31CCF /* DirTestView2.swift in Sources */,
+				0306F8542A72C70A002EB30A /* Font+.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
@@ -458,6 +482,7 @@
 				DEVELOPMENT_TEAM = Q83JD2ZC9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -487,6 +512,7 @@
 				DEVELOPMENT_TEAM = Q83JD2ZC9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoong/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

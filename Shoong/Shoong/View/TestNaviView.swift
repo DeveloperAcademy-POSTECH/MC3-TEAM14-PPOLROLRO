@@ -17,7 +17,6 @@ struct TestNaviView: View {
                     Text("gogo")
                         .font(.largeTitle)
                 }
-
             }
         }
     }

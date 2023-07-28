@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A6EEE6E2A73097800FEE381 /* InteractionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */; };
+		1A6EEE722A73165E00FEE381 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE712A73165E00FEE381 /* TestNaviView.swift */; };
+		1A6EEE742A731B2C00FEE381 /* ToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */; };
+		1A6EEE762A731B6500FEE381 /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6EEE752A731B6500FEE381 /* InteractionCardView.swift */; };
 		0306F8542A72C70A002EB30A /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8532A72C70A002EB30A /* Font+.swift */; };
 		0306F8602A72CA14002EB30A /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306F85F2A72CA13002EB30A /* SF-Pro.ttf */; };
 		ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611B2A72386300D31CCF /* ShoongApp.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionSelectView.swift; sourceTree = "<group>"; };
+		1A6EEE712A73165E00FEE381 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
+		1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyle.swift; sourceTree = "<group>"; };
+		1A6EEE752A731B6500FEE381 /* InteractionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionCardView.swift; sourceTree = "<group>"; };
 		0306F8532A72C70A002EB30A /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		0306F85E2A72C920002EB30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0306F85F2A72CA13002EB30A /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -59,6 +67,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A6EEE6C2A73095D00FEE381 /* InteractionView */ = {
+			isa = PBXGroup;
+			children = (
+				1A6EEE6D2A73097800FEE381 /* InteractionSelectView.swift */,
+				1A6EEE752A731B6500FEE381 /* InteractionCardView.swift */,
+			);
+			path = InteractionView;
 		0306F8552A72C719002EB30A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +126,9 @@
 		ACB061292A72387200D31CCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A6EEE6C2A73095D00FEE381 /* InteractionView */,
 				ACB061362A72392200D31CCF /* MainView.swift */,
+				1A6EEE712A73165E00FEE381 /* TestNaviView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */,
+				1A6EEE732A731B2C00FEE381 /* ToggleStyle.swift */,
 				0306F8532A72C70A002EB30A /* Font+.swift */,
 			);
 			path = "Extension+Modifier";
@@ -284,10 +302,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */,
+				1A6EEE6E2A73097800FEE381 /* InteractionSelectView.swift in Sources */,
+				1A6EEE762A731B6500FEE381 /* InteractionCardView.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
+				1A6EEE722A73165E00FEE381 /* TestNaviView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				1A6EEE742A731B2C00FEE381 /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				0306F8542A72C70A002EB30A /* Font+.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,

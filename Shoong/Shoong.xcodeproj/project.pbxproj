@@ -13,6 +13,8 @@
 		035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABB82A78401C009D1FED /* SpriteKitContainer.swift */; };
 		035FABBB2A78405D009D1FED /* DartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABBA2A78405D009D1FED /* DartScene.swift */; };
 		035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABBC2A784595009D1FED /* PhysicsCategory.swift */; };
+		035FABBF2A784A7F009D1FED /* dartSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 035FABBE2A784A7F009D1FED /* dartSound.m4a */; };
+		035FABC12A784AB2009D1FED /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABC02A784AB2009D1FED /* HapticManager.swift */; };
 		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
 		1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */; };
@@ -58,6 +60,8 @@
 		035FABB82A78401C009D1FED /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
 		035FABBA2A78405D009D1FED /* DartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartScene.swift; sourceTree = "<group>"; };
 		035FABBC2A784595009D1FED /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
+		035FABBE2A784A7F009D1FED /* dartSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dartSound.m4a; sourceTree = "<group>"; };
+		035FABC02A784AB2009D1FED /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameScene.swift; sourceTree = "<group>"; };
 		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
@@ -266,12 +270,14 @@
 		ACB0612D2A72389E00D31CCF /* Dart */ = {
 			isa = PBXGroup;
 			children = (
+				035FABBE2A784A7F009D1FED /* dartSound.m4a */,
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
 				035FABBA2A78405D009D1FED /* DartScene.swift */,
 				035FABBC2A784595009D1FED /* PhysicsCategory.swift */,
 				035FABB42A783FD9009D1FED /* GuageBar.swift */,
 				035FABB62A783FF4009D1FED /* ThrownCount.swift */,
 				035FABB82A78401C009D1FED /* SpriteKitContainer.swift */,
+				035FABC02A784AB2009D1FED /* HapticManager.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
+				035FABBF2A784A7F009D1FED /* dartSound.m4a in Resources */,
 				1AA311912A77A7A500F7FF75 /* ball.png in Resources */,
 				1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */,
 				035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */,
@@ -410,6 +417,7 @@
 				1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */,
 				1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
+				035FABC12A784AB2009D1FED /* HapticManager.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
 				035FABB52A783FD9009D1FED /* GuageBar.swift in Sources */,

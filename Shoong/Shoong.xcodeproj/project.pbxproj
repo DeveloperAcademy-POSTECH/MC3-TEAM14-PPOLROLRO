@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF161A42A739F5600923F2F /* SF-Pro.ttf */; };
 		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
 		1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */; };
@@ -375,6 +376,7 @@
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
 				1AA311912A77A7A500F7FF75 /* ball.png in Resources */,
 				1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */,
+				035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */,
 				1AA311932A77A7AB00F7FF75 /* pin.png in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 				1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */,

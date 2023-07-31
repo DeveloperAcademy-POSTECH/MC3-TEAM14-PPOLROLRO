@@ -5,6 +5,8 @@
 //  Created by 금가경 on 2023/08/01.
 //
 
+import AVFoundation
+import CoreHaptics
 import CoreMotion
 import SpriteKit
 import SwiftUI
@@ -34,6 +36,11 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     private var motionManager = CMMotionManager()
     private var previousAcceleration: CMAcceleration?
     
+    // 소리 관련 변수
+    var player: AVAudioPlayer!
+    
+    // 햅틱 관련 변수
+    private var hapticManager: HapticManager?
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(.backGroundBeige)
@@ -143,6 +150,8 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         var collideBody = SKPhysicsBody()
         
+        hapticManager = HapticManager()
+        
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             collideBody = contact.bodyB
         } else {
@@ -154,6 +163,8 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
             print("target!")
             darts.last?.physicsBody?.linearDamping = 1
             darts.last?.physicsBody?.isDynamic = false
+            playSound()
+            hapticManager?.playHaptic()
         }
         
         // 충돌 시 새 다트 생성
@@ -196,5 +207,11 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         }
         darts.last?.physicsBody?.isDynamic = true
         darts.last?.physicsBody?.applyImpulse(CGVector(dx: CGFloat(acceleration.y) * 30, dy: 100))
+    }
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "dartSound", withExtension: "m4a")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
     }
 }

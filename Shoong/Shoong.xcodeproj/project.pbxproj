@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5DC9172A779ABD00E7906E /* sagicser.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC9162A779ABD00E7906E /* sagicser.png */; };
+		1A5DC9192A779AE100E7906E /* basicInteractionSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC9182A779AE100E7906E /* basicInteractionSound.mp3 */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -32,14 +34,15 @@
 		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
 		ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotView.swift */; };
 		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
-		ACB061452A723C3500D31CCF /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicView.swift */; };
-		ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061462A723C4300D31CCF /* DirTestView4.swift */; };
+		ACB061452A723C3500D31CCF /* BasicInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicInteractionView.swift */; };
 		ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061482A723C4900D31CCF /* DirTestView5.swift */; };
 		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A5DC9162A779ABD00E7906E /* sagicser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sagicser.png; path = ../../../../../../../../Downloads/sagicser.png; sourceTree = "<group>"; };
+		1A5DC9182A779AE100E7906E /* basicInteractionSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = basicInteractionSound.mp3; path = ../../../../../../../../Downloads/basicInteractionSound.mp3; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -68,8 +71,7 @@
 		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
 		ACB061402A723C1E00D31CCF /* SlingShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotView.swift; sourceTree = "<group>"; };
 		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
-		ACB061442A723C3500D31CCF /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
-		ACB061462A723C4300D31CCF /* DirTestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView4.swift; sourceTree = "<group>"; };
+		ACB061442A723C3500D31CCF /* BasicInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInteractionView.swift; sourceTree = "<group>"; };
 		ACB061482A723C4900D31CCF /* DirTestView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView5.swift; sourceTree = "<group>"; };
 		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
@@ -253,7 +255,7 @@
 		ACB061332A7238D000D31CCF /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061442A723C3500D31CCF /* BasicView.swift */,
+				ACB061442A723C3500D31CCF /* BasicInteractionView.swift */,
 				ACB061342A7238D600D31CCF /* BasicAssets */,
 			);
 			path = Basic;
@@ -262,7 +264,8 @@
 		ACB061342A7238D600D31CCF /* BasicAssets */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061462A723C4300D31CCF /* DirTestView4.swift */,
+				1A5DC9182A779AE100E7906E /* basicInteractionSound.mp3 */,
+				1A5DC9162A779ABD00E7906E /* sagicser.png */,
 			);
 			path = BasicAssets;
 			sourceTree = "<group>";
@@ -335,7 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5DC9172A779ABD00E7906E /* sagicser.png in Resources */,
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
+				1A5DC9192A779AE100E7906E /* basicInteractionSound.mp3 in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,9 +373,8 @@
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,
 				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,
-				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
-				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
+				ACB061452A723C3500D31CCF /* BasicInteractionView.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,
 				1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */,

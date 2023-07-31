@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A5DC9172A779ABD00E7906E /* sagicser.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC9162A779ABD00E7906E /* sagicser.png */; };
-		1A5DC9192A779AE100E7906E /* basicInteractionSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC9182A779AE100E7906E /* basicInteractionSound.mp3 */; };
+		1AA311962A77AACD00F7FF75 /* sagicser.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311952A77AACD00F7FF75 /* sagicser.png */; };
+		1AA311982A77AAED00F7FF75 /* basicInteractionSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311972A77AAED00F7FF75 /* basicInteractionSound.mp3 */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -41,8 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A5DC9162A779ABD00E7906E /* sagicser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sagicser.png; path = ../../../../../../../../Downloads/sagicser.png; sourceTree = "<group>"; };
-		1A5DC9182A779AE100E7906E /* basicInteractionSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = basicInteractionSound.mp3; path = ../../../../../../../../Downloads/basicInteractionSound.mp3; sourceTree = "<group>"; };
+		1AA311952A77AACD00F7FF75 /* sagicser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagicser.png; sourceTree = "<group>"; };
+		1AA311972A77AAED00F7FF75 /* basicInteractionSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basicInteractionSound.mp3; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -88,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AA311942A77A96300F7FF75 /* BasicAssets */ = {
+			isa = PBXGroup;
+			children = (
+				1AA311972A77AAED00F7FF75 /* basicInteractionSound.mp3 */,
+				1AA311952A77AACD00F7FF75 /* sagicser.png */,
+			);
+			path = BasicAssets;
+			sourceTree = "<group>";
+		};
 		1AF161A22A739EEA00923F2F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,19 +264,10 @@
 		ACB061332A7238D000D31CCF /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				1AA311942A77A96300F7FF75 /* BasicAssets */,
 				ACB061442A723C3500D31CCF /* BasicInteractionView.swift */,
-				ACB061342A7238D600D31CCF /* BasicAssets */,
 			);
 			path = Basic;
-			sourceTree = "<group>";
-		};
-		ACB061342A7238D600D31CCF /* BasicAssets */ = {
-			isa = PBXGroup;
-			children = (
-				1A5DC9182A779AE100E7906E /* basicInteractionSound.mp3 */,
-				1A5DC9162A779ABD00E7906E /* sagicser.png */,
-			);
-			path = BasicAssets;
 			sourceTree = "<group>";
 		};
 		ACB061352A7238E300D31CCF /* Extension+Modifier */ = {
@@ -338,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5DC9172A779ABD00E7906E /* sagicser.png in Resources */,
+				1AA311962A77AACD00F7FF75 /* sagicser.png in Resources */,
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
-				1A5DC9192A779AE100E7906E /* basicInteractionSound.mp3 in Resources */,
+				1AA311982A77AAED00F7FF75 /* basicInteractionSound.mp3 in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

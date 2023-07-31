@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A931C322A741CE400C12D28 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C312A741CE400C12D28 /* StorageView.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
 		1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A931C312A741CE400C12D28 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
@@ -90,6 +92,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A931C302A741CC700C12D28 /* StorageView */ = {
+			isa = PBXGroup;
+			children = (
+				1A931C312A741CE400C12D28 /* StorageView.swift */,
+			);
+			path = StorageView;
 		1A931C2B2A73EE1300C12D28 /* ResultView */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +192,7 @@
 		ACB061292A72387200D31CCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A931C302A741CC700C12D28 /* StorageView */,
 				1A931C2B2A73EE1300C12D28 /* ResultView */,
 				1AF161B92A73A83D00923F2F /* TemplateCrumpleView */,
 				1AF161AE2A73A59600923F2F /* TemplateEditorView */,
@@ -307,6 +316,8 @@
 			dependencies = (
 			);
 			name = Shoong;
+			packageProductDependencies = (
+			);
 			productName = Shoong;
 			productReference = ACB061182A72386300D31CCF /* Shoong.app */;
 			productType = "com.apple.product-type.application";
@@ -335,6 +346,8 @@
 				Base,
 			);
 			mainGroup = ACB0610F2A72386300D31CCF;
+			packageReferences = (
+			);
 			productRefGroup = ACB061192A72386300D31CCF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -380,6 +393,7 @@
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
+				1A931C322A741CE400C12D28 /* StorageView.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,

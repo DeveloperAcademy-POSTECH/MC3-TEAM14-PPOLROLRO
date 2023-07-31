@@ -10,4 +10,5 @@ import SpriteKit
  struct PhysicsCategory {
      static let dart: UInt32 = 0x1 << 0 // 1
      static let dartboard: UInt32 = 0x1 << 1 // 2
+     static let border: UInt32 = 0x1 << 2 // 4
  }

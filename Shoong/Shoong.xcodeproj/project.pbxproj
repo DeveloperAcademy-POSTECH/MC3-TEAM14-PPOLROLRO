@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A931C322A741CE400C12D28 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C312A741CE400C12D28 /* StorageView.swift */; };
+		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
+		1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		1A931C312A741CE400C12D28 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
+		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -94,6 +98,12 @@
 				1A931C312A741CE400C12D28 /* StorageView.swift */,
 			);
 			path = StorageView;
+		1A931C2B2A73EE1300C12D28 /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				1A931C2C2A73EEC500C12D28 /* ResultView.swift */,
+			);
+			path = ResultView;
 			sourceTree = "<group>";
 		};
 		1AF161A22A739EEA00923F2F /* Fonts */ = {
@@ -164,6 +174,7 @@
 				ACB0612A2A72387B00D31CCF /* ViewModel */,
 				ACB0611B2A72386300D31CCF /* ShoongApp.swift */,
 				ACB0611D2A72386300D31CCF /* ContentView.swift */,
+				1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */,
 				ACB0611F2A72386400D31CCF /* Assets.xcassets */,
 				ACB061212A72386400D31CCF /* Preview Content */,
 			);
@@ -182,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				1A931C302A741CC700C12D28 /* StorageView */,
+				1A931C2B2A73EE1300C12D28 /* ResultView */,
 				1AF161B92A73A83D00923F2F /* TemplateCrumpleView */,
 				1AF161AE2A73A59600923F2F /* TemplateEditorView */,
 				1AF161A52A73A15500923F2F /* InteractionView */,
@@ -370,10 +382,12 @@
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
+				1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */,
 				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
 				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */,
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,

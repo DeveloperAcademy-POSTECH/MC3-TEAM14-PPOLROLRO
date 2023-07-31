@@ -13,6 +13,7 @@
 		0306F8862A781245002EB30A /* GuageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8852A781245002EB30A /* GuageBar.swift */; };
 		0306F8882A78126C002EB30A /* ThrownCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8872A78126C002EB30A /* ThrownCount.swift */; };
 		0306F88B2A781A5D002EB30A /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */; };
+		0306F88D2A781FCB002EB30A /* dartSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0306F88C2A781FCB002EB30A /* dartSound.m4a */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -51,6 +52,7 @@
 		0306F8852A781245002EB30A /* GuageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuageBar.swift; sourceTree = "<group>"; };
 		0306F8872A78126C002EB30A /* ThrownCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrownCount.swift; sourceTree = "<group>"; };
 		0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
+		0306F88C2A781FCB002EB30A /* dartSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dartSound.m4a; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		ACB0612D2A72389E00D31CCF /* Dart */ = {
 			isa = PBXGroup;
 			children = (
+				0306F88C2A781FCB002EB30A /* dartSound.m4a */,
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
 				0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */,
 				0306F8832A781119002EB30A /* DartScene.swift */,
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
+				0306F88D2A781FCB002EB30A /* dartSound.m4a in Resources */,
 				0306F87F2A78106A002EB30A /* SF-Pro.ttf in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 			);

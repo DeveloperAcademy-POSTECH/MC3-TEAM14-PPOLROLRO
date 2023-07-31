@@ -36,6 +36,8 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     private var motionManager = CMMotionManager()
     private var previousAcceleration: CMAcceleration?
     
+    // 소리 관련 변수
+    var player: AVAudioPlayer!
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(.backGroundBeige)
@@ -159,6 +161,7 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
             print("target!")
             darts.last?.physicsBody?.linearDamping = 1
             darts.last?.physicsBody?.isDynamic = false
+            playSound()
         }
         
         // 충돌 시 새 다트 생성
@@ -201,5 +204,12 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         }
         darts.last?.physicsBody?.isDynamic = true
         darts.last?.physicsBody?.applyImpulse(CGVector(dx: CGFloat(acceleration.y) * 30, dy: 100))
+    }
+    
+    // 사운드 플레이 함수
+    func playSound() {
+        let url = Bundle.main.url(forResource: "dartSound", withExtension: "m4a")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
     }
 }

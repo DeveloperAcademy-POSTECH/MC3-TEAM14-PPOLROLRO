@@ -17,6 +17,12 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     // 화면 관련 변수
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
+    
+    // 화면 경계 관련 변수
+    var topBorder: SKShapeNode!
+    var leftBorder: SKShapeNode!
+    var rightBorder: SKShapeNode!
+    var bottomBorder: SKShapeNode!
 
     // 노드 관련 변수
     var darts: [SKSpriteNode] = []
@@ -30,12 +36,14 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     private var motionManager = CMMotionManager()
     private var previousAcceleration: CMAcceleration?
     
+    
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(.backGroundBeige)
         
         setUpPhysicsWorld()
         createDart()
         createDartboard()
+        createBorder()
         startDarting()
     }
     
@@ -54,6 +62,53 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         dartboard.physicsBody?.categoryBitMask = PhysicsCategory.dartboard
 
         addChild(dartboard)
+    }
+    
+    // 화면 border 생성
+    func createBorder() {
+        topBorder = SKShapeNode(rectOf: CGSize(width: screenWidth, height: 1))
+        
+        topBorder.position = .init(x: screenWidth / 2, y: screenHeight - 100)
+        topBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: screenWidth, height: 1))
+        topBorder.physicsBody?.isDynamic = false
+        topBorder.physicsBody?.categoryBitMask = PhysicsCategory.border
+        topBorder.physicsBody?.contactTestBitMask = PhysicsCategory.dart
+        topBorder.strokeColor = .clear
+
+        addChild(topBorder)
+        
+        leftBorder = SKShapeNode(rectOf: CGSize(width: 1, height: screenHeight))
+        
+        leftBorder.position = .init(x: 10, y: screenHeight / 2)
+        leftBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: screenHeight))
+        leftBorder.physicsBody?.isDynamic = false
+        leftBorder.physicsBody?.categoryBitMask = PhysicsCategory.border
+        leftBorder.physicsBody?.contactTestBitMask = PhysicsCategory.dart
+        leftBorder.strokeColor = .clear
+
+        addChild(leftBorder)
+        
+        rightBorder = SKShapeNode(rectOf: CGSize(width: 1, height: screenHeight))
+        
+        rightBorder.position = .init(x: screenWidth - 10, y: screenHeight / 2)
+        rightBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: screenHeight))
+        rightBorder.physicsBody?.isDynamic = false
+        rightBorder.physicsBody?.categoryBitMask = PhysicsCategory.border
+        rightBorder.physicsBody?.contactTestBitMask = PhysicsCategory.dart
+        rightBorder.strokeColor = .clear
+
+        addChild(rightBorder)
+        
+        bottomBorder = SKShapeNode(rectOf: CGSize(width: screenWidth, height: 1))
+        
+        bottomBorder.position = .init(x: screenWidth / 2, y: 20)
+        bottomBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: screenWidth, height: 1))
+        bottomBorder.physicsBody?.isDynamic = false
+        bottomBorder.physicsBody?.categoryBitMask = PhysicsCategory.border
+        bottomBorder.physicsBody?.contactTestBitMask = PhysicsCategory.dart
+        bottomBorder.strokeColor = .clear
+        
+        addChild(bottomBorder)
     }
     
     // 다트 생성
@@ -115,6 +170,12 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
                 self.isDartThrown = false
                 self.createDart()
             }
+        }
+        
+        // 다트가 화면 밖으로 나갔을 때
+        if collideBody.categoryBitMask == PhysicsCategory.border {
+            print("border!")
+            darts.popLast()?.removeFromParent()
         }
     }
     

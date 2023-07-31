@@ -9,7 +9,21 @@ import SwiftUI
 
 struct GuageBar: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let randomGuage = CGFloat.random(in: 0...330)
+        
+        ZStack() {
+            RoundedRectangle(cornerRadius: 5)
+                .frame(width: 42, height: 358)
+                .foregroundColor(.green)
+            ZStack(alignment: .bottom) {
+                RoundedRectangle(cornerRadius: 5)
+                    .frame(width: 7, height: 330)
+                    .foregroundColor(.white)
+                RoundedRectangle(cornerRadius: 5)
+                    .frame(width: 7, height: randomGuage)
+                    .foregroundColor(.red)
+            }
+        }
     }
 }
 

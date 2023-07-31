@@ -39,6 +39,9 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     // 소리 관련 변수
     var player: AVAudioPlayer!
     
+    // 햅틱 관련 변수
+    private var hapticManager: HapticManager?
+    
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(.backGroundBeige)
         
@@ -149,7 +152,8 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         var collideBody = SKPhysicsBody()
-        
+        hapticManager = HapticManager()
+
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             collideBody = contact.bodyB
         } else {
@@ -162,6 +166,7 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
             darts.last?.physicsBody?.linearDamping = 1
             darts.last?.physicsBody?.isDynamic = false
             playSound()
+            hapticManager?.playHaptic()
         }
         
         // 충돌 시 새 다트 생성

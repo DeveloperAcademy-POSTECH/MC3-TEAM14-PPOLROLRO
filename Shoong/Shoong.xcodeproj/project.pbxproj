@@ -14,6 +14,7 @@
 		0306F8882A78126C002EB30A /* ThrownCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8872A78126C002EB30A /* ThrownCount.swift */; };
 		0306F88B2A781A5D002EB30A /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */; };
 		0306F88D2A781FCB002EB30A /* dartSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0306F88C2A781FCB002EB30A /* dartSound.m4a */; };
+		0306F88F2A7820DB002EB30A /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F88E2A7820DB002EB30A /* HapticManager.swift */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -53,6 +54,7 @@
 		0306F8872A78126C002EB30A /* ThrownCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrownCount.swift; sourceTree = "<group>"; };
 		0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		0306F88C2A781FCB002EB30A /* dartSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dartSound.m4a; sourceTree = "<group>"; };
+		0306F88E2A7820DB002EB30A /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */,
 				0306F8832A781119002EB30A /* DartScene.swift */,
 				0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */,
+				0306F88E2A7820DB002EB30A /* HapticManager.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
+				0306F88F2A7820DB002EB30A /* HapticManager.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,

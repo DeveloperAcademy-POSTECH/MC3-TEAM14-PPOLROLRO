@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		1AA311962A77AACD00F7FF75 /* sagicser.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311952A77AACD00F7FF75 /* sagicser.png */; };
 		1AA311982A77AAED00F7FF75 /* basicInteractionSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311972A77AAED00F7FF75 /* basicInteractionSound.mp3 */; };
+
+		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
+		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
+		1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */; };
+		1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA311892A77A1C700F7FF75 /* StorageView.swift */; };
+		1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */; };
+		1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */; };
+		1AA311912A77A7A500F7FF75 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311902A77A7A500F7FF75 /* ball.png */; };
+		1AA311932A77A7AB00F7FF75 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311922A77A7AB00F7FF75 /* pin.png */; };
+
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -34,15 +44,31 @@
 		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
 		ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotView.swift */; };
 		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
+
 		ACB061452A723C3500D31CCF /* BasicInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicInteractionView.swift */; };
 		ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061482A723C4900D31CCF /* DirTestView5.swift */; };
+
+		ACB061452A723C3500D31CCF /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicView.swift */; };
+		ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061462A723C4300D31CCF /* DirTestView4.swift */; };
+
 		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		1AA311952A77AACD00F7FF75 /* sagicser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagicser.png; sourceTree = "<group>"; };
 		1AA311972A77AAED00F7FF75 /* basicInteractionSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basicInteractionSound.mp3; sourceTree = "<group>"; };
+
+		1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameScene.swift; sourceTree = "<group>"; };
+		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
+		1AA311892A77A1C700F7FF75 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
+		1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pinSound.mp3; sourceTree = "<group>"; };
+		1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ballSound.mp3; sourceTree = "<group>"; };
+		1AA311902A77A7A500F7FF75 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		1AA311922A77A7AB00F7FF75 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -71,8 +97,13 @@
 		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
 		ACB061402A723C1E00D31CCF /* SlingShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotView.swift; sourceTree = "<group>"; };
 		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
+
 		ACB061442A723C3500D31CCF /* BasicInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInteractionView.swift; sourceTree = "<group>"; };
 		ACB061482A723C4900D31CCF /* DirTestView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView5.swift; sourceTree = "<group>"; };
+
+		ACB061442A723C3500D31CCF /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
+		ACB061462A723C4300D31CCF /* DirTestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView4.swift; sourceTree = "<group>"; };
+
 		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +119,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
 		1AA311942A77A96300F7FF75 /* BasicAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +127,33 @@
 				1AA311952A77AACD00F7FF75 /* sagicser.png */,
 			);
 			path = BasicAssets;
+
+		1A931C2B2A73EE1300C12D28 /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				1A931C2C2A73EEC500C12D28 /* ResultView.swift */,
+			);
+			path = ResultView;
+			sourceTree = "<group>";
+		};
+		1AA311882A77A1B600F7FF75 /* StorageView */ = {
+			isa = PBXGroup;
+			children = (
+				1AA311892A77A1C700F7FF75 /* StorageView.swift */,
+			);
+			path = StorageView;
+			sourceTree = "<group>";
+		};
+		1AA3118F2A77A64200F7FF75 /* BowlingAsset */ = {
+			isa = PBXGroup;
+			children = (
+				1AA311922A77A7AB00F7FF75 /* pin.png */,
+				1AA311902A77A7A500F7FF75 /* ball.png */,
+				1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */,
+				1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */,
+			);
+			path = BowlingAsset;
+
 			sourceTree = "<group>";
 		};
 		1AF161A22A739EEA00923F2F /* Fonts */ = {
@@ -165,6 +224,7 @@
 				ACB0612A2A72387B00D31CCF /* ViewModel */,
 				ACB0611B2A72386300D31CCF /* ShoongApp.swift */,
 				ACB0611D2A72386300D31CCF /* ContentView.swift */,
+				1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */,
 				ACB0611F2A72386400D31CCF /* Assets.xcassets */,
 				ACB061212A72386400D31CCF /* Preview Content */,
 			);
@@ -182,6 +242,8 @@
 		ACB061292A72387200D31CCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AA311882A77A1B600F7FF75 /* StorageView */,
+				1A931C2B2A73EE1300C12D28 /* ResultView */,
 				1AF161B92A73A83D00923F2F /* TemplateCrumpleView */,
 				1AF161AE2A73A59600923F2F /* TemplateEditorView */,
 				1AF161A52A73A15500923F2F /* InteractionView */,
@@ -247,18 +309,11 @@
 		ACB061312A7238BC00D31CCF /* Bowling */ = {
 			isa = PBXGroup;
 			children = (
+				1AA3118F2A77A64200F7FF75 /* BowlingAsset */,
 				ACB061422A723C2A00D31CCF /* BowlingView.swift */,
-				ACB061322A7238C400D31CCF /* BowlingAseets */,
+				1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */,
 			);
 			path = Bowling;
-			sourceTree = "<group>";
-		};
-		ACB061322A7238C400D31CCF /* BowlingAseets */ = {
-			isa = PBXGroup;
-			children = (
-				ACB061482A723C4900D31CCF /* DirTestView5.swift */,
-			);
-			path = BowlingAseets;
 			sourceTree = "<group>";
 		};
 		ACB061332A7238D000D31CCF /* Basic */ = {
@@ -340,8 +395,15 @@
 			files = (
 				1AA311962A77AACD00F7FF75 /* sagicser.png in Resources */,
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
+
 				1AA311982A77AAED00F7FF75 /* basicInteractionSound.mp3 in Resources */,
+
+				1AA311912A77A7A500F7FF75 /* ball.png in Resources */,
+				1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */,
+				1AA311932A77A7AB00F7FF75 /* pin.png in Resources */,
+
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
+				1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,19 +417,21 @@
 				1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */,
 				1AF161B22A73A5CB00923F2F /* TemplatesEditorView.swift in Sources */,
 				1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */,
-				ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */,
 				1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
+				1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */,
 				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
 				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */,
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
+				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
@@ -378,6 +442,7 @@
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,
 				1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */,
+				1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */,
 				ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

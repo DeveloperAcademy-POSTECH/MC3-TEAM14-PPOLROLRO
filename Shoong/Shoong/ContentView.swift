@@ -9,7 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MainView()
+        NavigationView {
+            NavigationLink {
+                StorageView()
+            } label: {
+                Text("gogo")
+                    .font(.title)
+            }
+        }
     }
 }
 

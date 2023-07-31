@@ -12,6 +12,7 @@
 		0306F8842A781119002EB30A /* DartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8832A781119002EB30A /* DartScene.swift */; };
 		0306F8862A781245002EB30A /* GuageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8852A781245002EB30A /* GuageBar.swift */; };
 		0306F8882A78126C002EB30A /* ThrownCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8872A78126C002EB30A /* ThrownCount.swift */; };
+		0306F88B2A781A5D002EB30A /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -49,6 +50,7 @@
 		0306F8832A781119002EB30A /* DartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartScene.swift; sourceTree = "<group>"; };
 		0306F8852A781245002EB30A /* GuageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuageBar.swift; sourceTree = "<group>"; };
 		0306F8872A78126C002EB30A /* ThrownCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrownCount.swift; sourceTree = "<group>"; };
+		0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
 				0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */,
 				0306F8832A781119002EB30A /* DartScene.swift */,
+				0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
+				0306F88B2A781A5D002EB30A /* PhysicsCategory.swift in Sources */,
 				0306F8842A781119002EB30A /* DartScene.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,

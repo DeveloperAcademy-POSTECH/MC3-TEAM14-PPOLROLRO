@@ -38,6 +38,7 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     // 물리 세계 설정 : 중력 0
     func setUpPhysicsWorld() {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        self.physicsWorld.contactDelegate = self
     }
     
     // 다트보드 생성
@@ -46,6 +47,7 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         dartboard.position = CGPoint(x: screenWidth / 2, y: 702)
         dartboard.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: dartboard.size.width, height: dartboard.size.height))
         dartboard.physicsBody?.isDynamic = false
+        dartboard.physicsBody?.categoryBitMask = PhysicsCategory.dartboard
 
         addChild(dartboard)
     }
@@ -57,10 +59,14 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         dart.physicsBody?.affectedByGravity = false
         dart.position = CGPoint(x: screenWidth / 2, y: 100)
         dart.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: dart.size.width, height: dart.size.height))
+        dart.physicsBody?.categoryBitMask = PhysicsCategory.dart
+        dart.physicsBody?.contactTestBitMask = PhysicsCategory.dartboard
+        dart.physicsBody?.collisionBitMask = PhysicsCategory.dartboard
 
         addChild(dart)
     }
 
+    
     // 다트 게임 시작
     private func startDarting() {
         if motionManager.isAccelerometerAvailable {
@@ -75,6 +81,23 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
+        }
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        var collideBody = SKPhysicsBody()
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            collideBody = contact.bodyB
+        } else {
+            collideBody = contact.bodyA
+        }
+        
+        // 다트가 다트판에 꽂혔을 시 실행할 행동
+        if collideBody.categoryBitMask == PhysicsCategory.dartboard {
+            print("target!")
+            dart.physicsBody?.linearDamping = 1
+            dart.physicsBody?.isDynamic = false
         }
     }
     

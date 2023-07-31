@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0306F87F2A78106A002EB30A /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF161A42A739F5600923F2F /* SF-Pro.ttf */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -336,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
+				0306F87F2A78106A002EB30A /* SF-Pro.ttf in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,9 +15,14 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
     // 화면 관련 변수
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
+    
     // 노드 관련 변수
+    var darts: [SKSpriteNode] = []
     var dart : SKSpriteNode!
     var dartboard: SKSpriteNode!
+    
+    // 게임 진행 관련 변수
+    var isDartThrown = false
     
     // 가속도 관련 변수
     private var motionManager = CMMotionManager()
@@ -60,7 +65,10 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         dart.physicsBody?.contactTestBitMask = PhysicsCategory.dartboard
         dart.physicsBody?.collisionBitMask = PhysicsCategory.dartboard
         
-        addChild(dart)
+        // 다트 배열에 넣은 뒤 마지막 값을 움직이게 만듬
+        darts.append(dart)
+        addChild(darts.last!)
+
     }
     
     
@@ -93,8 +101,19 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         // 다트가 다트판에 꽂혔을 시 실행할 행동
         if collideBody.categoryBitMask == PhysicsCategory.dartboard {
             print("target!")
-            dart.physicsBody?.linearDamping = 1
-            dart.physicsBody?.isDynamic = false
+            darts.last?.physicsBody?.linearDamping = 1
+            darts.last?.physicsBody?.isDynamic = false
+        }
+        
+        // 충돌 시 새 다트 생성
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.darts.last?.physicsBody?.linearDamping = 0
+            self.isDartThrown = true
+            
+            if self.isDartThrown {
+                self.isDartThrown = false
+                self.createDart()
+            }
         }
     }
     
@@ -118,7 +137,7 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         guard motionManager.isAccelerometerAvailable else {
             return
         }
-        dart.physicsBody?.isDynamic = true
-        dart.physicsBody?.applyImpulse(CGVector(dx: CGFloat(acceleration.y) * 30, dy: 100))
+        darts.last?.physicsBody?.isDynamic = true
+        darts.last?.physicsBody?.applyImpulse(CGVector(dx: CGFloat(acceleration.y) * 30, dy: 100))
     }
 }

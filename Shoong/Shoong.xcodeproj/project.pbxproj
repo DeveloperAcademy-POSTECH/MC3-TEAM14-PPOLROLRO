@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF161A42A739F5600923F2F /* SF-Pro.ttf */; };
+		035FABB52A783FD9009D1FED /* GuageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABB42A783FD9009D1FED /* GuageBar.swift */; };
+		035FABB72A783FF4009D1FED /* ThrownCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABB62A783FF4009D1FED /* ThrownCount.swift */; };
+		035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABB82A78401C009D1FED /* SpriteKitContainer.swift */; };
+		035FABBB2A78405D009D1FED /* DartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABBA2A78405D009D1FED /* DartScene.swift */; };
+		035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABBC2A784595009D1FED /* PhysicsCategory.swift */; };
 		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
 		1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */; };
@@ -47,6 +53,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		035FABB42A783FD9009D1FED /* GuageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuageBar.swift; sourceTree = "<group>"; };
+		035FABB62A783FF4009D1FED /* ThrownCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrownCount.swift; sourceTree = "<group>"; };
+		035FABB82A78401C009D1FED /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
+		035FABBA2A78405D009D1FED /* DartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartScene.swift; sourceTree = "<group>"; };
+		035FABBC2A784595009D1FED /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameScene.swift; sourceTree = "<group>"; };
 		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
@@ -256,6 +267,11 @@
 			isa = PBXGroup;
 			children = (
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
+				035FABBA2A78405D009D1FED /* DartScene.swift */,
+				035FABBC2A784595009D1FED /* PhysicsCategory.swift */,
+				035FABB42A783FD9009D1FED /* GuageBar.swift */,
+				035FABB62A783FF4009D1FED /* ThrownCount.swift */,
+				035FABB82A78401C009D1FED /* SpriteKitContainer.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -375,6 +391,7 @@
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
 				1AA311912A77A7A500F7FF75 /* ball.png in Resources */,
 				1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */,
+				035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */,
 				1AA311932A77A7AB00F7FF75 /* pin.png in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 				1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */,
@@ -395,18 +412,22 @@
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
+				035FABB52A783FD9009D1FED /* GuageBar.swift in Sources */,
 				1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */,
 				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
+				035FABB72A783FF4009D1FED /* ThrownCount.swift in Sources */,
 				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */,
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
+				035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
+				035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,
@@ -415,6 +436,7 @@
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
+				035FABBB2A78405D009D1FED /* DartScene.swift in Sources */,
 				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,
 				1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */,
 				1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */,
@@ -547,7 +569,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shoong/Preview Content\"";
-				DEVELOPMENT_TEAM = Q83JD2ZC9T;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shoong/Info.plist;
@@ -577,7 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shoong/Preview Content\"";
-				DEVELOPMENT_TEAM = Q83JD2ZC9T;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shoong/Info.plist;

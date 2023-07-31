@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
+		1A5DC90F2A77968600E7906E /* pinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC90E2A77968600E7906E /* pinSound.mp3 */; };
+		1A5DC9112A77969300E7906E /* ballSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC9102A77969300E7906E /* ballSound.mp3 */; };
+		1A5DC9132A7796F200E7906E /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC9122A7796F200E7906E /* pin.png */; };
+		1A5DC9152A77970000E7906E /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5DC9142A77970000E7906E /* ball.png */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -34,12 +39,16 @@
 		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
 		ACB061452A723C3500D31CCF /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicView.swift */; };
 		ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061462A723C4300D31CCF /* DirTestView4.swift */; };
-		ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061482A723C4900D31CCF /* DirTestView5.swift */; };
 		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameScene.swift; sourceTree = "<group>"; };
+		1A5DC90E2A77968600E7906E /* pinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pinSound.mp3; path = ../../../../../../../../Downloads/pinSound.mp3; sourceTree = "<group>"; };
+		1A5DC9102A77969300E7906E /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ballSound.mp3; path = ../../../../../../../../Downloads/ballSound.mp3; sourceTree = "<group>"; };
+		1A5DC9122A7796F200E7906E /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = ../../../../../../../../Downloads/pin.png; sourceTree = "<group>"; };
+		1A5DC9142A77970000E7906E /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = ../../../../../../../../Downloads/ball.png; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -70,7 +79,6 @@
 		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
 		ACB061442A723C3500D31CCF /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
 		ACB061462A723C4300D31CCF /* DirTestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView4.swift; sourceTree = "<group>"; };
-		ACB061482A723C4900D31CCF /* DirTestView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView5.swift; sourceTree = "<group>"; };
 		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB061422A723C2A00D31CCF /* BowlingView.swift */,
+				1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */,
 				ACB061322A7238C400D31CCF /* BowlingAseets */,
 			);
 			path = Bowling;
@@ -245,7 +254,10 @@
 		ACB061322A7238C400D31CCF /* BowlingAseets */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061482A723C4900D31CCF /* DirTestView5.swift */,
+				1A5DC9142A77970000E7906E /* ball.png */,
+				1A5DC9122A7796F200E7906E /* pin.png */,
+				1A5DC9102A77969300E7906E /* ballSound.mp3 */,
+				1A5DC90E2A77968600E7906E /* pinSound.mp3 */,
 			);
 			path = BowlingAseets;
 			sourceTree = "<group>";
@@ -336,7 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
+				1A5DC90F2A77968600E7906E /* pinSound.mp3 in Resources */,
+				1A5DC9152A77970000E7906E /* ball.png in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
+				1A5DC9132A7796F200E7906E /* pin.png in Resources */,
+				1A5DC9112A77969300E7906E /* ballSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +366,6 @@
 				1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */,
 				1AF161B22A73A5CB00923F2F /* TemplatesEditorView.swift in Sources */,
 				1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */,
-				ACB061492A723C4900D31CCF /* DirTestView5.swift in Sources */,
 				1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
@@ -363,6 +378,7 @@
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
+				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,

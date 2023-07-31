@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0306F87F2A78106A002EB30A /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF161A42A739F5600923F2F /* SF-Pro.ttf */; };
+		0306F8822A7810E6002EB30A /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */; };
+		0306F8842A781119002EB30A /* DartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8832A781119002EB30A /* DartScene.swift */; };
+		0306F8862A781245002EB30A /* GuageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8852A781245002EB30A /* GuageBar.swift */; };
+		0306F8882A78126C002EB30A /* ThrownCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8872A78126C002EB30A /* ThrownCount.swift */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
+		0306F8832A781119002EB30A /* DartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartScene.swift; sourceTree = "<group>"; };
+		0306F8852A781245002EB30A /* GuageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuageBar.swift; sourceTree = "<group>"; };
+		0306F8872A78126C002EB30A /* ThrownCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrownCount.swift; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
 		1AF161A42A739F5600923F2F /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -87,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0306F8892A781486002EB30A /* CommonComponent */ = {
+			isa = PBXGroup;
+			children = (
+				0306F8852A781245002EB30A /* GuageBar.swift */,
+				0306F8872A78126C002EB30A /* ThrownCount.swift */,
+			);
+			path = CommonComponent;
+			sourceTree = "<group>";
+		};
 		1AF161A22A739EEA00923F2F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +218,7 @@
 		ACB0612C2A72389100D31CCF /* Interaction */ = {
 			isa = PBXGroup;
 			children = (
+				0306F8892A781486002EB30A /* CommonComponent */,
 				ACB061332A7238D000D31CCF /* Basic */,
 				ACB061312A7238BC00D31CCF /* Bowling */,
 				ACB0612F2A7238AC00D31CCF /* SlingShot */,
@@ -213,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
+				0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */,
+				0306F8832A781119002EB30A /* DartScene.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -357,7 +377,9 @@
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
+				0306F8822A7810E6002EB30A /* SpriteKitContainer.swift in Sources */,
 				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
+				0306F8862A781245002EB30A /* GuageBar.swift in Sources */,
 				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
@@ -370,9 +392,11 @@
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,
 				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,
+				0306F8882A78126C002EB30A /* ThrownCount.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
+				0306F8842A781119002EB30A /* DartScene.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,
 				1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */,

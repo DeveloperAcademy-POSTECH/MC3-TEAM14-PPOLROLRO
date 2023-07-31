@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0306F87F2A78106A002EB30A /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF161A42A739F5600923F2F /* SF-Pro.ttf */; };
+		0306F8822A7810E6002EB30A /* SpriteKitContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */; };
+		0306F8842A781119002EB30A /* DartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8832A781119002EB30A /* DartScene.swift */; };
+		0306F8862A781245002EB30A /* GuageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8852A781245002EB30A /* GuageBar.swift */; };
+		0306F8882A78126C002EB30A /* ThrownCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F8872A78126C002EB30A /* ThrownCount.swift */; };
+		0306F88B2A781A5D002EB30A /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */; };
+		0306F88D2A781FCB002EB30A /* dartSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0306F88C2A781FCB002EB30A /* dartSound.m4a */; };
+		0306F88F2A7820DB002EB30A /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306F88E2A7820DB002EB30A /* HapticManager.swift */; };
 		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
 		1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */; };
@@ -47,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
+		0306F8832A781119002EB30A /* DartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartScene.swift; sourceTree = "<group>"; };
+		0306F8852A781245002EB30A /* GuageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuageBar.swift; sourceTree = "<group>"; };
+		0306F8872A78126C002EB30A /* ThrownCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrownCount.swift; sourceTree = "<group>"; };
+		0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
+		0306F88C2A781FCB002EB30A /* dartSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dartSound.m4a; sourceTree = "<group>"; };
+		0306F88E2A7820DB002EB30A /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameScene.swift; sourceTree = "<group>"; };
 		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1A931C2E2A73EF1000C12D28 /* TestNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNaviView.swift; sourceTree = "<group>"; };
@@ -100,6 +115,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0306F8892A781486002EB30A /* CommonComponent */ = {
+			isa = PBXGroup;
+			children = (
+				0306F8852A781245002EB30A /* GuageBar.swift */,
+				0306F8872A78126C002EB30A /* ThrownCount.swift */,
+			);
+			path = CommonComponent;
 		1A931C2B2A73EE1300C12D28 /* ResultView */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +266,7 @@
 		ACB0612C2A72389100D31CCF /* Interaction */ = {
 			isa = PBXGroup;
 			children = (
+				0306F8892A781486002EB30A /* CommonComponent */,
 				ACB061332A7238D000D31CCF /* Basic */,
 				ACB061312A7238BC00D31CCF /* Bowling */,
 				ACB0612F2A7238AC00D31CCF /* SlingShot */,
@@ -255,7 +278,12 @@
 		ACB0612D2A72389E00D31CCF /* Dart */ = {
 			isa = PBXGroup;
 			children = (
+				0306F88C2A781FCB002EB30A /* dartSound.m4a */,
 				ACB0613E2A723C1200D31CCF /* DartView.swift */,
+				0306F8812A7810E6002EB30A /* SpriteKitContainer.swift */,
+				0306F8832A781119002EB30A /* DartScene.swift */,
+				0306F88A2A781A5D002EB30A /* PhysicsCategory.swift */,
+				0306F88E2A7820DB002EB30A /* HapticManager.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -373,6 +401,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
+				0306F88D2A781FCB002EB30A /* dartSound.m4a in Resources */,
+				0306F87F2A78106A002EB30A /* SF-Pro.ttf in Resources */,
 				1AA311912A77A7A500F7FF75 /* ball.png in Resources */,
 				1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */,
 				1AA311932A77A7AB00F7FF75 /* pin.png in Resources */,
@@ -395,14 +425,17 @@
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
+				0306F8822A7810E6002EB30A /* SpriteKitContainer.swift in Sources */,
 				1A931C2F2A73EF1000C12D28 /* TestNaviView.swift in Sources */,
 				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
+				0306F8862A781245002EB30A /* GuageBar.swift in Sources */,
 				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */,
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
+				0306F88F2A7820DB002EB30A /* HapticManager.swift in Sources */,
 				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
@@ -411,9 +444,12 @@
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,
 				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,
+				0306F8882A78126C002EB30A /* ThrownCount.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
+				0306F88B2A781A5D002EB30A /* PhysicsCategory.swift in Sources */,
+				0306F8842A781119002EB30A /* DartScene.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,
 				1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */,
@@ -547,7 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shoong/Preview Content\"";
-				DEVELOPMENT_TEAM = Q83JD2ZC9T;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shoong/Info.plist;
@@ -577,7 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shoong/Preview Content\"";
-				DEVELOPMENT_TEAM = Q83JD2ZC9T;
+				DEVELOPMENT_TEAM = RFZY2ACQ74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shoong/Info.plist;

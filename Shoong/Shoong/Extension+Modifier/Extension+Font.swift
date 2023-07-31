@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Font {
     static func registerFonts() {
-        self.register(name: "esamanruOTFLight", withExtension: "otf")
+        self.register(name: "SF-Pro", withExtension: "ttf")
     }
     
     static func register(name: String, withExtension: String) {

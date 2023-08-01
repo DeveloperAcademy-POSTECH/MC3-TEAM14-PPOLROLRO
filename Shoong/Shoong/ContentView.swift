@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isViewChanger: Bool = false
+    
     var body: some View {
-        MainView()
+        if isViewChanger {
+            MainView()
+        } else {
+            SplashView()
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        isViewChanger.toggle()
+                    }
+                }
+        }
     }
 }
 

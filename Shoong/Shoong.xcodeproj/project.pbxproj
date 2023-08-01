@@ -19,6 +19,7 @@
 		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
 		1A8982982A7928810004A618 /* TemplateSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
+		1A983A872A797A9300E5CF84 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983A862A797A9300E5CF84 /* SplashView.swift */; };
 		1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA311892A77A1C700F7FF75 /* StorageView.swift */; };
 		1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */; };
 		1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */; };
@@ -70,6 +71,7 @@
 		1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameScene.swift; sourceTree = "<group>"; };
 		1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSelectViewModel.swift; sourceTree = "<group>"; };
 		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		1A983A862A797A9300E5CF84 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		1AA311892A77A1C700F7FF75 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pinSound.mp3; sourceTree = "<group>"; };
 		1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ballSound.mp3; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				1AF161AE2A73A59600923F2F /* TemplateEditorView */,
 				1AF161A52A73A15500923F2F /* InteractionView */,
 				ACB061362A72392200D31CCF /* MainView.swift */,
+				1A983A862A797A9300E5CF84 /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				035FABC12A784AB2009D1FED /* HapticManager.swift in Sources */,
+				1A983A872A797A9300E5CF84 /* SplashView.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
 				035FABB52A783FD9009D1FED /* GuageBar.swift in Sources */,

@@ -45,7 +45,7 @@ struct MainView: View {
                                 Spacer()
                                 
                                 NavigationLink {
-                                    StorageView(firstNaviLinkActive: $firstNaviLinkActive)
+                                    StorageView()
                                 } label: {
                                     ZStack {
                                         RoundedRectangle(cornerRadius: 18)
@@ -203,8 +203,8 @@ struct FolderView: View {
             VStack {
                 ZStack {
                     if index == 4 {
-                        NavigationLink {
-                            SelectedTemplateView(firstNaviLinkActive: $firstNaviLinkAction)
+                        Button {
+                            firstNaviLinkAction.toggle()
                         } label: {
                             Image(imageName)
                                 .resizable()

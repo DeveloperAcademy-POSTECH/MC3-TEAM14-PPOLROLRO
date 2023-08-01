@@ -64,7 +64,7 @@ struct ResultView: View {
                     
                     NavigationLink {
                         // 보관함으로 이동
-                        StorageView(firstNaviLinkActive: $firstNaviLinkActive)
+                        StorageView()
                     } label: {
                         Text("보관함 가기")
                     }

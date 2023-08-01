@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SelectedTemplateView: View {
     @EnvironmentObject var templatesEditorViewModel: TemplatesEditorViewModel
+    
     @Environment(\.dismiss) private var dismiss
+    
     @Binding var firstNaviLinkActive: Bool
     
     var body: some View {
@@ -109,7 +111,7 @@ struct SelectedTemplateView: View {
 
 struct SelectedTemplateView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedTemplateView(firstNaviLinkActive: .constant(true))
+        SelectedTemplateView(firstNaviLinkActive: .constant(false))
             .environmentObject(TemplatesEditorViewModel())
     }
 }

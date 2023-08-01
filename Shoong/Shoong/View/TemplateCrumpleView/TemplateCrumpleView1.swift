@@ -14,6 +14,7 @@ struct TemplateCrumpleView1: View {
     @State private var draggedOffset: CGFloat = 50
     @State private var accumulatedOffset: CGFloat = 0.0
     @State private var isScriptCheck: Bool = false
+    @State private var isExplanation: Bool = false
     
     @Binding var firstNaviLinkActive: Bool
     
@@ -23,6 +24,24 @@ struct TemplateCrumpleView1: View {
     var body: some View {
         ZStack(alignment: .top) {
             Color.backGroundBeige.ignoresSafeArea()
+            
+            if !isExplanation {
+                ZStack {
+                    Rectangle()
+                        .fill(Color.black)
+                        .opacity(0.5)
+                    
+                    Image("transitionExplanation")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 246)
+                }
+                .onTapGesture {
+                    isExplanation = true
+                }
+                .zIndex(20)
+                .ignoresSafeArea()
+            }
             
             ZStack {
                 ZStack {

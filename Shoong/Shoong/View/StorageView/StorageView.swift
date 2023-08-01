@@ -14,8 +14,6 @@ struct StorageView: View {
     @State private var height: CGFloat = UIScreen.main.bounds.height
     @State private var yAxis: CGFloat = 16
     @State private var mainIndex: Int = 0
-
-    @Binding var firstNaviLinkActive: Bool
     
     var body: some View {
         ZStack {
@@ -78,7 +76,7 @@ struct StorageView: View {
 
 struct StorageView_Previews: PreviewProvider {
     static var previews: some View {
-        StorageView(firstNaviLinkActive: .constant(true))
+        StorageView()
     }
 }
 

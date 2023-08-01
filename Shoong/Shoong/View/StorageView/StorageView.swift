@@ -78,8 +78,7 @@ struct StorageView: View {
 
 struct StorageView_Previews: PreviewProvider {
     static var previews: some View {
-        // StorageView(firstNaviLinkActive: .constant(true))
-        StorageView()
+        StorageView(firstNaviLinkActive: .constant(true))
     }
 }
 

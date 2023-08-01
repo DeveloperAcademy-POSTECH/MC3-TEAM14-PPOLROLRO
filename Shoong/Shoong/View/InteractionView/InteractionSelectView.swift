@@ -10,6 +10,7 @@ import SwiftUI
 struct InteractionSelectView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var isHaptic: Bool = true
+    @Binding var firstNaviLinkActive: Bool
     var width: CGFloat = UIScreen.main.bounds.width
     var height: CGFloat = UIScreen.main.bounds.height
     var interactionNameArr: [String] = ["사직서 날리기", "볼링 던지기", "다트 던지기", "새총 쏘기"]
@@ -48,7 +49,7 @@ struct InteractionSelectView: View {
                     ScrollView {
                         ForEach(interactionNameArr, id: \.self) { name in
                             NavigationLink {
-                                // 각각 인터렉션 뷰로 네비
+                                ResultView(firstNaviLinkActive: $firstNaviLinkActive)
                             } label: {
                                 InteractionCardView(width: width, interactionName: name)
                                     .padding(.bottom, 10)
@@ -105,6 +106,6 @@ struct InteractionSelectView: View {
 
 struct InteractionSelectView_Previews: PreviewProvider {
     static var previews: some View {
-        InteractionSelectView()
+        InteractionSelectView(firstNaviLinkActive: .constant(true))
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import CoreHaptics
+import Foundation
 
 class HapticManager {
     

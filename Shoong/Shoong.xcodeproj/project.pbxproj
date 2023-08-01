@@ -34,7 +34,6 @@
 		1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B32A73A62400923F2F /* TextColorPickerView.swift */; };
 		1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */; };
 		1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B72A73A67E00923F2F /* TextEditorView.swift */; };
-		1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BA2A73A85300923F2F /* TemplateCrumpleScriptView.swift */; };
 		1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */; };
 		1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */; };
 		1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */; };
@@ -87,7 +86,6 @@
 		1AF161B32A73A62400923F2F /* TextColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorPickerView.swift; sourceTree = "<group>"; };
 		1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDragGestureView.swift; sourceTree = "<group>"; };
 		1AF161B72A73A67E00923F2F /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
-		1AF161BA2A73A85300923F2F /* TemplateCrumpleScriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleScriptView.swift; sourceTree = "<group>"; };
 		1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView1.swift; sourceTree = "<group>"; };
 		1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView2.swift; sourceTree = "<group>"; };
 		1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView3.swift; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 		1AF161B92A73A83D00923F2F /* TemplateCrumpleView */ = {
 			isa = PBXGroup;
 			children = (
-				1AF161BA2A73A85300923F2F /* TemplateCrumpleScriptView.swift */,
 				1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */,
 				1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */,
 				1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */,
@@ -450,7 +447,6 @@
 				035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
-				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
 				035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,

@@ -12,6 +12,7 @@ struct ResultView: View {
     @State var backGroundColor: Color = .white
     @State var isTurn: Bool = false
     @State var angle: Double = 0
+    @Binding var firstNaviLinkActive: Bool
     var width: CGFloat = UIScreen.main.bounds.width
     var height: CGFloat = UIScreen.main.bounds.height
     
@@ -35,16 +36,10 @@ struct ResultView: View {
                 
                 Button {
                     // 메인으로 가도록
+                    firstNaviLinkActive.toggle()
                 } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Color.pointBlue)
-                            .frame(width: width * 0.88, height: 54)
-                        
-                        Text("메인으로 가기")
-                            .foregroundColor(.white)
-                            .font(.system(size: 17, weight: .bold))
-                    }
+                    Text("메인으로 가기")
+                        .modifier(ButtonModifier(backgroundColor: backGroundColor == .pointGreen ? .pointYellow : .pointGreen, foregroundColor: backGroundColor == .pointGreen ? .black : .white))
                 }
                 .padding(.top, 10)
                 
@@ -67,8 +62,9 @@ struct ResultView: View {
                     
                     Spacer()
                     
-                    Button {
+                    NavigationLink {
                         // 보관함으로 이동
+                        StorageView(firstNaviLinkActive: $firstNaviLinkActive)
                     } label: {
                         Text("보관함 가기")
                     }
@@ -106,7 +102,7 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView()
+        ResultView(firstNaviLinkActive: .constant(true))
     }
 }
 

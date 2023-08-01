@@ -50,7 +50,6 @@
 		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
 		ACB061452A723C3500D31CCF /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicView.swift */; };
 		ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061462A723C4300D31CCF /* DirTestView4.swift */; };
-		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +99,6 @@
 		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
 		ACB061442A723C3500D31CCF /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
 		ACB061462A723C4300D31CCF /* DirTestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView4.swift; sourceTree = "<group>"; };
-		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,17 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB061402A723C1E00D31CCF /* SlingShotView.swift */,
-				ACB061302A7238B400D31CCF /* SlingShotAssets */,
 			);
 			path = SlingShot;
-			sourceTree = "<group>";
-		};
-		ACB061302A7238B400D31CCF /* SlingShotAssets */ = {
-			isa = PBXGroup;
-			children = (
-				ACB0614A2A723C5000D31CCF /* DirTestView6.swift */,
-			);
-			path = SlingShotAssets;
 			sourceTree = "<group>";
 		};
 		ACB061312A7238BC00D31CCF /* Bowling */ = {
@@ -431,7 +420,6 @@
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */,
-				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,

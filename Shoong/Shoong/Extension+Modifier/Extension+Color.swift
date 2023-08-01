@@ -2,7 +2,7 @@
 //  Extension+Color.swift
 //  Shoong
 //
-//  Created by Sup on 2023/07/27.
+//  Created by Zerom on 2023/07/27.
 //
 
 import SwiftUI
@@ -24,6 +24,10 @@ extension Color {
     static let fontOrange = Color("fontOrange")
     static let fontGray = Color("fontGray")
     static let fontRed = Color("fontRed")
+    static let fontGreen = Color("fontGreen")
+    static let fontBurgundy = Color("fontBurgundy")
+    static let fontBlue = Color("fontBlue")
+    static let fontBlack = Color("fontBlack")
     
     // 인터렉션 선택 카드색
     static let interactionCardBeige = Color("interactionCardBeige")

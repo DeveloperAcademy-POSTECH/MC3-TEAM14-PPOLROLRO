@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var templateModel = TemplateModel()
+    @ObservedObject var templateSelectViewModel = TemplateSelectViewModel()
+    
+    @State var isOpenArr: [Bool] = [false, false, false, false, false]
     @State var yAxisArr: [Double] = [0, 0, 0, 0, 0]
-    @State var isOpen: Bool = false
-    var colorArr: [Color] = [.pointGreen, .pointOrange, .pointYellow, .pointBlue, .pointGray]
-    @State private var draggedOffset: CGFloat = 0.0
-    @State private var accumulatedOffset: CGFloat = 0.0
-    @State private var pageIndex: Int = 0
+    @State var firstNaviLinkActive = false
+    
+    @State private var currentSelectedIndex: Int = 0
+    @State private var offset: CGFloat = 0.0
+    @State private var opacity: Double = 0.0
+    
+    let colorArr: [Color] = [.pointGreen, .pointOrange, .pointYellow, .pointBlue, .pointGray]
+    let height: CGFloat = UIScreen.main.bounds.height
+    let width: CGFloat = UIScreen.main.bounds.width
+    let ratio: CGFloat = 464 / 348
     
     var body: some View {
         NavigationView {
@@ -25,12 +32,35 @@ struct MainView: View {
                             .fill(Color.backGroundBeige)
                         
                         VStack(alignment: .leading, spacing: 3) {
-                            Text("주말까지 4일")
-                                .font(.system(size: 24, weight: .heavy))
-                            
-                            Text("화요일은 화사하게 웃는날!")
-                                .font(.system(size: 24, weight: .heavy))
-                                .opacity(0.6)
+                            HStack(alignment: .top) {
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text("주말까지 4일")
+                                        .font(.system(size: 24, weight: .heavy))
+                                    
+                                    Text("화요일은 화사하게 웃는날!")
+                                        .font(.system(size: 24, weight: .heavy))
+                                        .opacity(0.6)
+                                }
+                                
+                                Spacer()
+                                
+                                NavigationLink {
+                                    StorageView(firstNaviLinkActive: $firstNaviLinkActive)
+                                } label: {
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 18)
+                                            .fill(Color.white)
+                                            .frame(width: 86, height: 36)
+                                        
+                                        HStack {
+                                            Image(systemName: "folder.fill")
+                                            Text("보관함")
+                                        }
+                                        .font(.system(size: 13, weight: .semibold))
+                                        .foregroundColor(.black)
+                                    }
+                                }
+                            }
                             
                             VStack(spacing: 6) {
                                 ZStack {
@@ -57,104 +87,94 @@ struct MainView: View {
                             .font(.system(size: 13, weight: .bold))
                             .padding(.top, 10)
                         }
-                        .padding(.top, UIScreen.main.bounds.height * 0.06)
+                        .padding(.top, height * 0.06)
                         .padding(.horizontal, 16)
                         .zIndex(1)
                     }
-                    .frame(height: UIScreen.main.bounds.height * 0.3)
+                    .frame(height: height * 0.3)
                     .padding(.bottom, 0.4)
                     .background(Color.gray)
                     .ignoresSafeArea()
                     
                     Spacer()
-                }
+                } // VStack
                 .zIndex(1)
                 
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .fill(Color.backGroundGray)
-                        .frame(height: UIScreen.main.bounds.height * 0.3)
+                ScrollView {
+                    VStack(spacing: 0) {
+                        Rectangle()
+                            .fill(Color.backGroundGray)
+                            .frame(height: height * 0.3)
                         
-                        ScrollView {
-                            ScrollViewReader { proxy in
-//                                HStack {
-//                                    Button("test0") {
-//                                        proxy.scrollTo(0, anchor: .top)
-//                                    }
-//
-//                                    Button("tes1") {
-//                                        proxy.scrollTo(1, anchor: .top)
-//                                    }
-//
-//                                    Button("test2") {
-//                                        proxy.scrollTo(2, anchor: .top)
-//                                    }
-//                                }
-                                
-                            ZStack {
-                                ForEach(0..<5) { index in
-                                    FolderView(yAxisArr: $yAxisArr, isOpen: $isOpen, index: index, imageName: "folder\(index)", color: colorArr[index])
-                                        .offset(y: Double(Double(index) * UIScreen.main.bounds.height * 0.102) + yAxisArr[index])
-                                        .animation(.easeInOut(duration: 0.3), value: yAxisArr)
-                                }
-                                
-                                if isOpen {
-                                    VStack {
-                                        ForEach(0..<4) { index in
-                                            TabView {
-                                                ForEach(templateModel.templates[index], id: \.self) { arr in
-                                                    Image(arr)
-                                                        .resizable()
-                                                }
-                                            }
-                                            .zIndex(Double(index + 5))
-                                            .tabViewStyle(.page)
-                                            .frame(width: UIScreen.main.bounds.width - 40, height: (UIScreen.main.bounds.width - 40) * 464 / 348)
-                                            .padding(.top, 10)
-                                        }
-                                    }
-                                    .padding(.top, 60)
-                                    
-                                    VStack {
-                                        Rectangle()
-                                            .fill(Color.clear)
-                                            .frame(height: 1)
-                                            .id(0)
-
-                                        Rectangle()
-                                            .fill(Color.clear)
-                                            .frame(height: 300)
-
-                                        Rectangle()
-                                            .fill(Color.clear)
-                                            .frame(height: 1)
-                                            .id(1)
-
-                                        Rectangle()
-                                            .fill(Color.clear)
-                                            .frame(height: 600)
-
-                                        Rectangle()
-                                            .fill(Color.clear)
-                                            .frame(height: 1)
-                                            .id(2)
-
-                                        Rectangle()
-                                            .fill(Color.clear)
-                                            .frame(height: 900)
-                                    }
-                                    .zIndex(20)
-                                }
+                        ZStack {
+                            ForEach(0..<5) { index in
+                                FolderView(isOpenArr: $isOpenArr, yAxisArr: $yAxisArr, firstNaviLinkAction: $firstNaviLinkActive, color: colorArr[index], imageName: "folder\(index)", index: index)
+                                    .offset(y: Double(Double(index) * height * 0.102) + yAxisArr[index])
+                                    .animation(.easeInOut(duration: 0.3), value: yAxisArr)
                             }
-                            .padding(.horizontal, 16)
-                            .padding(.top, 8)
                         }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 8)
                     }
                     .scrollDisabled(true)
+                    .offset(y: offset)
+                    .animation(.easeInOut(duration: 0.3), value: offset)
+                    .onChange(of: isOpenArr, perform: { newValue in
+                        if isOpenArr[0] {
+                            currentSelectedIndex = 0
+                            opacity = 1
+                        } else if isOpenArr[1] {
+                            offset = -height * 0.102
+                            currentSelectedIndex = 1
+                            opacity = 1
+                        } else if isOpenArr[2] {
+                            offset = -height * 0.204
+                            currentSelectedIndex = 2
+                            opacity = 1
+                        } else if isOpenArr[3] {
+                            offset = -height * 0.306
+                            currentSelectedIndex = 3
+                            opacity = 1
+                        } else if !isOpenArr.contains(true) {
+                            offset = 0
+                            opacity = 0
+                        }
+                    })
                 }
                 .ignoresSafeArea()
                 .background(Color.backGroundGray)
                 .zIndex(0)
+                
+                TabView {
+                    ForEach(templateSelectViewModel.templates[currentSelectedIndex], id: \.self) { arr in
+                        Image(arr)
+                            .resizable()
+                            .scaleEffect(y: opacity == 1 ? 1 : 0, anchor: .top)
+                            .animation(.easeInOut(duration: 0.2), value: opacity)
+                    }
+                }
+                .frame(width: width - 40, height: (width - 40) * ratio)
+                .tabViewStyle(.page)
+                .offset(y: height * 0.18)
+                .zIndex(3)
+                .opacity(opacity)
+                .animation(.easeInOut(duration: 0.5), value: opacity)
+                
+                NavigationLink(isActive: $firstNaviLinkActive) {
+                    SelectedTemplateView(firstNaviLinkActive: $firstNaviLinkActive)
+                } label: {
+                    Text("바로 날리기")
+                        .modifier(ButtonModifier())
+                }
+                .opacity(opacity)
+                .offset(y: height * 0.4)
+                .zIndex(4)
+            } // ZStack
+            .onAppear {
+                firstNaviLinkActive = false
+            }
+            .onDisappear {
+                isOpenArr = [false, false, false, false, false]
             }
         }
     }
@@ -167,53 +187,56 @@ struct MainView_Previews: PreviewProvider {
 }
 
 struct FolderView: View {
+    @Binding var isOpenArr: [Bool]
     @Binding var yAxisArr: [Double]
-    @Binding var isOpen: Bool
-    var index: Int
-    var imageName: String
+    @Binding var firstNaviLinkAction: Bool
     var color: Color
+    var imageName: String
+    var index: Int
+    
+    let height: CGFloat = UIScreen.main.bounds.height
+    let title: [String] = ["최근", "바로 날리기", "빈칸 채우기", "사직서 만들기", "그냥 즐기기"]
+    let titleColor: [Color] = [.fontGreen, .fontBurgundy, .fontRed, .fontBlue, .fontBlack]
     
     var body: some View {
         ZStack {
             VStack {
                 ZStack {
-                    Image(imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .onTapGesture {
-                            isOpen.toggle()
+                    if index == 4 {
+                        NavigationLink {
+                            SelectedTemplateView(firstNaviLinkActive: $firstNaviLinkAction)
+                        } label: {
+                            Image(imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .zIndex(1)
                         }
-                        .zIndex(1)
+                    } else {
+                        Image(imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .onTapGesture {
+                                isOpenArr[index].toggle()
+                            }
+                            .zIndex(1)
+                    }
                     
                     HStack {
-                        Spacer()
-                        
-                        VStack(alignment: .trailing, spacing: 5) {
-                            if index == 4 {
-                                HStack {
-                                    Text("바로가기")
-                                    
-                                    Image(systemName: "arrow.up.right")
-                                }
-                                .font(.system(size: 17, weight: .bold))
-                            } else {
-                                HStack {
-                                    Image(systemName: "chevron.down")
-                                        .foregroundColor(.fontRed)
-                                        .padding(.trailing, 10)
-                                    
-                                    Text("템플릿 \(index + 1)")
-                                }
-                                .font(.system(size: 17, weight: .bold))
+                        VStack(alignment: .leading, spacing: 5) {
+                            HStack {
+                                Text(title[index])
                             }
+                            .font(.system(size: 17, weight: .bold))
                             
                             Text("사직서 바로 날리기")
                                 .font(.system(size: 13))
                                 .font(.callout)
                         }
-                        .foregroundColor(.fontGray)
+                        .foregroundColor(titleColor[index])
+                        
+                        Spacer()
                     }
-                    .padding(.horizontal, 30)
+                    .padding(.horizontal, 20)
                     .padding(.top, 6)
                     .zIndex(2)
                 }
@@ -225,18 +248,18 @@ struct FolderView: View {
             VStack {
                 Rectangle()
                     .opacity(0.0)
-                    .frame(height: 50)
+                    .frame(height: 48)
                 
                 ZStack(alignment: .top) {
                     if index == 4 {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(color)
-                            .frame(height: UIScreen.main.bounds.height * 0.18)
+                            .frame(height: height * 0.18)
                     } else {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(color)
-                            .frame(height: isOpen ? UIScreen.main.bounds.height * 0.7 : UIScreen.main.bounds.height * 0.18)
-                            .animation(.easeInOut(duration: isOpen ? 0.1 : 0.4), value: isOpen)
+                            .frame(height: isOpenArr[index] ? height * 0.7 : height * 0.18)
+                            .animation(.easeInOut(duration: isOpenArr[index] ? 0.1 : 0.4), value: isOpenArr[index])
                             .scaleEffect(anchor: .top)
                     }
                 }
@@ -245,14 +268,23 @@ struct FolderView: View {
             }
             .zIndex(0)
         }
-        .onChange(of: isOpen) { _ in
-            if isOpen {
-                yAxisArr = [0, UIScreen.main.bounds.height * 0.46, UIScreen.main.bounds.height * 0.46 * 2, UIScreen.main.bounds.height * 0.46 * 3, UIScreen.main.bounds.height * 0.46 * 4]
-            }else {
+        .onChange(of: isOpenArr[index]) { _ in
+            if isOpenArr[index] {
+                let min = index + 1
+                
+                for i in min...4 {
+                    if i == min {
+                        yAxisArr[i] = UIScreen.main.bounds.height * 0.46
+                    } else {
+                        yAxisArr[i] = UIScreen.main.bounds.height * 0.6
+                    }
+                }
+            } else {
                 yAxisArr = [0, 0, 0, 0, 0]
             }
         }
     }
 }
+
 
 

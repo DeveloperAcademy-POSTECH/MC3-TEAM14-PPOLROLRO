@@ -11,8 +11,11 @@ struct StorageView: View {
     @Environment(\.dismiss) private var dismiss
     var cards: [String] = ["testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage"]
     @State private var width: CGFloat = UIScreen.main.bounds.width - 20
+    @State private var height: CGFloat = UIScreen.main.bounds.height
     @State private var yAxis: CGFloat = 16
-    @State private var counter: Int = -1
+    @State private var mainIndex: Int = 0
+    var firstNaviLinkActive: Bool = false
+    // @Binding var firstNaviLinkActive: Bool
     
     var body: some View {
         ZStack {
@@ -29,31 +32,25 @@ struct StorageView: View {
             .zIndex(20)
             
             ForEach(0..<cards.count) { index in
-                CardStackView(index: index, card: cards[index], width: width)
-                    .offset(y: yAxis + CGFloat(index * (index - 50)))
+                CardStackView(mainIndex: mainIndex, index: index, card: cards[index], width: width)
+                    .offset(y: yAxis + CGFloat(index * (index - 50)) < 17 ? yAxis + CGFloat(index * (index - 50)) : height * 0.66)
                     .animation(.easeInOut(duration: 0.6), value: yAxis)
-                    .opacity(yAxis + CGFloat(index * (index - 50)) < 17 ? 1 : 0)
+                    .opacity(yAxis + CGFloat(index * (index - 50)) < 70 ? 1 : 0)
             }
             .gesture(
                 DragGesture()
-                    .onChanged({ gesture in
-                        if counter == 0 {
-                            counter += Int(gesture.translation.height / 100)
-                        } else {
-                            counter += Int(gesture.translation.height / 100) / counter
+                    .onEnded({ gesture in
+                        if gesture.translation.height > 0 && yAxis < 16 + CGFloat((cards.count - 1) * 40) {
+                            yAxis += 40
+                            width += 30
+                            mainIndex += 1
+                        } else if gesture.translation.height < 0 && yAxis > 16 {
+                            yAxis -= 40
+                            width -= 30
+                            mainIndex -= 1
                         }
-                        print(counter)
                     })
             )
-            .onChange(of: counter) { newValue in
-                if counter < 0 {
-                    yAxis += 40
-                    width += 30
-                } else if counter > 0 {
-                    yAxis -= 40
-                    width -= 30
-                }
-            }
         }
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -81,11 +78,14 @@ struct StorageView: View {
 
 struct StorageView_Previews: PreviewProvider {
     static var previews: some View {
+        // StorageView(firstNaviLinkActive: .constant(true))
         StorageView()
     }
 }
 
 struct CardStackView: View {
+    @State private var angle: Double = 0.0
+    var mainIndex: Int
     var index: Int
     var card: String
     var width: CGFloat
@@ -96,5 +96,13 @@ struct CardStackView: View {
             .scaledToFit()
             .frame(width: width - 40 - CGFloat(index * 30))
             .zIndex(Double(10 - index))
+            .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0))
+            .animation(.easeInOut(duration: 0.6), value: angle)
+            .onTapGesture {
+                if index == mainIndex {
+                    angle += 180
+                }
+            }
     }
 }
+

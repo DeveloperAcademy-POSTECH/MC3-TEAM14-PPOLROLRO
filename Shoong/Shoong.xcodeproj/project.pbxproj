@@ -16,6 +16,7 @@
 		035FABBF2A784A7F009D1FED /* dartSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 035FABBE2A784A7F009D1FED /* dartSound.m4a */; };
 		035FABC12A784AB2009D1FED /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABC02A784AB2009D1FED /* HapticManager.swift */; };
 		1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */; };
+		1A8982982A7928810004A618 /* TemplateSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
 		1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA311892A77A1C700F7FF75 /* StorageView.swift */; };
 		1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */; };
@@ -66,6 +67,7 @@
 		035FABBE2A784A7F009D1FED /* dartSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dartSound.m4a; sourceTree = "<group>"; };
 		035FABC02A784AB2009D1FED /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		1A5DC90A2A7795A400E7906E /* BowlingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameScene.swift; sourceTree = "<group>"; };
+		1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSelectViewModel.swift; sourceTree = "<group>"; };
 		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1AA311892A77A1C700F7FF75 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pinSound.mp3; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */,
+				1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
+				1A8982982A7928810004A618 /* TemplateSelectViewModel.swift in Sources */,
 				1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */,
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,

@@ -46,12 +46,15 @@
 		ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061382A723B5100D31CCF /* TextBoxModel.swift */; };
 		ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */; };
 		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
-		ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotView.swift */; };
+		ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */; };
 		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
 		ACB061452A723C3500D31CCF /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicView.swift */; };
 		ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061462A723C4300D31CCF /* DirTestView4.swift */; };
-		ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614A2A723C5000D31CCF /* DirTestView6.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
+		ACF4B3172A791EF900DE4192 /* SlingShotInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B3162A791EF900DE4192 /* SlingShotInteraction.swift */; };
+		ACF4B31F2A7920CA00DE4192 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACF4B31D2A7920CA00DE4192 /* FireParticle.sks */; };
+		ACF4B3202A7920CA00DE4192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF4B31E2A7920CA00DE4192 /* Assets.xcassets */; };
+		ACF4B3222A7920F700DE4192 /* BuildingsBrokenSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACF4B3212A7920F700DE4192 /* BuildingsBrokenSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,12 +99,15 @@
 		ACB061382A723B5100D31CCF /* TextBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxModel.swift; sourceTree = "<group>"; };
 		ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorViewModel.swift; sourceTree = "<group>"; };
 		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
-		ACB061402A723C1E00D31CCF /* SlingShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotView.swift; sourceTree = "<group>"; };
+		ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotGameScene.swift; sourceTree = "<group>"; };
 		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
 		ACB061442A723C3500D31CCF /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
 		ACB061462A723C4300D31CCF /* DirTestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView4.swift; sourceTree = "<group>"; };
-		ACB0614A2A723C5000D31CCF /* DirTestView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView6.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		ACF4B3162A791EF900DE4192 /* SlingShotInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotInteraction.swift; sourceTree = "<group>"; };
+		ACF4B31D2A7920CA00DE4192 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+		ACF4B31E2A7920CA00DE4192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACF4B3212A7920F700DE4192 /* BuildingsBrokenSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BuildingsBrokenSound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,18 +290,11 @@
 		ACB0612F2A7238AC00D31CCF /* SlingShot */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061402A723C1E00D31CCF /* SlingShotView.swift */,
-				ACB061302A7238B400D31CCF /* SlingShotAssets */,
+				ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */,
+				ACF4B3162A791EF900DE4192 /* SlingShotInteraction.swift */,
+				ACF4B31C2A7920AE00DE4192 /* SlingShotEffectAssets */,
 			);
 			path = SlingShot;
-			sourceTree = "<group>";
-		};
-		ACB061302A7238B400D31CCF /* SlingShotAssets */ = {
-			isa = PBXGroup;
-			children = (
-				ACB0614A2A723C5000D31CCF /* DirTestView6.swift */,
-			);
-			path = SlingShotAssets;
 			sourceTree = "<group>";
 		};
 		ACB061312A7238BC00D31CCF /* Bowling */ = {
@@ -334,6 +333,16 @@
 				1ABEE62A2A79085D0003A3E8 /* Modifier+View.swift */,
 			);
 			path = "Extension+Modifier";
+			sourceTree = "<group>";
+		};
+		ACF4B31C2A7920AE00DE4192 /* SlingShotEffectAssets */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4B3212A7920F700DE4192 /* BuildingsBrokenSound.mp3 */,
+				ACF4B31D2A7920CA00DE4192 /* FireParticle.sks */,
+				ACF4B31E2A7920CA00DE4192 /* Assets.xcassets */,
+			);
+			path = SlingShotEffectAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,7 +407,10 @@
 				035FABBF2A784A7F009D1FED /* dartSound.m4a in Resources */,
 				1AA311912A77A7A500F7FF75 /* ball.png in Resources */,
 				1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */,
+				ACF4B3202A7920CA00DE4192 /* Assets.xcassets in Resources */,
 				035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */,
+				ACF4B3222A7920F700DE4192 /* BuildingsBrokenSound.mp3 in Resources */,
+				ACF4B31F2A7920CA00DE4192 /* FireParticle.sks in Resources */,
 				1AA311932A77A7AB00F7FF75 /* pin.png in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 				1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */,
@@ -412,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF4B3172A791EF900DE4192 /* SlingShotInteraction.swift in Sources */,
 				1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */,
 				1AF161B22A73A5CB00923F2F /* TemplatesEditorView.swift in Sources */,
 				1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */,
@@ -431,12 +444,11 @@
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */,
-				ACB0614B2A723C5000D31CCF /* DirTestView6.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
 				035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */,
-				ACB061412A723C1E00D31CCF /* SlingShotView.swift in Sources */,
+				ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,
 				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,

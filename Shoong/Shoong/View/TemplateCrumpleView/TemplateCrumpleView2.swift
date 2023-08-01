@@ -38,9 +38,11 @@ struct TemplateCrumpleView2: View {
                         if isScriptCheck {
                             Text("참을 수 없는 감정으로\n사직서를 구겨버렸다!")
                                 .multilineTextAlignment(.center)
+                                .padding(.top, 10)
                         } else {
                             Text("놀랍게도, 곧 사직서는\n움직이기 시작하는데...")
                                 .multilineTextAlignment(.center)
+                                .padding(.top, 10)
                         }
                         
                         Spacer()
@@ -56,7 +58,7 @@ struct TemplateCrumpleView2: View {
                             
                             if isScriptCheck {
                                 NavigationLink {
-                                    TemplateCrumpleView3()
+                                    TemplateCrumpleView3(firstNaviLinkActive: $firstNaviLinkActive)
                                 } label: {
                                     Text("다음")
                                         .bold()

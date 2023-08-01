@@ -42,9 +42,11 @@ struct TemplateCrumpleView1: View {
                         if isScriptCheck {
                             Text("하지만, 쉽지 않다는 것을\n잘 아는 당신은...")
                                 .multilineTextAlignment(.center)
+                                .padding(.top, 10)
                         } else {
                             Text("당신은 드디어, 사직서를\n봉투에 담았다!")
                                 .multilineTextAlignment(.center)
+                                .padding(.top, 10)
                         }
                         
                         Spacer()

@@ -60,7 +60,7 @@ struct SelectedTemplateView: View {
                             }
                             
                             NavigationLink {
-                                InteractionSelectView(firstNaviLinkActive: $firstNaviLinkActive)
+                                TemplateCrumpleView1(firstNaviLinkActive: $firstNaviLinkActive)
                             } label: {
                                 Text("날리기")
                                     .modifier(ButtonModifier())

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034D28032A795B74001D3561 /* HowToPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D28022A795B74001D3561 /* HowToPlay.swift */; };
 		035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF161A42A739F5600923F2F /* SF-Pro.ttf */; };
 		035FABB52A783FD9009D1FED /* GuageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABB42A783FD9009D1FED /* GuageBar.swift */; };
 		035FABB72A783FF4009D1FED /* ThrownCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FABB62A783FF4009D1FED /* ThrownCount.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034D28022A795B74001D3561 /* HowToPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlay.swift; sourceTree = "<group>"; };
 		035FABB42A783FD9009D1FED /* GuageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuageBar.swift; sourceTree = "<group>"; };
 		035FABB62A783FF4009D1FED /* ThrownCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrownCount.swift; sourceTree = "<group>"; };
 		035FABB82A78401C009D1FED /* SpriteKitContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitContainer.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				035FABB62A783FF4009D1FED /* ThrownCount.swift */,
 				035FABB82A78401C009D1FED /* SpriteKitContainer.swift */,
 				035FABC02A784AB2009D1FED /* HapticManager.swift */,
+				034D28022A795B74001D3561 /* HowToPlay.swift */,
 			);
 			path = Dart;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				1AF161BB2A73A85300923F2F /* TemplateCrumpleScriptView.swift in Sources */,
 				035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */,
+				034D28032A795B74001D3561 /* HowToPlay.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,

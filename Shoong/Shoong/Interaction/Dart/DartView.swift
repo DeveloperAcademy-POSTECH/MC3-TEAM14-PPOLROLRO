@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DartView: View {
+    @State private var isMessagePresented = true
+
     var body: some View {
         ZStack(alignment: .bottom) {
             SpriteKitContainer(scene: DartScene())
@@ -21,6 +23,9 @@ struct DartView: View {
                 .padding(.leading, 19)
                 .padding(.trailing, 16)
                 .padding(.bottom, 24)
+            }
+            if isMessagePresented {
+                HowToPlay(playImageName: "dartHowToPlay", isMessagePresented: $isMessagePresented)
             }
         }
     }

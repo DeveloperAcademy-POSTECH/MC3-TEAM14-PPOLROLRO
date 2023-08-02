@@ -11,13 +11,13 @@ struct MainView: View {
     @ObservedObject var templateSelectViewModel = TemplateSelectViewModel()
     @EnvironmentObject var templateEditViewModel: TemplateEditViewModel
     
-    @State var isOpenArr: [Bool] = [false, false, false, false, false]
-    @State var yAxisArr: [Double] = [0, 0, 0, 0, 0]
+    @State var isOpenArr: [Bool] = [false, true, false, false, false]
+    @State var yAxisArr: [Double] = [0, 0, UIScreen.main.bounds.height * 0.46, UIScreen.main.bounds.height * 0.6, UIScreen.main.bounds.height * 0.6]
     @State var firstNaviLinkActive = false
     
-    @State private var currentSelectedIndex: Int = 0
-    @State private var offset: CGFloat = 0.0
-    @State private var opacity: Double = 0.0
+    @State private var currentSelectedIndex: Int = 1
+    @State private var offset: CGFloat = -UIScreen.main.bounds.height * 0.102
+    @State private var opacity: Double = 1.0
     
     let colorArr: [Color] = [.pointGreen, .pointOrange, .pointYellow, .pointBlue, .pointGray]
     let height: CGFloat = UIScreen.main.bounds.height
@@ -36,12 +36,11 @@ struct MainView: View {
                             HStack(alignment: .top) {
                                 VStack(alignment: .leading, spacing: 3) {
                                     Text("주말까지 4일")
-                                        .font(.system(size: 24, weight: .heavy))
                                     
-                                    Text("화요일은 화사하게 웃는날!")
-                                        .font(.system(size: 24, weight: .heavy))
+                                    Text("필승, YES I CAN!")
                                         .opacity(0.6)
                                 }
+                                .font(.custom("SFPro-Bold", size: 24))
                                 
                                 Spacer()
                                 
@@ -50,18 +49,19 @@ struct MainView: View {
                                 } label: {
                                     ZStack {
                                         RoundedRectangle(cornerRadius: 18)
-                                            .fill(Color.white)
+                                            .fill(Color.pointGray)
                                             .frame(width: 86, height: 36)
                                         
                                         HStack {
                                             Image(systemName: "folder.fill")
                                             Text("보관함")
                                         }
-                                        .font(.system(size: 13, weight: .semibold))
+                                        .font(.custom("SFPro-Semibold", size: 13))
                                         .foregroundColor(.black)
                                     }
                                 }
                             }
+                            .padding(.top, 18)
                             
                             VStack(spacing: 6) {
                                 ZStack {
@@ -85,13 +85,13 @@ struct MainView: View {
                                     Text("금")
                                 }
                             }
-                            .font(.system(size: 13, weight: .bold))
-                            .padding(.top, 10)
-                        }
+                            .foregroundColor(.fontWhiteGray)
+                            .font(.custom("SFPro-Bold", size: 13))
+                        } // VStack
                         .padding(.top, height * 0.06)
                         .padding(.horizontal, 16)
                         .zIndex(1)
-                    }
+                    } // ZStack
                     .frame(height: height * 0.3)
                     .padding(.bottom, 0.4)
                     .background(Color.gray)
@@ -117,7 +117,6 @@ struct MainView: View {
                         .padding(.horizontal, 16)
                         .padding(.top, 8)
                     }
-                    .scrollDisabled(true)
                     .offset(y: offset)
                     .animation(.easeInOut(duration: 0.3), value: offset)
                     .onChange(of: isOpenArr, perform: { newValue in
@@ -144,6 +143,7 @@ struct MainView: View {
                 }
                 .ignoresSafeArea()
                 .background(Color.backGroundGray)
+                .scrollDisabled(true)
                 .zIndex(0)
                 
                 TabView {
@@ -176,9 +176,9 @@ struct MainView: View {
                 firstNaviLinkActive = false
             }
             .onDisappear {
-                isOpenArr = [false, false, false, false, false]
+                // isOpenArr = [false, true, false, false, false]
             }
-        }
+        } // NavigationView
     }
 }
 
@@ -198,6 +198,7 @@ struct FolderView: View {
     
     let height: CGFloat = UIScreen.main.bounds.height
     let title: [String] = ["최근", "바로 날리기", "빈칸 채우기", "사직서 만들기", "그냥 즐기기"]
+    let script: [String] = ["그때 그 사직서를 다시 날려보세요!", "이미 완성된 사직서를 바로 날려보세요!", "채우고 싶은 부분만 채워서 날려보세요!", "내가 직접 쓴 사직서를 날려보세요!", "사직서를 쓰지 않고 빠르게 날려보세요!"]
     let titleColor: [Color] = [.fontGreen, .fontBurgundy, .fontRed, .fontBlue, .fontBlack]
     
     var body: some View {
@@ -224,23 +225,27 @@ struct FolderView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading, spacing: 5) {
-                            HStack {
-                                Text(title[index])
-                            }
-                            .font(.system(size: 17, weight: .bold))
-                            
-                            Text("사직서 바로 날리기")
-                                .font(.system(size: 13))
-                                .font(.callout)
-                        }
-                        .foregroundColor(titleColor[index])
+                        Text(title[index])
+                            .font(.custom("SFPro-Bold", size: 17))
+                            .foregroundColor(titleColor[index])
                         
                         Spacer()
                     }
                     .padding(.horizontal, 20)
-                    .padding(.top, 6)
                     .zIndex(2)
+                    
+                    if isOpenArr[index] {
+                        HStack {
+                            Text(script[index])
+                                .font(.custom("SFPro-Regular", size: 13))
+                                .foregroundColor(titleColor[index])
+                                .offset(y: 36)
+                            
+                            Spacer()
+                        }
+                        .zIndex(2)
+                        .padding(.leading, 24)
+                    }
                 }
                 
                 Spacer()
@@ -251,12 +256,25 @@ struct FolderView: View {
                 Rectangle()
                     .opacity(0.0)
                     .frame(height: 48)
+                    .zIndex(0)
                 
                 ZStack(alignment: .top) {
                     if index == 4 {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(color)
-                            .frame(height: height * 0.18)
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(color)
+                                .frame(height: height * 0.18)
+                            
+                            Text(script[4])
+                                .font(.custom("SFPro-Regular", size: 13))
+                                .foregroundColor(titleColor[index])
+                                .offset(x: -60, y: 40)
+                            
+                            Image(systemName: "arrow.up.right")
+                                .foregroundColor(titleColor[index])
+                                .font(.custom("SFPro-Semibold", size: 17))
+                                .offset(x: 150, y: -60)
+                        }
                     } else {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(color)

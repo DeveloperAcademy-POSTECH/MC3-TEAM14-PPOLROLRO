@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var templateEditViewModel: TemplateEditViewModel
     @State private var isViewChanger: Bool = false
     
     var body: some View {
         if isViewChanger {
             MainView()
+                .environmentObject(templateEditViewModel)
         } else {
             SplashView()
                 .onAppear {

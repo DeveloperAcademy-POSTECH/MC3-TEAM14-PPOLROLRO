@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject var templateSelectViewModel = TemplateSelectViewModel()
+    @EnvironmentObject var templateEditViewModel: TemplateEditViewModel
     
     @State var isOpenArr: [Bool] = [false, false, false, false, false]
     @State var yAxisArr: [Double] = [0, 0, 0, 0, 0]
@@ -161,7 +162,8 @@ struct MainView: View {
                 .animation(.easeInOut(duration: 0.5), value: opacity)
                 
                 NavigationLink(isActive: $firstNaviLinkActive) {
-                    SelectedTemplateView(firstNaviLinkActive: $firstNaviLinkActive)
+                    TemplateEditView(firstNaviLinkActive: $firstNaviLinkActive)
+                        .environmentObject(templateEditViewModel)
                 } label: {
                     Text("바로 날리기")
                         .modifier(ButtonModifier())

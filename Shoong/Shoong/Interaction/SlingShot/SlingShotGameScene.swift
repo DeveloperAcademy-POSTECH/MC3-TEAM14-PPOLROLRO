@@ -67,6 +67,7 @@ struct SlingShotGameScene: View {
                     .font(.custom("SFPro-Semibold", size: 17))
                     .tracking(-0.4)
                     .lineSpacing(20)
+                    .foregroundColor(.black)
             }
         }
     }

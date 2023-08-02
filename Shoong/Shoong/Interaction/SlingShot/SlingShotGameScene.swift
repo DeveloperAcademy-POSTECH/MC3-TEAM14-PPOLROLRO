@@ -43,6 +43,7 @@ struct SlingShotGameScene: View {
                 .padding(.trailing, 16)
                 .padding(.bottom, 24)
             }
+            .offset(y: 30)
             if isMessagePresented {
                 HowToPlay(playImageName: "slingshotHowToPlay", isMessagePresented: $isMessagePresented)
             }

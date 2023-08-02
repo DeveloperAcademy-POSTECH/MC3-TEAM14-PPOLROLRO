@@ -18,7 +18,7 @@ struct ThrownCount: View {
             VStack(alignment: .leading) {
                 Text("날린 사직서 갯수")
                     .font(.custom("SFPro-Regular", size: 11))
-                    .foregroundColor(.black)
+                    .foregroundColor(.interactionWhiteGray)
                 Text("\(count)")
                     .font(.custom("SFPro-Semibold", size: 15))
                     .foregroundColor(.black)

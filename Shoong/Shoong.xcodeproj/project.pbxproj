@@ -46,7 +46,6 @@
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
 		ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB061222A72386400D31CCF /* Preview Assets.xcassets */; };
 		ACB061372A72392200D31CCF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061362A72392200D31CCF /* MainView.swift */; };
-		ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */; };
 		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
 		ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */; };
 		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
@@ -101,7 +100,6 @@
 		ACB0611F2A72386400D31CCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACB061222A72386400D31CCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACB061362A72392200D31CCF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorViewModel.swift; sourceTree = "<group>"; };
 		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
 		ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotGameScene.swift; sourceTree = "<group>"; };
 		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 		ACB0612A2A72387B00D31CCF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */,
 				1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */,
 				1A983AB52A7A924200E5CF84 /* TemplateEditViewModel.swift */,
 			);
@@ -456,7 +453,6 @@
 				1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */,
 				1ABEE62B2A79085D0003A3E8 /* Modifier+View.swift in Sources */,
 				1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */,
-				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
 				035FABC12A784AB2009D1FED /* HapticManager.swift in Sources */,
 				1A983A872A797A9300E5CF84 /* SplashView.swift in Sources */,
 				ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */,

@@ -38,6 +38,7 @@ struct TemplateCrumpleView4: View {
                     VStack {
                         HStack {
                             Text("4/4")
+                                .font(.custom("SFPro-Regular", size: 17))
                             
                             Spacer()
                         }
@@ -45,6 +46,7 @@ struct TemplateCrumpleView4: View {
                         Spacer()
                         
                         Text("사직서를 힘껏 날려 스트레스를 풀고,\n지기를 굴리고, 쏘고, 던져 회사를\n무너뜨려보자!")
+                            .font(.custom("SFPro-Regular", size: 17))
                             .multilineTextAlignment(.center)
                             .padding(.top, 10)
                         
@@ -57,7 +59,7 @@ struct TemplateCrumpleView4: View {
                                 InteractionSelectView(firstNaviLinkActive: $firstNaviLinkActive)
                             } label: {
                                 Text("다음")
-                                    .bold()
+                                    .font(.custom("SFPro-Bold", size: 17))
                             }
                         }
                     }

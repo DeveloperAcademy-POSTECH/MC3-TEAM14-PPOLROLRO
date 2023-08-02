@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TemplateCrumpleView1: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
     
     @State private var isInteraction: Bool = false
@@ -52,6 +53,7 @@ struct TemplateCrumpleView1: View {
                     VStack {
                         HStack {
                             Text("1/4")
+                                .font(.custom("SFPro-Regular", size: 17))
                             
                             Spacer()
                         }
@@ -60,10 +62,12 @@ struct TemplateCrumpleView1: View {
                         
                         if isScriptCheck {
                             Text("하지만, 쉽지 않다는 것을\n잘 아는 당신은...")
+                                .font(.custom("SFPro-Regular", size: 17))
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 10)
                         } else {
                             Text("당신은 드디어, 사직서를\n봉투에 담았다!")
+                                .font(.custom("SFPro-Regular", size: 17))
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 10)
                         }
@@ -75,6 +79,7 @@ struct TemplateCrumpleView1: View {
                                 InteractionSelectView(firstNaviLinkActive: $firstNaviLinkActive)
                             } label: {
                                 Text("건너뛰기")
+                                    .font(.custom("SFPro-Regular", size: 17))
                             }
                             
                             Spacer()
@@ -84,7 +89,7 @@ struct TemplateCrumpleView1: View {
                                     TemplateCrumpleView2(firstNaviLinkActive: $firstNaviLinkActive)
                                 } label: {
                                     Text("다음")
-                                        .bold()
+                                        .font(.custom("SFPro-Bold", size: 17))
                                 }
                                 
                             } else {
@@ -92,7 +97,7 @@ struct TemplateCrumpleView1: View {
                                     isScriptCheck.toggle()
                                 } label: {
                                     Text("다음")
-                                        .bold()
+                                        .font(.custom("SFPro-Bold", size: 17))
                                 }
                             }
                         }
@@ -100,14 +105,13 @@ struct TemplateCrumpleView1: View {
                     .padding(.vertical, 20)
                     .padding(.horizontal, 30)
                 }
-                .font(.system(size: 17))
                 .foregroundColor(.fontRed)
                 .frame(width: width - 32, height: (width - 32) * 298 / 358)
                 .opacity(isInteraction ? 1 : 0)
                 .offset(y: -height * 0.05)
                 
                 ZStack(alignment: .top) {
-                    Image("PartiallyEditableTemplate0")
+                    Image(uiImage: UIImage(data: coreDataViewModel.currentCaptureImage ) ?? UIImage())
                         .resizable()
                         .scaledToFit()
                         .frame(width: width - 40)

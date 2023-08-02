@@ -37,10 +37,12 @@ struct TemplateCrumpleView2: View {
                         
                         if isScriptCheck {
                             Text("참을 수 없는 감정으로\n사직서를 구겨버렸다!")
+                                .font(.custom("SFPro-Regular", size: 17))
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 10)
                         } else {
                             Text("놀랍게도, 곧 사직서는\n움직이기 시작하는데...")
+                                .font(.custom("SFPro-Regular", size: 17))
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 10)
                         }
@@ -52,6 +54,7 @@ struct TemplateCrumpleView2: View {
                                 InteractionSelectView(firstNaviLinkActive: $firstNaviLinkActive)
                             } label: {
                                 Text("건너뛰기")
+                                    .font(.custom("SFPro-Regular", size: 17))
                             }
                             
                             Spacer()
@@ -61,7 +64,7 @@ struct TemplateCrumpleView2: View {
                                     TemplateCrumpleView3(firstNaviLinkActive: $firstNaviLinkActive)
                                 } label: {
                                     Text("다음")
-                                        .bold()
+                                        .font(.custom("SFPro-Bold", size: 17))
                                 }
                                 
                             } else {
@@ -69,7 +72,7 @@ struct TemplateCrumpleView2: View {
                                     isScriptCheck.toggle()
                                 } label: {
                                     Text("다음")
-                                        .bold()
+                                        .font(.custom("SFPro-Bold", size: 17))
                                 }
                             }
                         }
@@ -77,7 +80,6 @@ struct TemplateCrumpleView2: View {
                     .padding(.vertical, 20)
                     .padding(.horizontal, 30)
                 }
-                .font(.system(size: 17))
                 .foregroundColor(.fontRed)
                 .frame(width: width - 32, height: (width - 32) * 298 / 358)
                 .padding(.top, 40)

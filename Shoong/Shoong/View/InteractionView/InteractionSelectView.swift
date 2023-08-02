@@ -32,7 +32,7 @@ struct InteractionSelectView: View {
                     Text("날려보세요.")
                         .opacity(0.6)
                 }
-                .font(.system(size: 24, weight: .bold))
+                .font(.custom("SFPro-Bold", size: 24))
                 .padding(.horizontal, 16)
                 .padding(.top, 10)
                 
@@ -49,19 +49,16 @@ struct InteractionSelectView: View {
                     ScrollView {
                         ForEach(interactionNameArr, id: \.self) { name in
                             NavigationLink {
-                                if name ==  "사직서 날리기" {
+                                switch name {
+                                case "사직서 날리기":
                                     BasicView()
-                                }
-                                else if name == "볼링 던지기" {
+                                case "볼링 던지기":
                                     BowlingView()
-                                }
-                                else if name == "다트 던지기" {
+                                case "다트 던지기":
                                     DartView()
-                                }
-                                else if name == "새총 쏘기" {
+                                default:
                                     SlingShotGameScene()
                                 }
-                                // ResultView(firstNaviLinkActive: $firstNaviLinkActive)
                             } label: {
                                 InteractionCardView(width: width, interactionName: name)
                                     .padding(.bottom, 10)

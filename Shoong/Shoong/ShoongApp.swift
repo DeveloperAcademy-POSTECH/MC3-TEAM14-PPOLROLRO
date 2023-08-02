@@ -11,24 +11,28 @@ import SwiftUI
 struct ShoongApp: App {
     // Template 내용작성을 위한 Viewmodel
     @StateObject var templateEditViewModel = TemplateEditViewModel()
+    @StateObject var templateSelectViewModel = TemplateSelectViewModel()
+    @StateObject var coreDataViewModel = CoreDataViewModel()
     
     init() {
         Font.registerFonts()
         
         //실제 폰트 이름 확인
         //폰트 파일명과 실제 이름이 다를 수 있음
-        for family in UIFont.familyNames{
-            print(family)
-            for names in UIFont.fontNames(forFamilyName: family){
-                print("== \(names)")
-            }
-        }
+//        for family in UIFont.familyNames{
+//            print(family)
+//            for names in UIFont.fontNames(forFamilyName: family){
+//                print("== \(names)")
+//            }
+//        }
     }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(templateEditViewModel)
+                .environmentObject(templateSelectViewModel)
+                .environmentObject(coreDataViewModel)
         }
     }
 }

@@ -40,6 +40,9 @@
 		1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */; };
 		1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */; };
 		1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161C22A73A88200923F2F /* TemplateCrumpleView4.swift */; };
+		AC5D9EBA2A7A7B2700F3B519 /* PairSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D9EB92A7A7B2700F3B519 /* PairSet.swift */; };
+		AC5D9EBC2A7A7B4000F3B519 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5D9EBB2A7A7B4000F3B519 /* CoreDataViewModel.swift */; };
+		AC5D9EBF2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5D9EBD2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodeld */; };
 		ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611B2A72386300D31CCF /* ShoongApp.swift */; };
 		ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0611D2A72386300D31CCF /* ContentView.swift */; };
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
@@ -94,6 +97,9 @@
 		1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView2.swift; sourceTree = "<group>"; };
 		1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView3.swift; sourceTree = "<group>"; };
 		1AF161C22A73A88200923F2F /* TemplateCrumpleView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView4.swift; sourceTree = "<group>"; };
+		AC5D9EB92A7A7B2700F3B519 /* PairSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairSet.swift; sourceTree = "<group>"; };
+		AC5D9EBB2A7A7B4000F3B519 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		AC5D9EBE2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
 		ACB061182A72386300D31CCF /* Shoong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB0611B2A72386300D31CCF /* ShoongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoongApp.swift; sourceTree = "<group>"; };
 		ACB0611D2A72386300D31CCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +198,32 @@
 			path = TemplateCrumpleView;
 			sourceTree = "<group>";
 		};
+		AC5D9EB52A7A7AE400F3B519 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AC5D9EB72A7A7AFB00F3B519 /* CoreDataModel */,
+				AC5D9EB62A7A7AF000F3B519 /* CoreDataViewModel */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AC5D9EB62A7A7AF000F3B519 /* CoreDataViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC5D9EBB2A7A7B4000F3B519 /* CoreDataViewModel.swift */,
+				AC5D9EBD2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodeld */,
+			);
+			path = CoreDataViewModel;
+			sourceTree = "<group>";
+		};
+		AC5D9EB72A7A7AFB00F3B519 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC5D9EB92A7A7B2700F3B519 /* PairSet.swift */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
 		ACB0610F2A72386300D31CCF = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +243,7 @@
 		ACB0611A2A72386300D31CCF /* Shoong */ = {
 			isa = PBXGroup;
 			children = (
+				AC5D9EB52A7A7AE400F3B519 /* CoreData */,
 				1AF161AD2A73A26B00923F2F /* Info.plist */,
 				ACB061352A7238E300D31CCF /* Extension+Modifier */,
 				ACB0612C2A72389100D31CCF /* Interaction */,
@@ -443,6 +476,7 @@
 				1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */,
 				035FABB52A783FD9009D1FED /* GuageBar.swift in Sources */,
 				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
+				AC5D9EBC2A7A7B4000F3B519 /* CoreDataViewModel.swift in Sources */,
 				035FABB72A783FF4009D1FED /* ThrownCount.swift in Sources */,
 				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
@@ -453,6 +487,7 @@
 				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */,
 				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
+				AC5D9EBF2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodeld in Sources */,
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */,
 				034D28032A795B74001D3561 /* HowToPlay.swift in Sources */,
@@ -462,6 +497,7 @@
 				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
+				AC5D9EBA2A7A7B2700F3B519 /* PairSet.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
 				ACB061372A72392200D31CCF /* MainView.swift in Sources */,
 				035FABBB2A78405D009D1FED /* DartScene.swift in Sources */,
@@ -671,6 +707,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC5D9EBD2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC5D9EBE2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodel */,
+			);
+			currentVersion = AC5D9EBE2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodel */;
+			path = CoreDataContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ACB061102A72386300D31CCF /* Project object */;
 }

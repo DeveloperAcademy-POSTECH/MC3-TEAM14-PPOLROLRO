@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ShoongApp: App {
     // Template 내용작성을 위한 Viewmodel
-        @StateObject var templatesEditorViewModel = TemplatesEditorViewModel()
+    @StateObject var templateEditViewModel = TemplateEditViewModel()
     
     init() {
         Font.registerFonts()
@@ -28,7 +28,7 @@ struct ShoongApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(templatesEditorViewModel)
+                .environmentObject(templateEditViewModel)
         }
     }
 }

@@ -20,6 +20,11 @@
 		1A8982982A7928810004A618 /* TemplateSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */; };
 		1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A931C2C2A73EEC500C12D28 /* ResultView.swift */; };
 		1A983A872A797A9300E5CF84 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983A862A797A9300E5CF84 /* SplashView.swift */; };
+		1A983AAE2A7A91C500E5CF84 /* TemplateEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AAD2A7A91C500E5CF84 /* TemplateEditView.swift */; };
+		1A983AB02A7A91E500E5CF84 /* TemplateEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AAF2A7A91E500E5CF84 /* TemplateEditer.swift */; };
+		1A983AB22A7A920000E5CF84 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AB12A7A920000E5CF84 /* ColorPicker.swift */; };
+		1A983AB42A7A921400E5CF84 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AB32A7A921400E5CF84 /* TextModel.swift */; };
+		1A983AB62A7A924200E5CF84 /* TemplateEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AB52A7A924200E5CF84 /* TemplateEditViewModel.swift */; };
 		1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA311892A77A1C700F7FF75 /* StorageView.swift */; };
 		1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */; };
 		1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */; };
@@ -29,11 +34,6 @@
 		1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A62A73A16B00923F2F /* InteractionCardView.swift */; };
 		1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A92A73A17D00923F2F /* InteractionSelectView.swift */; };
 		1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161AB2A73A1C000923F2F /* ToggleStyle.swift */; };
-		1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161AF2A73A5B200923F2F /* SelectedTemplateView.swift */; };
-		1AF161B22A73A5CB00923F2F /* TemplatesEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B12A73A5CB00923F2F /* TemplatesEditorView.swift */; };
-		1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B32A73A62400923F2F /* TextColorPickerView.swift */; };
-		1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */; };
-		1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161B72A73A67E00923F2F /* TextEditorView.swift */; };
 		1AF161BD2A73A86700923F2F /* TemplateCrumpleView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */; };
 		1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */; };
 		1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */; };
@@ -46,7 +46,6 @@
 		ACB061202A72386400D31CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB0611F2A72386400D31CCF /* Assets.xcassets */; };
 		ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB061222A72386400D31CCF /* Preview Assets.xcassets */; };
 		ACB061372A72392200D31CCF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061362A72392200D31CCF /* MainView.swift */; };
-		ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061382A723B5100D31CCF /* TextBoxModel.swift */; };
 		ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */; };
 		ACB0613F2A723C1200D31CCF /* DartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0613E2A723C1200D31CCF /* DartView.swift */; };
 		ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */; };
@@ -73,6 +72,11 @@
 		1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSelectViewModel.swift; sourceTree = "<group>"; };
 		1A931C2C2A73EEC500C12D28 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1A983A862A797A9300E5CF84 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		1A983AAD2A7A91C500E5CF84 /* TemplateEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateEditView.swift; sourceTree = "<group>"; };
+		1A983AAF2A7A91E500E5CF84 /* TemplateEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateEditer.swift; sourceTree = "<group>"; };
+		1A983AB12A7A920000E5CF84 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		1A983AB32A7A921400E5CF84 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModel.swift; sourceTree = "<group>"; };
+		1A983AB52A7A924200E5CF84 /* TemplateEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateEditViewModel.swift; sourceTree = "<group>"; };
 		1AA311892A77A1C700F7FF75 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pinSound.mp3; sourceTree = "<group>"; };
 		1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ballSound.mp3; sourceTree = "<group>"; };
@@ -84,11 +88,6 @@
 		1AF161A92A73A17D00923F2F /* InteractionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionSelectView.swift; sourceTree = "<group>"; };
 		1AF161AB2A73A1C000923F2F /* ToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyle.swift; sourceTree = "<group>"; };
 		1AF161AD2A73A26B00923F2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		1AF161AF2A73A5B200923F2F /* SelectedTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTemplateView.swift; sourceTree = "<group>"; };
-		1AF161B12A73A5CB00923F2F /* TemplatesEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorView.swift; sourceTree = "<group>"; };
-		1AF161B32A73A62400923F2F /* TextColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorPickerView.swift; sourceTree = "<group>"; };
-		1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDragGestureView.swift; sourceTree = "<group>"; };
-		1AF161B72A73A67E00923F2F /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
 		1AF161BC2A73A86700923F2F /* TemplateCrumpleView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView1.swift; sourceTree = "<group>"; };
 		1AF161BE2A73A86E00923F2F /* TemplateCrumpleView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView2.swift; sourceTree = "<group>"; };
 		1AF161C02A73A87500923F2F /* TemplateCrumpleView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrumpleView3.swift; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 		ACB0611F2A72386400D31CCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACB061222A72386400D31CCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ACB061362A72392200D31CCF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		ACB061382A723B5100D31CCF /* TextBoxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxModel.swift; sourceTree = "<group>"; };
 		ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesEditorViewModel.swift; sourceTree = "<group>"; };
 		ACB0613E2A723C1200D31CCF /* DartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DartView.swift; sourceTree = "<group>"; };
 		ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotGameScene.swift; sourceTree = "<group>"; };
@@ -172,11 +170,9 @@
 		1AF161AE2A73A59600923F2F /* TemplateEditorView */ = {
 			isa = PBXGroup;
 			children = (
-				1AF161AF2A73A5B200923F2F /* SelectedTemplateView.swift */,
-				1AF161B12A73A5CB00923F2F /* TemplatesEditorView.swift */,
-				1AF161B32A73A62400923F2F /* TextColorPickerView.swift */,
-				1AF161B52A73A64F00923F2F /* TextDragGestureView.swift */,
-				1AF161B72A73A67E00923F2F /* TextEditorView.swift */,
+				1A983AAD2A7A91C500E5CF84 /* TemplateEditView.swift */,
+				1A983AAF2A7A91E500E5CF84 /* TemplateEditer.swift */,
+				1A983AB12A7A920000E5CF84 /* ColorPicker.swift */,
 			);
 			path = TemplateEditorView;
 			sourceTree = "<group>";
@@ -279,6 +275,7 @@
 			children = (
 				ACB0613C2A723BF300D31CCF /* TemplatesEditorViewModel.swift */,
 				1A8982972A7928810004A618 /* TemplateSelectViewModel.swift */,
+				1A983AB52A7A924200E5CF84 /* TemplateEditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,7 +283,7 @@
 		ACB0612B2A72388800D31CCF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061382A723B5100D31CCF /* TextBoxModel.swift */,
+				1A983AB32A7A921400E5CF84 /* TextModel.swift */,
 				1AF1619E2A739E3C00923F2F /* TemplateModel.swift */,
 				1AF161A22A739EEA00923F2F /* Fonts */,
 			);
@@ -457,8 +454,6 @@
 			files = (
 				ACF4B3172A791EF900DE4192 /* SlingShotInteraction.swift in Sources */,
 				1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */,
-				1AF161B22A73A5CB00923F2F /* TemplatesEditorView.swift in Sources */,
-				1AF161B42A73A62400923F2F /* TextColorPickerView.swift in Sources */,
 				1ABEE62B2A79085D0003A3E8 /* Modifier+View.swift in Sources */,
 				1AF161C12A73A87500923F2F /* TemplateCrumpleView3.swift in Sources */,
 				ACB0613D2A723BF300D31CCF /* TemplatesEditorViewModel.swift in Sources */,
@@ -470,24 +465,24 @@
 				1AF161AA2A73A17D00923F2F /* InteractionSelectView.swift in Sources */,
 				AC5D9EBC2A7A7B4000F3B519 /* CoreDataViewModel.swift in Sources */,
 				035FABB72A783FF4009D1FED /* ThrownCount.swift in Sources */,
-				1AF161B62A73A64F00923F2F /* TextDragGestureView.swift in Sources */,
 				ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */,
 				ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */,
 				1A8982982A7928810004A618 /* TemplateSelectViewModel.swift in Sources */,
 				1A931C2D2A73EEC500C12D28 /* ResultView.swift in Sources */,
+				1A983AB22A7A920000E5CF84 /* ColorPicker.swift in Sources */,
+				1A983AB42A7A921400E5CF84 /* TextModel.swift in Sources */,
 				1AF161AC2A73A1C000923F2F /* ToggleStyle.swift in Sources */,
-				ACB061392A723B5100D31CCF /* TextBoxModel.swift in Sources */,
 				035FABBD2A784595009D1FED /* PhysicsCategory.swift in Sources */,
-				1AF161B02A73A5B200923F2F /* SelectedTemplateView.swift in Sources */,
 				AC5D9EBF2A7A7B5C00F3B519 /* CoreDataContainer.xcdatamodeld in Sources */,
 				1A5DC90B2A7795A400E7906E /* BowlingGameScene.swift in Sources */,
 				035FABB92A78401C009D1FED /* SpriteKitContainer.swift in Sources */,
 				034D28032A795B74001D3561 /* HowToPlay.swift in Sources */,
 				ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */,
+				1A983AB02A7A91E500E5CF84 /* TemplateEditer.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
-				1AF161B82A73A67E00923F2F /* TextEditorView.swift in Sources */,
 				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,
 				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
+				1A983AAE2A7A91C500E5CF84 /* TemplateEditView.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				AC5D9EBA2A7A7B2700F3B519 /* PairSet.swift in Sources */,
 				ACB061452A723C3500D31CCF /* BasicView.swift in Sources */,
@@ -495,6 +490,7 @@
 				035FABBB2A78405D009D1FED /* DartScene.swift in Sources */,
 				1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */,
 				1AF161BF2A73A86E00923F2F /* TemplateCrumpleView2.swift in Sources */,
+				1A983AB62A7A924200E5CF84 /* TemplateEditViewModel.swift in Sources */,
 				1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */,
 				ACB0611C2A72386300D31CCF /* ShoongApp.swift in Sources */,
 			);

@@ -15,6 +15,7 @@ struct HowToPlay: View {
         ZStack {
             Rectangle()
                 .ignoresSafeArea()
+                .foregroundColor(.black)
                 .opacity(0.5)
             VStack(spacing: 18) {
                 Image(playImageName)

@@ -36,5 +36,7 @@ extension Color {
     // 인터랙션 내부 컴포넌트 색
     static let interactionGray = Color("interactionGray")
     static let guageOrange = Color("guageOrange")
+    static let interactionWhiteGray = Color("interactionWhiteGray")
+
 
 }

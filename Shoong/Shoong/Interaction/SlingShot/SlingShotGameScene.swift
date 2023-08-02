@@ -43,6 +43,7 @@ struct SlingShotGameScene: View {
                 .padding(.trailing, 16)
                 .padding(.bottom, 24)
             }
+            .offset(y: 30)
             if isMessagePresented {
                 HowToPlay(playImageName: "slingshotHowToPlay", isMessagePresented: $isMessagePresented)
             }
@@ -67,6 +68,7 @@ struct SlingShotGameScene: View {
                     .font(.custom("SFPro-Semibold", size: 17))
                     .tracking(-0.4)
                     .lineSpacing(20)
+                    .foregroundColor(.black)
             }
         }
     }

@@ -37,9 +37,7 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
     private var gyroData: CMGyroData?
     
     // 햅틱 관련 변수
-    private var engine: CHHapticEngine?
-    private var hapticFeedback = UIImpactFeedbackGenerator(style: .rigid)
-    private var hapticNotification = UINotificationFeedbackGenerator()
+    private var hapticManager: HapticManager?
     
     // 효과음 관련 변수
     private var collisionSoundPlayer: AVAudioPlayer?
@@ -185,9 +183,12 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
     
     // MARK: - 충돌 관련 메서드
     func didBegin(_ contact: SKPhysicsContact) {
+        hapticManager = HapticManager()
+
         let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         if contactMask == 1 | 2 {
-            self.playHapticFeedback()
+//            self.playHapticFeedback()
+            hapticManager?.playHaptic()
             self.playCollisionSound()
             self.endingGame()
             
@@ -202,28 +203,6 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
         let scale = SKAction.scale(to: 0.0001, duration: 0.24)
         let remove = SKAction.removeFromParent()
         return SKAction.sequence([move, scale, remove])
-    }
-    
-    // MARK: - 햅틱 관련 메서드
-    private func playHapticFeedback() {
-        do {
-            engine = try CHHapticEngine()
-            try engine?.start()
-        } catch {
-            print("Error starting the haptic engine: \(error)")
-        }
-        
-        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1.0)
-        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 1.0)
-        let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 0)
-        
-        do {
-            let pattern = try CHHapticPattern(events: [event], parameters: [])
-            let player = try engine?.makePlayer(with: pattern)
-            try player?.start(atTime: 0)
-        } catch {
-            print("Error playing haptic feedback: \(error)")
-        }
     }
     
     // MARK: - 소리 관련 메서드

@@ -23,9 +23,6 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
     let scoreLabel = SKLabelNode(fontNamed: "Helvetica")
     var score = 0
 
-    // Haptic feedback generators
-    let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
-
     //sound Option
     let sound = SKAction.playSoundFileNamed("SlingShotBrokenSound.mp3", waitForCompletion: false)
 
@@ -37,6 +34,8 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
         static let Company: UInt32 = 4
 
     }
+    // 햅틱 관련 변수
+    private var hapticManager: HapticManager?
 
 
 // 선택할 물체(node)를 위한 변수 , 모든 터치에서 접근 가능해야하므로 전역변수
@@ -175,7 +174,7 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
     }
 
     func didBegin(_ contact: SKPhysicsContact) {
-
+        hapticManager = HapticManager()
         let collisionObject = contact.bodyA.categoryBitMask == PhysicsCategory.Company ? contact.bodyB : contact.bodyA
 
 
@@ -184,8 +183,8 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
             contact.bodyA.node?.removeFromParent()
             contact.bodyB.node?.removeFromParent()
 
-            // Haptic feedback Trigger
-            impactFeedbackGenerator.impactOccurred()
+            // 햅틱 플레이
+            hapticManager?.playHaptic()
 
             //충돌 시 불꽃 효과 추가
             let fireParticle = SKEmitterNode(fileNamed: "FireParticle")

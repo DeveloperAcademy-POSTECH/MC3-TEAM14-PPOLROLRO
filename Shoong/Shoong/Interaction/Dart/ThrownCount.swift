@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ThrownCount: View {
+    let count: Int
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
@@ -16,7 +18,7 @@ struct ThrownCount: View {
             VStack {
                 Text("날린 사직서 갯수")
                     .font(.custom("SFPro-Regular", size: 11))
-                Text("0")
+                Text("\(count)")
                     .font(.custom("SFPro-Semibold", size: 15))
             }
         }
@@ -25,6 +27,6 @@ struct ThrownCount: View {
 
 struct ThrownCount_Previews: PreviewProvider {
     static var previews: some View {
-        ThrownCount()
+        ThrownCount(count: 3)
     }
 }

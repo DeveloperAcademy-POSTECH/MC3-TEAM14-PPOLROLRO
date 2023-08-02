@@ -13,21 +13,11 @@ struct TemplatesEditorView: View {
     @State private var dragOffset = CGSize.zero
     
     var body: some View {
-        ZStack {
-            Image("PartiallyEditableTemplate0")
-                .resizable()
-                .scaledToFit()
-                .frame(width: UIScreen.main.bounds.width * 0.9)
-                .zIndex(0)
-            
-            ForEach(model.textBoxes) { Box in
-                TextDragGesture(position: $position, dragOffset: $dragOffset, textBox: Box)
-                    .environmentObject(model)
-                    .offset(
-                        x: max(-130, min(130, position.width + dragOffset.width)),
-                        y: max(-50, min(400, position.height + dragOffset.height))
-                    )
-                    .zIndex(1)
+        ZStack{
+            // textBoxes에 있는 글자들 1개씩 Box로 꺼내서 화면에 표시
+            ForEach(templatesEditorViewModel.textBoxes) { Box in
+//                TextDragGestureView(textBox: Box)
+//                .shadow(color: .black, radius: 5,x: 1,y: 1)
             }
         }
     }

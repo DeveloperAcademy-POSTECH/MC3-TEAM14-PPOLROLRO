@@ -6,10 +6,30 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct BowlingView: View {
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+
+    var myscene: SKScene {
+
+        let scene = BowlingGameScene()
+
+        scene.size = CGSize(width: screenWidth, height: screenHeight)
+        scene.scaleMode = .fill
+        scene.backgroundColor = .gray
+
+        return scene
+
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        SpriteView(scene: myscene)
+            .frame(width: screenWidth, height: screenHeight)
+            .edgesIgnoringSafeArea(.all)
+
     }
 }
 

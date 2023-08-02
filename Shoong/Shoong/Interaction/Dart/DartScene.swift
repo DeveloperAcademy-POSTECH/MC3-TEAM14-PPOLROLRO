@@ -14,7 +14,8 @@ import SwiftUI
 // SKPhysicsContactDelegate : 충돌 감지에 필요한 프로토콜
 final class DartScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     @Published var throwingCount : Int = 0
-    
+    @Published var randomGuage : CGFloat = 0
+
     // 화면 관련 변수
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height

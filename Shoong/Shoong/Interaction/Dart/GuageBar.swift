@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct GuageBar: View {
+    let randomGuage = CGFloat.random(in: 0...330)
+
     var body: some View {
-        let randomGuage = CGFloat.random(in: 0...330)
-        
         ZStack() {
             RoundedRectangle(cornerRadius: 5)
                 .frame(width: 42, height: 358)

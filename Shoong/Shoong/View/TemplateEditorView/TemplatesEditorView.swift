@@ -16,8 +16,9 @@ struct TemplatesEditorView: View {
         ZStack{
             // textBoxes에 있는 글자들 1개씩 Box로 꺼내서 화면에 표시
             ForEach(templatesEditorViewModel.textBoxes) { Box in
-                TextDragGestureView(textBox: Box)
-                .shadow(color: .black, radius: 5,x: 1,y: 1)}
+//                TextDragGestureView(textBox: Box)
+//                .shadow(color: .black, radius: 5,x: 1,y: 1)
+            }
         }
     }
 }

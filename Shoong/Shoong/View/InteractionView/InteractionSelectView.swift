@@ -49,7 +49,8 @@ struct InteractionSelectView: View {
                     ScrollView {
                         ForEach(interactionNameArr, id: \.self) { name in
                             NavigationLink {
-                                ResultView(firstNaviLinkActive: $firstNaviLinkActive)
+                                DartView()
+                                // ResultView(firstNaviLinkActive: $firstNaviLinkActive)
                             } label: {
                                 InteractionCardView(width: width, interactionName: name)
                                     .padding(.bottom, 10)

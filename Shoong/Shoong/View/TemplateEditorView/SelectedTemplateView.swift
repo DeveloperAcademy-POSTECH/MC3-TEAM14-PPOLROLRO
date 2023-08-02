@@ -18,6 +18,11 @@ struct SelectedTemplateView: View {
         ZStack{
             Color.backGroundBeige.ignoresSafeArea()
             
+            if templatesEditorViewModel.editButtonClicked {
+                TextEditorView()
+                    .zIndex(1)
+            }
+            
             VStack {
                 ZStack {
                     VStack {
@@ -72,17 +77,10 @@ struct SelectedTemplateView: View {
                     }
                     .ignoresSafeArea()
                     
-                    // 하얀색으로 들어가 있는 부분이 TemplatesEditorView
                     TemplatesEditorView()
-                        .frame(width: 350, height: 500)
-                        .background()
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width * 0.9)
                 }
-            }
-            
-            // Click me 버튼을 누르면 Text를 수정할 수 있는 TextEditorView
-            // 검은 반투명 layer View임
-            if templatesEditorViewModel.editButtonClicked {
-                TextEditorView()
             }
         }
         .navigationBarBackButtonHidden()

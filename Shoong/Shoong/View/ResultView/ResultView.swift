@@ -144,7 +144,7 @@ struct CardView: View {
 struct randomCardCreateView: View {
     @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     var cardBackArr = ["cardBack1", "cardBack2", "cardBack3", "cardBack4"]
-    var cardCharacterArr = ["character1", "character2", "character3", "character4"]
+    var cardCharacterArr = ["character1", "character2", "character3", "character4", "character5", "character6", "character7", "character8", "character9", "character10", "character11", "character12", "character13", "character14", "character15", "character16"]
     @State private var randomCardBack: String = "cardBack1"
     @Binding var backGroundColor: Color
     @State private var fontColor: Color = .blue

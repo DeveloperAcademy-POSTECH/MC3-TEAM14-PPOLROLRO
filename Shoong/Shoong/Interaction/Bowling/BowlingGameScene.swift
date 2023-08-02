@@ -12,10 +12,14 @@ import CoreHaptics
 import AVFoundation
 
 class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
+    // 화면 관련 변수
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
     // 노드 관련 변수
     private var ballNode: SKSpriteNode!
     private var pins: [SKSpriteNode] = []
-    let aspectRatio = SKTexture(imageNamed: "pin.png").size().width / SKTexture(imageNamed: "pin.png").size().height
+    let aspectRatio = SKTexture(imageNamed: "black_building_01.png").size().width / SKTexture(imageNamed: "black_building_01.png").size().height
     private var leftBorder: SKSpriteNode!
     private var rightBorder: SKSpriteNode!
     
@@ -64,8 +68,8 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func createPlayer() {
-        ballNode = SKSpriteNode(imageNamed: "ball")
-        ballNode.position = CGPoint(x: 0, y: -frame.height / 3 - 100)
+        ballNode = SKSpriteNode(imageNamed: "jiggy_crouching_00")
+        ballNode.position = CGPoint(x: screenWidth / 2 , y: 100)
         ballNode.size = CGSize(width: 80, height: 80)
         ballNode.physicsBody = SKPhysicsBody(circleOfRadius: ballNode.size.width / 2)
         ballNode.physicsBody?.isDynamic = true
@@ -93,16 +97,16 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
         addChild(rightBorder)
         
         let pinPositions: [CGPoint] = [
-            .init(x: 0, y: frame.height / 4),
-            .init(x: -60, y: frame.height / 4 + 70),
-            .init(x: 60, y: frame.height / 4 + 70),
-            .init(x: 0, y: frame.height / 4 + 140),
-            .init(x: 120, y: frame.height / 4 + 140),
-            .init(x: -120, y: frame.height / 4 + 140),
-            .init(x: -60, y: frame.height / 4 + 210),
-            .init(x: 60, y: frame.height / 4 + 210),
-            .init(x: -180, y: frame.height / 4 + 210),
-            .init(x: 180, y: frame.height / 4 + 210)
+            .init(x: screenWidth / 2, y: screenHeight / 3 * 2),
+            .init(x: screenWidth / 2 - 25, y: screenHeight / 3 * 2 + 45),
+            .init(x: screenWidth / 2 + 25, y: screenHeight / 3 * 2 + 45),
+            .init(x: screenWidth / 2 , y: screenHeight / 3 * 2 + 90),
+            .init(x: screenWidth / 2 + 50, y: screenHeight / 3 * 2 + 90),
+            .init(x: screenWidth / 2 - 50, y: screenHeight / 3 * 2 + 90),
+            .init(x: screenWidth / 2 - 25, y: screenHeight / 3 * 2 + 135),
+            .init(x: screenWidth / 2 + 25, y: screenHeight / 3 * 2 + 135),
+            .init(x: screenWidth / 2 - 75, y: screenHeight / 3 * 2 + 135),
+            .init(x: screenWidth / 2 + 75, y: screenHeight / 3 * 2 + 135)
         ]
         
         for position in pinPositions {
@@ -113,9 +117,9 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func createPin(position: CGPoint) -> SKSpriteNode {
-        let pin = SKSpriteNode(imageNamed: "pin")
-        pin.size = CGSize(width: 60 * aspectRatio, height: 60)
-        pin.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50 * aspectRatio, height: 50))
+        let pin = SKSpriteNode(imageNamed: "black_building_01.png")
+        pin.size = CGSize(width: pin.size.width, height: pin.size.height)
+        pin.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: pin.size.width - 10, height: pin.size.height - 10))
         pin.physicsBody?.affectedByGravity = false
         pin.physicsBody?.isDynamic = true
         pin.physicsBody?.density = 2.0

@@ -23,8 +23,6 @@
 		1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA311892A77A1C700F7FF75 /* StorageView.swift */; };
 		1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */; };
 		1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */; };
-		1AA311912A77A7A500F7FF75 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311902A77A7A500F7FF75 /* ball.png */; };
-		1AA311932A77A7AB00F7FF75 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA311922A77A7AB00F7FF75 /* pin.png */; };
 		1ABEE62B2A79085D0003A3E8 /* Modifier+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEE62A2A79085D0003A3E8 /* Modifier+View.swift */; };
 		1AF1619F2A739E3C00923F2F /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1619E2A739E3C00923F2F /* TemplateModel.swift */; };
 		1AF161A12A739EB900923F2F /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF161A02A739EB900923F2F /* Extension+Font.swift */; };
@@ -78,8 +76,6 @@
 		1AA311892A77A1C700F7FF75 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pinSound.mp3; sourceTree = "<group>"; };
 		1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ballSound.mp3; sourceTree = "<group>"; };
-		1AA311902A77A7A500F7FF75 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
-		1AA311922A77A7AB00F7FF75 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		1ABEE62A2A79085D0003A3E8 /* Modifier+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Modifier+View.swift"; sourceTree = "<group>"; };
 		1AF1619E2A739E3C00923F2F /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
 		1AF161A02A739EB900923F2F /* Extension+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
@@ -150,8 +146,6 @@
 		1AA3118F2A77A64200F7FF75 /* BowlingAsset */ = {
 			isa = PBXGroup;
 			children = (
-				1AA311922A77A7AB00F7FF75 /* pin.png */,
-				1AA311902A77A7A500F7FF75 /* ball.png */,
 				1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */,
 				1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */,
 			);
@@ -444,13 +438,11 @@
 			files = (
 				ACB061232A72386400D31CCF /* Preview Assets.xcassets in Resources */,
 				035FABBF2A784A7F009D1FED /* dartSound.m4a in Resources */,
-				1AA311912A77A7A500F7FF75 /* ball.png in Resources */,
 				1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */,
 				ACF4B3202A7920CA00DE4192 /* Assets.xcassets in Resources */,
 				035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */,
 				ACF4B3222A7920F700DE4192 /* BuildingsBrokenSound.mp3 in Resources */,
 				ACF4B31F2A7920CA00DE4192 /* FireParticle.sks in Resources */,
-				1AA311932A77A7AB00F7FF75 /* pin.png in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 				1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */,
 			);

@@ -20,8 +20,8 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
     private var ballNode: SKSpriteNode!
     private var pins: [SKSpriteNode] = []
     let aspectRatio = SKTexture(imageNamed: "black_building_01.png").size().width / SKTexture(imageNamed: "black_building_01.png").size().height
-    private var leftBorder: SKSpriteNode!
-    private var rightBorder: SKSpriteNode!
+    private var leftBorder: SKShapeNode!
+    private var rightBorder: SKShapeNode!
     
     // 전체 게임 관련 변수
     private var isGameOver = false
@@ -81,19 +81,23 @@ class BowlingGameScene: SKScene, SKPhysicsContactDelegate {
         addChild(ballNode)
         
         // 영역 왼쪽 설정
-        leftBorder = SKSpriteNode()
-        leftBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: UIScreen.main.bounds.height))
+        leftBorder = SKShapeNode()
+        leftBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: screenHeight))
         leftBorder.physicsBody?.affectedByGravity = false
         leftBorder.physicsBody?.isDynamic = false
-        leftBorder.position = .init(x: UIScreen.main.bounds.width / 2 + 100, y: 0)
+        leftBorder.position = .init(x: 10, y: screenHeight / 2)
+        leftBorder.strokeColor = .red
+
         addChild(leftBorder)
 
         // 영역 오른쪽 설정
-        rightBorder = SKSpriteNode()
-        rightBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: UIScreen.main.bounds.height))
+        rightBorder = SKShapeNode()
+        rightBorder.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: screenHeight))
         rightBorder.physicsBody?.affectedByGravity = false
         rightBorder.physicsBody?.isDynamic = false
-        rightBorder.position = .init(x: -UIScreen.main.bounds.width / 2 - 100, y: 0)
+        rightBorder.position = .init(x: screenWidth - 10, y: screenHeight / 2)
+        leftBorder.strokeColor = .blue
+
         addChild(rightBorder)
         
         let pinPositions: [CGPoint] = [

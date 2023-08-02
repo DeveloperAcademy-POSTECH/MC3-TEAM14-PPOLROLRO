@@ -21,7 +21,9 @@ struct HowToPlay: View {
                 Button(action: {
                     isMessagePresented = false
                 }, label: {
-                    Image("xmark")})
+                    Image("xmark")
+                        .frame(width: 50, height: 50)
+                })
             }
         }
     }

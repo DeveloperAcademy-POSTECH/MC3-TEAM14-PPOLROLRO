@@ -8,10 +8,10 @@
 import SwiftUI
 
 class TemplateSelectViewModel: ObservableObject {
-    @Published var templates: [[String]] = [["FixedTemplate0", "FixedTemplate1", "FixedTemplate2"],
-                                            ["PartiallyEditableTemplate0", "PartiallyEditableTemplate1"],
-                                            ["FullyEditableTemplate0"],
-                                            [], []]
+    @Published var templates: [[String]] = [["FixedTemplate0", "PartiallyEditableTemplate0", "FullyEditableTemplate0"],
+                                            ["FixedTemplate0", "FixedTemplate1", "FixedTemplate2"],
+                                            ["PartiallyEditableTemplate0", "PartiallyEditableTemplate1", "PartiallyEditableTemplate2", "PartiallyEditableTemplate3", "PartiallyEditableTemplate4"],
+                                            ["FullyEditableTemplate0", "FullyEditableTemplate1"], ["FullyEditableTemplate0"]]
     
     @Published var isOpenArr: [Bool] = [false, true, false, false, false]
     @Published var yAxisArr: [Double] = [0, 0, UIScreen.main.bounds.height * 0.46,

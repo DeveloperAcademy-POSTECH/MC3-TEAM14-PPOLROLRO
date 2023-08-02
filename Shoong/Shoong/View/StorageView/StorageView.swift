@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct StorageView: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
-    var cards: [String] = ["testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage"]
+//    var cards: [String] = ["testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage", "testImage"]
     @State private var width: CGFloat = UIScreen.main.bounds.width - 20
     @State private var height: CGFloat = UIScreen.main.bounds.height
     @State private var yAxis: CGFloat = 16
@@ -29,8 +30,8 @@ struct StorageView: View {
             .ignoresSafeArea()
             .zIndex(20)
             
-            ForEach(0..<cards.count) { index in
-                CardStackView(mainIndex: mainIndex, index: index, card: cards[index], width: width)
+            ForEach(0..<coreDataViewModel.pairsSavedEntities.count) { index in
+                CardStackView(mainIndex: mainIndex, index: index, card: coreDataViewModel.pairsSavedEntities[index].cardImageD, width: width)
                     .offset(y: yAxis + CGFloat(index * (index - 50)) < 17 ? yAxis + CGFloat(index * (index - 50)) : height * 0.66)
                     .animation(.easeInOut(duration: 0.6), value: yAxis)
                     .opacity(yAxis + CGFloat(index * (index - 50)) < 70 ? 1 : 0)
@@ -38,7 +39,7 @@ struct StorageView: View {
             .gesture(
                 DragGesture()
                     .onEnded({ gesture in
-                        if gesture.translation.height > 0 && yAxis < 16 + CGFloat((cards.count - 1) * 40) {
+                        if gesture.translation.height > 0 && yAxis < 16 + CGFloat((coreDataViewModel.pairsSavedEntities.count - 1) * 40) {
                             yAxis += 40
                             width += 30
                             mainIndex += 1
@@ -84,11 +85,11 @@ struct CardStackView: View {
     @State private var angle: Double = 0.0
     var mainIndex: Int
     var index: Int
-    var card: String
+    var card: Data
     var width: CGFloat
     
     var body: some View {
-        Image(card)
+        Image(uiImage: UIImage(data: card) ?? UIImage())
             .resizable()
             .scaledToFit()
             .frame(width: width - 40 - CGFloat(index * 30))

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InteractionSelectView: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var isHaptic: Bool = true
     @Binding var firstNaviLinkActive: Bool
@@ -51,13 +52,17 @@ struct InteractionSelectView: View {
                             NavigationLink {
                                 switch name {
                                 case "사직서 날리기":
-                                    BasicView()
+                                    BasicView(firstNaviLinkActive: $firstNaviLinkActive)
+                                        .environmentObject(coreDataViewModel)
                                 case "볼링 던지기":
-                                    BowlingView()
+                                    BowlingView(firstNaviLinkActive: $firstNaviLinkActive)
+                                        .environmentObject(coreDataViewModel)
                                 case "다트 던지기":
-                                    DartView()
+                                    DartView(firstNaviLinkActive: $firstNaviLinkActive)
+                                        .environmentObject(coreDataViewModel)
                                 default:
-                                    SlingShotGameScene()
+                                    SlingShotGameScene(firstNaviLinkActive: $firstNaviLinkActive)
+                                        .environmentObject(coreDataViewModel)
                                 }
                             } label: {
                                 InteractionCardView(width: width, interactionName: name)

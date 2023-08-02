@@ -9,8 +9,12 @@ import SwiftUI
 import SpriteKit
 
 struct BowlingView: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var isMessagePresented = true
+    @State private var isNavi: Bool = false
+    
+    @Binding var firstNaviLinkActive: Bool
     
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
@@ -35,6 +39,10 @@ struct BowlingView: View {
             if isMessagePresented {
                 HowToPlay(playImageName: "bowlingHowToPlay", isMessagePresented: $isMessagePresented)
             }
+            NavigationLink(destination: ResultView(firstNaviLinkActive: $firstNaviLinkActive).environmentObject(coreDataViewModel), isActive: $isNavi) {
+                Text(".")
+                    .opacity(0)
+            }
         }
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -51,11 +59,23 @@ struct BowlingView: View {
                     .foregroundColor(.black)
                 }
             }
+            
             ToolbarItem(placement: .principal) {
                 Text("볼링공 던지기")
                     .font(.custom("SFPro-Semibold", size: 17))
                     .tracking(-0.4)
                     .lineSpacing(20)
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    isNavi.toggle()
+                } label: {
+                    Image("gift")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
             }
         }
     }
@@ -63,6 +83,6 @@ struct BowlingView: View {
 
 struct BowlingView_Previews: PreviewProvider {
     static var previews: some View {
-        BowlingView()
+        BowlingView(firstNaviLinkActive: .constant(true))
     }
 }

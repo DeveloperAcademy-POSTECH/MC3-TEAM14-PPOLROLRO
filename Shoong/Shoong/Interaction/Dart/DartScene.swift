@@ -121,9 +121,10 @@ final class DartScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     func createDart() {
         dart = SKSpriteNode(imageNamed: "jiggy_02")
         
+        dart.size = CGSize(width: 43.18, height: 56)
         dart.physicsBody?.affectedByGravity = false
-        dart.position = CGPoint(x: screenWidth / 2, y: 100)
-        dart.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: dart.size.width, height: dart.size.height))
+        dart.position = CGPoint(x: screenWidth / 2, y: 60)
+        dart.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 43, height: 56))
         dart.physicsBody?.categoryBitMask = PhysicsCategory.dart
         dart.physicsBody?.contactTestBitMask = PhysicsCategory.dartboard
         dart.physicsBody?.collisionBitMask = PhysicsCategory.dartboard

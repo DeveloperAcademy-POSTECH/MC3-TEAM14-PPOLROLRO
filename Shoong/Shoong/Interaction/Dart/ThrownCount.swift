@@ -15,7 +15,7 @@ struct ThrownCount: View {
             RoundedRectangle(cornerRadius: 5)
                 .frame(width: 110, height: 60)
                 .foregroundColor(.interactionGray)
-            VStack {
+            VStack(alignment: .leading) {
                 Text("날린 사직서 갯수")
                     .font(.custom("SFPro-Regular", size: 11))
                 Text("\(count)")

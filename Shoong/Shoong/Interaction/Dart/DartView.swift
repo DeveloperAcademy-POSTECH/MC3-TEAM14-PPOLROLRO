@@ -16,7 +16,7 @@ struct DartView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             SpriteKitContainer(scene: dartScene)
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.all)
             ZStack{
                 HStack(alignment: .bottom) {
                     ThrownCount(count: dartScene.throwingCount)
@@ -27,6 +27,7 @@ struct DartView: View {
                 .padding(.trailing, 16)
                 .padding(.bottom, 24)
             }
+            .offset(y: 30)
             if isMessagePresented {
                 HowToPlay(playImageName: "dartHowToPlay", isMessagePresented: $isMessagePresented)
             }
@@ -39,17 +40,19 @@ struct DartView: View {
                 } label: {
                     HStack(spacing: 4) {
                         Image(systemName: "chevron.backward")
-                            .fontWeight(.semibold)
-                        
+                            .font(.custom("SFPro-Semibold", size: 17))
                         Text("뒤로")
+                            .font(.custom("SFPro-Regular", size: 17))
                     }
                     .foregroundColor(.black)
                 }
             }
-            
             ToolbarItem(placement: .principal) {
-                Text("사직서 날리기")
-                    .bold()
+                Text("다트 던지기")
+                    .font(.custom("SFPro-Semibold", size: 17))
+                    .tracking(-0.4)
+                    .lineSpacing(20)
+                    .foregroundColor(.black)
             }
         }
     }

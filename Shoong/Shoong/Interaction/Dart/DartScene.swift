@@ -12,7 +12,8 @@ import SpriteKit
 import SwiftUI
 
 // SKPhysicsContactDelegate : 충돌 감지에 필요한 프로토콜
-final class DartScene: SKScene, SKPhysicsContactDelegate {
+final class DartScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
+    @Published var throwingCount : Int = 0
     
     // 화면 관련 변수
     let screenWidth = UIScreen.main.bounds.width
@@ -165,6 +166,7 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
             darts.last?.physicsBody?.isDynamic = false
             playSound()
             hapticManager?.playHaptic()
+            throwingCount += 1
         }
         
         // 충돌 시 새 다트 생성
@@ -181,6 +183,7 @@ final class DartScene: SKScene, SKPhysicsContactDelegate {
         // 다트가 화면 밖으로 나갔을 때
         if collideBody.categoryBitMask == PhysicsCategory.border {
             print("border!")
+            throwingCount += 1
             darts.popLast()?.removeFromParent()
         }
     }

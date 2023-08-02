@@ -22,6 +22,8 @@ struct ContentView: View {
         } else {
             SplashView()
                 .onAppear {
+                    coreDataViewModel.fetchPairs()
+                    
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         isViewChanger.toggle()
                     }

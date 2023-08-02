@@ -13,6 +13,7 @@ class CoreDataViewModel: ObservableObject {
     @Published var templatesSavedEntities: [TemplatesEntity] = [] //최근을 위한 Template배열
     @Published var pairsSavedEntities: [PairSet] = [] //보관함을 위한 PairSet([Template,Card]) 배열
     @Published var currentCaptureImage: Data = (UIImage(named: "FullyEditableTemplate0")?.pngData())!
+    @Published var currentCaptureCard: Data = (UIImage(named: "FullyEditableTemplate0")?.pngData())!
 
     let container: NSPersistentContainer
     
@@ -58,7 +59,7 @@ class CoreDataViewModel: ObservableObject {
         }
         
         // tempalte저장 entity가져오기
-        // let newTemplate = TemplatesEntity(context: container.viewContext)
+         let newTemplate = TemplatesEntity(context: container.viewContext)
         
         // tempalteView 이미지 rendering
         let renderingtemplateView = ImageRenderer(content: templateImageD)
@@ -69,11 +70,11 @@ class CoreDataViewModel: ObservableObject {
         //tempalteView를 Rendering한다음 UiImage로 변환
         if let TemplateViewUimage = renderingtemplateView.uiImage {
             // UiImage를 data로 변환해서 TemplatesEntity의 templateImageD에 담아주기
-            // newTemplate.templateImageD = TemplateViewUimage.pngData()
+            newTemplate.templateImageD = TemplateViewUimage.pngData()
             currentCaptureImage = TemplateViewUimage.pngData()!
         }
         // data저장
-        //saveData()
+        saveData()
     }
     
     // 3. Temaplte 삭제
@@ -121,37 +122,55 @@ class CoreDataViewModel: ObservableObject {
     }
     
     // 2. Pair(Template,Card) 추가
-    @MainActor //UI update은 main Thread에서 이루어져야해서 @MainActor사용
-    func addPair<V1: View, V2: View>(templateView: V1, CardView: V2, scale: CGFloat) {
-        
-        // PairSet이 있으면서 && PairSet의 개수가 10개 초과면 삭제
-        if !pairsSavedEntities.isEmpty && (pairsSavedEntities.count > 9) {
-            deletePair()
-        }
+//    @MainActor //UI update은 main Thread에서 이루어져야해서 @MainActor사용
+//    func addPair<V1: View, V2: View>(templateView: V1, CardView: V2, scale: CGFloat) {
+//
+//        // PairSet이 있으면서 && PairSet의 개수가 10개 초과면 삭제
+//        if !pairsSavedEntities.isEmpty && (pairsSavedEntities.count > 9) {
+//            deletePair()
+//        }
+//
+//        let newPair = PairEntity(context: container.viewContext)
+//
+//        // 각 화면 rendering
+//        let renderingTemplateView = ImageRenderer(content: templateView)
+//        let renderingCardView = ImageRenderer(content: CardView)
+//
+//        // 화질 문제로 무조건 rendering을 원하는 뷰에 @Environment(\.displayScale) var displayScale 를 넣어주고 displayscale을 addPair(scale:)로 넣어줘야 화질의 문제가 없음
+//        renderingTemplateView.scale = scale
+//        renderingCardView.scale = scale
+//
+//        // renering한 화면 UiImage로 변환
+//        if let templateViewUimage = renderingTemplateView.uiImage, let CardViewUimage = renderingCardView.uiImage  {
+//            // UiImage들을 data로 변환하여 각 Attribute에 할당
+//            newPair.templateImageD = templateViewUimage.pngData()
+//            newPair.cardImageD = CardViewUimage.pngData()
+//        }
+//
+//        // 변경내용 저장
+//        savePairData()
+//    }
+    
+    // 2. Temaplte 추가
+    @MainActor  //UI update은 main Thread에서 이루어져야해서 @MainActor사용
+    func addCard<V: View>(cardView: V, scale: CGFloat){
         
         let newPair = PairEntity(context: container.viewContext)
         
-        // 각 화면 rendering
-        let renderingTemplateView = ImageRenderer(content: templateView)
-        let renderingCardView = ImageRenderer(content: CardView)
+        let renderingCardView = ImageRenderer(content: cardView)
         
-        // 화질 문제로 무조건 rendering을 원하는 뷰에 @Environment(\.displayScale) var displayScale 를 넣어주고 displayscale을 addPair(scale:)로 넣어줘야 화질의 문제가 없음
-        renderingTemplateView.scale = scale
         renderingCardView.scale = scale
         
-        // renering한 화면 UiImage로 변환
-        if let templateViewUimage = renderingTemplateView.uiImage, let CardViewUimage = renderingCardView.uiImage  {
-            // UiImage들을 data로 변환하여 각 Attribute에 할당
-            newPair.templateImageD = templateViewUimage.pngData()
-            newPair.cardImageD = CardViewUimage.pngData()
-            
+        if let cardViewUimage = renderingCardView.uiImage {
+            currentCaptureCard = cardViewUimage.pngData()!
         }
         
-        // 변경내용 저장
+        newPair.cardImageD = currentCaptureCard
+        newPair.templateImageD = currentCaptureImage
+        
+        // data저장
         savePairData()
     }
-    
-    
     
 
     // 3. Pair(Template,Card) 삭제

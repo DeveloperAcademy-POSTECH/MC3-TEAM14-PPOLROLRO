@@ -10,8 +10,11 @@ import UIKit
 import SpriteKit
 
 struct SlingShotGameScene: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var isMessagePresented = true
+    @State private var isNavi: Bool = false
+    @Binding var firstNaviLinkActive: Bool
 
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
@@ -47,6 +50,10 @@ struct SlingShotGameScene: View {
             if isMessagePresented {
                 HowToPlay(playImageName: "slingshotHowToPlay", isMessagePresented: $isMessagePresented)
             }
+            NavigationLink(destination: ResultView(firstNaviLinkActive: $firstNaviLinkActive).environmentObject(coreDataViewModel), isActive: $isNavi) {
+                Text(".")
+                    .opacity(0)
+            }
         }
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -63,6 +70,7 @@ struct SlingShotGameScene: View {
                     .foregroundColor(.black)
                 }
             }
+            
             ToolbarItem(placement: .principal) {
                 Text("새총 쏘기")
                     .font(.custom("SFPro-Semibold", size: 17))
@@ -70,12 +78,23 @@ struct SlingShotGameScene: View {
                     .lineSpacing(20)
                     .foregroundColor(.black)
             }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    isNavi.toggle()
+                } label: {
+                    Image("gift")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
+            }
         }
     }
 }
 
 struct SlingShotGameScene_Previews: PreviewProvider {
     static var previews: some View {
-        SlingShotGameScene()
+        SlingShotGameScene(firstNaviLinkActive: .constant(true))
     }
 }

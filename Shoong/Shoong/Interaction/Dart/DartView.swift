@@ -9,9 +9,12 @@ import SwiftUI
 import SpriteKit
 
 struct DartView: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var isMessagePresented = true
     @StateObject private var dartScene = DartScene()
+    @State private var isNavi: Bool = false
+    @Binding var firstNaviLinkActive: Bool
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -31,6 +34,10 @@ struct DartView: View {
             if isMessagePresented {
                 HowToPlay(playImageName: "dartHowToPlay", isMessagePresented: $isMessagePresented)
             }
+            NavigationLink(destination: ResultView(firstNaviLinkActive: $firstNaviLinkActive).environmentObject(coreDataViewModel), isActive: $isNavi) {
+                Text(".")
+                    .opacity(0)
+            }
         }
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -47,6 +54,7 @@ struct DartView: View {
                     .foregroundColor(.black)
                 }
             }
+            
             ToolbarItem(placement: .principal) {
                 Text("다트 던지기")
                     .font(.custom("SFPro-Semibold", size: 17))
@@ -54,12 +62,23 @@ struct DartView: View {
                     .lineSpacing(20)
                     .foregroundColor(.black)
             }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    isNavi.toggle()
+                } label: {
+                    Image("gift")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
+            }
         }
     }
 }
 
 struct DartView_Previews: PreviewProvider {
     static var previews: some View {
-        DartView()
+        DartView(firstNaviLinkActive: .constant(true))
     }
 }

@@ -77,6 +77,7 @@ struct TemplateCrumpleView1: View {
                         HStack {
                             NavigationLink {
                                 InteractionSelectView(firstNaviLinkActive: $firstNaviLinkActive)
+                                    .environmentObject(coreDataViewModel)
                             } label: {
                                 Text("건너뛰기")
                                     .font(.custom("SFPro-Regular", size: 17))
@@ -87,6 +88,7 @@ struct TemplateCrumpleView1: View {
                             if isScriptCheck {
                                 NavigationLink {
                                     TemplateCrumpleView2(firstNaviLinkActive: $firstNaviLinkActive)
+                                        .environmentObject(coreDataViewModel)
                                 } label: {
                                     Text("다음")
                                         .font(.custom("SFPro-Bold", size: 17))

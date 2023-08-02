@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TemplateCrumpleView3: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
     
     @Binding var firstNaviLinkActive: Bool
@@ -55,6 +56,7 @@ struct TemplateCrumpleView3: View {
                         HStack {
                             NavigationLink {
                                 InteractionSelectView(firstNaviLinkActive: $firstNaviLinkActive)
+                                    .environmentObject(coreDataViewModel)
                             } label: {
                                 Text("건너뛰기")
                                     .font(.custom("SFPro-Regular", size: 17))
@@ -64,6 +66,7 @@ struct TemplateCrumpleView3: View {
                             
                             NavigationLink {
                                 TemplateCrumpleView4(firstNaviLinkActive: $firstNaviLinkActive)
+                                    .environmentObject(coreDataViewModel)
                             } label: {
                                 Text("다음")
                                     .font(.custom("SFPro-Bold", size: 17))

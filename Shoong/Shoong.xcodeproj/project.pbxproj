@@ -25,6 +25,7 @@
 		1A983AB22A7A920000E5CF84 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AB12A7A920000E5CF84 /* ColorPicker.swift */; };
 		1A983AB42A7A921400E5CF84 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AB32A7A921400E5CF84 /* TextModel.swift */; };
 		1A983AB62A7A924200E5CF84 /* TemplateEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A983AB52A7A924200E5CF84 /* TemplateEditViewModel.swift */; };
+		1A983AB82A7AF05700E5CF84 /* basicInteractionSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1A983AB72A7AF05700E5CF84 /* basicInteractionSound.mp3 */; };
 		1AA3118A2A77A1C700F7FF75 /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA311892A77A1C700F7FF75 /* StorageView.swift */; };
 		1AA3118C2A77A62500F7FF75 /* pinSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */; };
 		1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */; };
@@ -50,7 +51,6 @@
 		ACB061412A723C1E00D31CCF /* SlingShotGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */; };
 		ACB061432A723C2A00D31CCF /* BowlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061422A723C2A00D31CCF /* BowlingView.swift */; };
 		ACB061452A723C3500D31CCF /* BasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061442A723C3500D31CCF /* BasicView.swift */; };
-		ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB061462A723C4300D31CCF /* DirTestView4.swift */; };
 		ACB0614D2A723C6D00D31CCF /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */; };
 		ACF4B3172A791EF900DE4192 /* SlingShotInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4B3162A791EF900DE4192 /* SlingShotInteraction.swift */; };
 		ACF4B31F2A7920CA00DE4192 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACF4B31D2A7920CA00DE4192 /* FireParticle.sks */; };
@@ -76,6 +76,7 @@
 		1A983AB12A7A920000E5CF84 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		1A983AB32A7A921400E5CF84 /* TextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModel.swift; sourceTree = "<group>"; };
 		1A983AB52A7A924200E5CF84 /* TemplateEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateEditViewModel.swift; sourceTree = "<group>"; };
+		1A983AB72A7AF05700E5CF84 /* basicInteractionSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basicInteractionSound.mp3; sourceTree = "<group>"; };
 		1AA311892A77A1C700F7FF75 /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		1AA3118B2A77A62500F7FF75 /* pinSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pinSound.mp3; sourceTree = "<group>"; };
 		1AA3118D2A77A63600F7FF75 /* ballSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ballSound.mp3; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		ACB061402A723C1E00D31CCF /* SlingShotGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotGameScene.swift; sourceTree = "<group>"; };
 		ACB061422A723C2A00D31CCF /* BowlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingView.swift; sourceTree = "<group>"; };
 		ACB061442A723C3500D31CCF /* BasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicView.swift; sourceTree = "<group>"; };
-		ACB061462A723C4300D31CCF /* DirTestView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirTestView4.swift; sourceTree = "<group>"; };
 		ACB0614C2A723C6D00D31CCF /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		ACF4B3162A791EF900DE4192 /* SlingShotInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingShotInteraction.swift; sourceTree = "<group>"; };
 		ACF4B31D2A7920CA00DE4192 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 		ACB061342A7238D600D31CCF /* BasicAssets */ = {
 			isa = PBXGroup;
 			children = (
-				ACB061462A723C4300D31CCF /* DirTestView4.swift */,
+				1A983AB72A7AF05700E5CF84 /* basicInteractionSound.mp3 */,
 			);
 			path = BasicAssets;
 			sourceTree = "<group>";
@@ -436,6 +436,7 @@
 				ACF4B3202A7920CA00DE4192 /* Assets.xcassets in Resources */,
 				035FABB32A783EF3009D1FED /* SF-Pro.ttf in Resources */,
 				ACF4B3222A7920F700DE4192 /* BuildingsBrokenSound.mp3 in Resources */,
+				1A983AB82A7AF05700E5CF84 /* basicInteractionSound.mp3 in Resources */,
 				ACF4B31F2A7920CA00DE4192 /* FireParticle.sks in Resources */,
 				ACB061202A72386400D31CCF /* Assets.xcassets in Resources */,
 				1AA3118E2A77A63600F7FF75 /* ballSound.mp3 in Resources */,
@@ -477,7 +478,6 @@
 				1A983AB02A7A91E500E5CF84 /* TemplateEditer.swift in Sources */,
 				1AF161A72A73A16B00923F2F /* InteractionCardView.swift in Sources */,
 				1AF161C32A73A88200923F2F /* TemplateCrumpleView4.swift in Sources */,
-				ACB061472A723C4300D31CCF /* DirTestView4.swift in Sources */,
 				1A983AAE2A7A91C500E5CF84 /* TemplateEditView.swift in Sources */,
 				ACB0611E2A72386300D31CCF /* ContentView.swift in Sources */,
 				AC5D9EBA2A7A7B2700F3B519 /* PairSet.swift in Sources */,

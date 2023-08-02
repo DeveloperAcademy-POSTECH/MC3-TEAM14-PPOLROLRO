@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     @Environment(\.dismiss) private var dismiss
     @State var backGroundColor: Color = .white
     @State var isTurn: Bool = false
@@ -21,7 +22,8 @@ struct ResultView: View {
             backGroundColor.ignoresSafeArea()
             
             VStack {
-                CardView(backGroundColor: $backGroundColor, isTurn: $isTurn, width: width * 0.9)
+                CardView(isTurn: $isTurn, backGroundColor: $backGroundColor, width: width * 0.9)
+                    .environmentObject(coreDataViewModel)
                     .frame(height: height * 0.6)
                     .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0))
                     .animation(.easeInOut(duration: 0.6), value: angle)
@@ -65,6 +67,7 @@ struct ResultView: View {
                     NavigationLink {
                         // 보관함으로 이동
                         StorageView()
+                            .environmentObject(coreDataViewModel)
                     } label: {
                         Text("보관함 가기")
                     }
@@ -107,66 +110,91 @@ struct ResultView_Previews: PreviewProvider {
 }
 
 struct CardView: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
+    @Environment(\.displayScale) var displayScale
+    
+    @Binding var isTurn: Bool
+    @Binding var backGroundColor: Color
+    
+    var width: CGFloat
+    let ratio: Double = (UIImage(named: "cardBack1")?.size.height ?? 0) / (UIImage(named: "cardBack1")?.size.width ?? 0)
+    
+    var body: some View {
+        ZStack {
+            if isTurn {
+                Image(uiImage: UIImage(data: coreDataViewModel.currentCaptureImage) ?? UIImage())
+                    .resizable()
+                    .scaledToFit()
+                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+            } else {
+                Image(uiImage: UIImage(data: coreDataViewModel.currentCaptureCard) ?? UIImage())
+                    .resizable()
+                    .scaledToFit()
+            }
+        }
+        .frame(width: width, height: ratio * width)
+        .onAppear {
+            if coreDataViewModel.pairsSavedEntities.popLast()?.cardImageD != coreDataViewModel.currentCaptureCard {
+                coreDataViewModel.addCard(cardView: randomCardCreateView(backGroundColor: $backGroundColor, width: width), scale: displayScale)
+            }
+        }
+    }
+}
+
+struct randomCardCreateView: View {
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     var cardBackArr = ["cardBack1", "cardBack2", "cardBack3", "cardBack4"]
-    var cardCharacterArr = ["character1", "character2", "character3", "character4"]
+    var cardCharacterArr = ["character1", "character2", "character3", "character4", "character5", "character6", "character7", "character8", "character9", "character10", "character11", "character12", "character13", "character14", "character15", "character16"]
     @State private var randomCardBack: String = "cardBack1"
     @Binding var backGroundColor: Color
-    @Binding var isTurn: Bool
     @State private var fontColor: Color = .blue
     var width: CGFloat
     let ratio: Double = (UIImage(named: "cardBack1")?.size.height ?? 0) / (UIImage(named: "cardBack1")?.size.width ?? 0)
     
     var body: some View {
         ZStack {
-            Image(randomCardBack)
+            Image(cardBackArr.randomElement() ?? "character1")
                 .resizable()
                 .scaledToFit()
             
-            if isTurn {
-                Image("PartiallyEditableTemplate0")
+            ZStack {
+                VStack {
+                    HStack {
+                        Text("07")
+                        
+                        Spacer()
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Text("13")
+                    }
+                    .padding(.bottom, -50)
+                    
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("나는 오늘 3번의")
+                            Text("사직서를 날렸습니다.")
+                        }
+                        .font(.system(size: 25, weight: .bold))
+                        
+                        Spacer()
+                    }
+                }
+                .foregroundColor(.blue)
+                .font(.system(size: 210, weight: .bold))
+                .zIndex(0)
+                .offset(y: -20)
+                
+                Image(cardCharacterArr.randomElement() ?? "character1")
                     .resizable()
                     .scaledToFit()
-                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-            } else {
-                ZStack {
-                    VStack {
-                        HStack {
-                            Text("07")
-                            
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            Spacer()
-                            
-                            Text("13")
-                        }
-                        .padding(.bottom, -50)
-                        
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text("나는 오늘 83번의")
-                                Text("사직서를 날렸습니다.")
-                            }
-                            .font(.system(size: 25, weight: .bold))
-                            
-                            Spacer()
-                        }
-                    }
-                    .foregroundColor(.blue)
-                    .font(.system(size: 210, weight: .bold))
-                    .zIndex(0)
-                    .offset(y: -20)
-                    
-                    Image(cardCharacterArr.randomElement() ?? "character1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: width * 0.7)
-                        .zIndex(1)
-                }
-                .foregroundColor(fontColor)
-                .padding(20)
+                    .frame(width: width * 0.7)
+                    .zIndex(1)
             }
+            .foregroundColor(fontColor)
+            .padding(20)
         }
         .frame(width: width, height: ratio * width)
         .onAppear{
@@ -184,4 +212,3 @@ struct CardView: View {
         }
     }
 }
-

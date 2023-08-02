@@ -32,4 +32,9 @@ extension Color {
     
     // 인터렉션 선택 카드색
     static let interactionCardBeige = Color("interactionCardBeige")
+    
+    // 인터랙션 내부 컴포넌트 색
+    static let interactionGray = Color("interactionGray")
+    static let guageOrange = Color("guageOrange")
+
 }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "buildingOne@1x.png",
+      "filename" : "angry_jiggy.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "buildingOne@2x.png",
+      "filename" : "angry_jiggy@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "buildingOne@3x.png",
+      "filename" : "angry_jiggy@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

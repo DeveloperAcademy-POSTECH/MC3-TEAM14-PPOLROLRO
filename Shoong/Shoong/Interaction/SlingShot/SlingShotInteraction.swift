@@ -17,7 +17,7 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
     var dragY: CGFloat = 0
     var dragX: CGFloat = 0
 
-    let ball = SKSpriteNode(imageNamed: "jiggy")
+    let ball = SKSpriteNode(imageNamed: "angry_jiggy")
 
     // 점수를 위한 전역변수
     let scoreLabel = SKLabelNode(fontNamed: "Helvetica")
@@ -48,7 +48,7 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
 
         self.physicsWorld.contactDelegate = self // 충돌기능을 작동시켜줄 delegate
 
-        scoring()
+//        scoring()
         makeLine()
         addLineTouchArea()
 
@@ -245,8 +245,8 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
         basicPath.addLine(to: CGPoint(x: frame.maxX  , y: frame.midY / 2))
 
         line = SKShapeNode(path: basicPath.cgPath)
-        line?.strokeColor = .white
-        line?.lineWidth = 5
+        line?.strokeColor = .black
+        line?.lineWidth = 1
 
         line?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: frame.maxX, height: 2), center: CGPoint(x: frame.maxX / 2, y: frame.midY / 2))
 
@@ -274,10 +274,10 @@ class SlingShotViewModel: SKScene, SKPhysicsContactDelegate {
     func createCompany(pos: CGPoint){
 
         // -- Basic properties setup
-        let randomImageNaming = Int.random(in: 1...2)
-        let company = SKSpriteNode(imageNamed: "building\(randomImageNaming)")
+        let randomSize = CGFloat.random(in: 1...2)
+        let company = SKSpriteNode(imageNamed: "black_building_01")
 
-        company.size = CGSize(width: 60, height: 60)
+        company.size = CGSize(width: company.size.width * randomSize, height: company.size.height * randomSize)
         company.position = pos
         company.name = "company"
 

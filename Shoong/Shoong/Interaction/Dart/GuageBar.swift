@@ -14,14 +14,14 @@ struct GuageBar: View {
         ZStack() {
             RoundedRectangle(cornerRadius: 5)
                 .frame(width: 42, height: 358)
-                .foregroundColor(.green)
+                .foregroundColor(.interactionGray)
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 5)
                     .frame(width: 7, height: 330)
                     .foregroundColor(.white)
                 RoundedRectangle(cornerRadius: 5)
                     .frame(width: 7, height: randomGuage)
-                    .foregroundColor(.red)
+                    .foregroundColor(.guageOrange)
             }
         }
     }

@@ -14,7 +14,7 @@ struct ThrownCount: View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
                 .frame(width: 110, height: 60)
-                .foregroundColor(.yellow)
+                .foregroundColor(.interactionGray)
             VStack {
                 Text("날린 사직서 갯수")
                     .font(.custom("SFPro-Regular", size: 11))

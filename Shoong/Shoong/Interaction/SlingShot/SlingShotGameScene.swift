@@ -11,6 +11,7 @@ import SpriteKit
 
 struct SlingShotGameScene: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var isMessagePresented = true
 
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
@@ -41,6 +42,9 @@ struct SlingShotGameScene: View {
                 .padding(.leading, 19)
                 .padding(.trailing, 16)
                 .padding(.bottom, 24)
+            }
+            if isMessagePresented {
+                HowToPlay(playImageName: "slingshotHowToPlay", isMessagePresented: $isMessagePresented)
             }
         }
         .navigationBarBackButtonHidden()

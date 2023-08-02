@@ -28,6 +28,7 @@ extension Color {
     static let fontBurgundy = Color("fontBurgundy")
     static let fontBlue = Color("fontBlue")
     static let fontBlack = Color("fontBlack")
+    static let fontWhiteGray = Color("fontWhiteGray")
     
     // 인터렉션 선택 카드색
     static let interactionCardBeige = Color("interactionCardBeige")

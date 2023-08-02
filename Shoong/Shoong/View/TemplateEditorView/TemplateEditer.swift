@@ -9,23 +9,24 @@ import SwiftUI
 
 struct TemplateEditer: View {
     @EnvironmentObject var templateEditViewModel: TemplateEditViewModel
+    @EnvironmentObject var templateSelectViewModel: TemplateSelectViewModel
     
     @State private var position = CGSize.zero
-    @State private var draggedOffset: CGSize = CGSize(width: 0, height: -64)
-    @State private var accumulatedOffset: CGSize = CGSize(width: 0, height: -64)
+    @State private var draggedOffset: CGSize = CGSize(width: 0, height: -42)
+    @State private var accumulatedOffset: CGSize = CGSize(width: 0, height: -42)
     
     let width: CGFloat = UIScreen.main.bounds.width - 12
     let height: CGFloat = (UIScreen.main.bounds.width - 12) * 464 / 348
     
     var body: some View {
         ZStack {
-            Image("template4")
+            Image(templateSelectViewModel.selectedTemplate)
                 .resizable()
                 .scaledToFit()
             
             ForEach(0..<templateEditViewModel.textModels.count, id: \.self) { index in
                 Text(templateEditViewModel.textModels[index].text)
-                    .font(.system(size: templateEditViewModel.textModels[index].fontSize))
+                    .font(.custom("SFPro-Regular", size: templateEditViewModel.textModels[index].fontSize))
                     .foregroundColor(templateEditViewModel.textModels[index].color)
                     .offset(x: max(-width / 2 + 30, min(width / 2 - 30, index == templateEditViewModel.selectIndex ? draggedOffset.width : templateEditViewModel.textModels[index].xAxis)), y: max(-height / 2 + 10, min(height / 2 - 10, index == templateEditViewModel.selectIndex ? draggedOffset.height : templateEditViewModel.textModels[index].yAxis)))
                     .gesture(

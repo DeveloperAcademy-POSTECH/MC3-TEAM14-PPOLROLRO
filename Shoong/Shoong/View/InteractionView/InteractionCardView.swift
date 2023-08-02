@@ -20,7 +20,7 @@ struct InteractionCardView: View {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("마지막으로 날린 속도")
-                            .font(.system(size: 15, weight: .bold))
+                            .font(.custom("SFPro-Bold", size: 15))
                             .foregroundColor(.fontOrange)
                         
                         ZStack(alignment: .leading) {
@@ -42,7 +42,7 @@ struct InteractionCardView: View {
                 
                 HStack {
                     Text(interactionName)
-                        .font(.system(size: 24, weight: .bold))
+                        .font(.custom("SFPro-Bold", size: 24))
                     
                     Spacer()
                 }
@@ -51,10 +51,10 @@ struct InteractionCardView: View {
                 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("날린 사직서 갯수")
-                        .font(.system(size: 13))
+                        .font(.custom("SFPro-Regular", size: 13))
                     
                     Text("045")
-                        .font(.system(size: 17, weight: .semibold))
+                        .font(.custom("SFPro-Semibold", size: 17))
                 }
                 .opacity(0.7)
             }

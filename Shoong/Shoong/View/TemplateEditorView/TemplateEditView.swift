@@ -9,11 +9,15 @@ import SwiftUI
 
 struct TemplateEditView: View {
     @EnvironmentObject var templateEditViewModel: TemplateEditViewModel
+    @EnvironmentObject var templateSeletViewModel: TemplateSelectViewModel
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.displayScale) var displayScale
     
     @State private var isWrite: Bool = false
     @State private var isColorSelect: Bool = false
     @State var writeText: String = ""
-    @State var fontSize: CGFloat = 20
+    @State var fontSize: CGFloat = 24
     @Binding var firstNaviLinkActive: Bool
     let width: CGFloat = UIScreen.main.bounds.width
     let height: CGFloat = UIScreen.main.bounds.height
@@ -41,50 +45,46 @@ struct TemplateEditView: View {
                             
                             Button {
                                 isWrite.toggle()
-                                templateEditViewModel.textModels.append(TextModel(text: writeText, xAxis: 0, yAxis: -64, color: templateEditViewModel.selectColor, fontSize: fontSize))
+                                templateEditViewModel.textModels.append(TextModel(text: writeText, xAxis: 0, yAxis: -42, color: templateEditViewModel.selectColor, fontSize: fontSize))
                                 writeText = ""
                                 isColorSelect = false
                                 templateEditViewModel.selectColor = .black
                             } label: {
                                 Text("완료")
-                                    .font(.system(size: 17, weight: .bold))
+                                    .font(.custom("SFPro-Bold", size: 20))
                                     .foregroundColor(.white)
                             }
                         }
-                        .padding(.top, 70)
+                        .padding(.top, 64)
                         .padding(.horizontal, 20)
                         
-                        if isColorSelect {
-                            HStack {
-                                Spacer()
-                                
+                        HStack {
+                            Spacer()
+                            
+                            if isColorSelect {
                                 ColorPicker()
                                     .environmentObject(templateEditViewModel)
+                                    .padding(.horizontal, 15)
                             }
-                            .padding(.horizontal, 15)
-                            .padding(.top, 29)
                             
-                        } else {
-                            HStack {
-                                Spacer()
-                                
-                                Button {
-                                    isColorSelect.toggle()
-                                } label: {
-                                    Image("colorSelecter")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 40)
-                                }
+                            Spacer()
+                            
+                            Button {
+                                isColorSelect.toggle()
+                            } label: {
+                                Image("colorSelecter")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40)
                             }
-                            .padding(.horizontal, 15)
-                            .padding(.top, 29)
                         }
+                        .padding(.horizontal, 15)
+                        .padding(.top, 9)
 
                         Spacer()
                         
                         HStack {
-                            Slider(value: $fontSize, in: 12...48, step: 4)
+                            Slider(value: $fontSize, in: 16...48, step: 2)
                                 .tint(.orange)
                                 .rotationEffect(.degrees(-90.0), anchor: .topLeading)
                                 .frame(height: 20)
@@ -95,7 +95,7 @@ struct TemplateEditView: View {
                         
                         TextField(text: $writeText, axis: .vertical) {
                         }
-                        .font(.system(size: fontSize))
+                        .font(.custom("SFPro-Bold", size: fontSize))
                         .foregroundColor(templateEditViewModel.selectColor)
                         .focused($focusField, equals: .textInput)
                         .multilineTextAlignment(.center)
@@ -126,7 +126,7 @@ struct TemplateEditView: View {
                                 .frame(width: 40)
                             
                             Text("Aa")
-                                .font(.system(size: 22))
+                                .font(.custom("SFPro-Regular", size: 22))
                                 .foregroundColor(.black)
                         }
                     }
@@ -135,32 +135,45 @@ struct TemplateEditView: View {
                     
                     TemplateEditer()
                         .environmentObject(templateEditViewModel)
+                        .environmentObject(templateSeletViewModel)
                         .padding(.bottom, 60)
                         .zIndex(0)
                     
                     NavigationLink {
                         TemplateCrumpleView1(firstNaviLinkActive: $firstNaviLinkActive)
+                            .environmentObject(coreDataViewModel)
                     } label: {
-                        Text("날리기 임시 버튼")
+                        Text("날리기")
+                            .modifier(ButtonModifier())
                     }
-
-//                    Button {
-//                        let renderer = ImageRenderer(content: TemplateEditer().environmentObject(templateEditViewModel))
-//
-//
-//                        if let captureViewToImage = renderer.uiImage {
-//                            UIImageWriteToSavedPhotosAlbum(captureViewToImage, nil, nil, nil)
-//
-//
-//                        }
-//                    } label: {
-//                        Text("캡처")
-//                            .font(.title)
-//                    }
-//                    .offset(y: 300)
+                    .offset(y: width * 0.76)
                 }
             }
             .ignoresSafeArea()
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.backward")
+                            .fontWeight(.semibold)
+                        
+                        Text("뒤로")
+                    }
+                    .foregroundColor(.black)
+                }
+            }
+            
+            ToolbarItem(placement: .principal) {
+                Text("선택된 사직서")
+                    .bold()
+            }
+        }
+        .onDisappear {
+            coreDataViewModel.addTemplate(templateImageD: TemplateEditer().environmentObject(templateEditViewModel).environmentObject(templateSeletViewModel), scale: displayScale)
         }
     }
 }

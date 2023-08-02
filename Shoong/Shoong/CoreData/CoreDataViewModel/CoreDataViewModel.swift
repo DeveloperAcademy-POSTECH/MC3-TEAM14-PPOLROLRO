@@ -6,21 +6,15 @@
 //
 
 import SwiftUI
+import UIKit
 import CoreData
 
 class CoreDataViewModel: ObservableObject {
-    
-    @State var numOne: Int = 0
-    @State var numTwo: Int = 0
-
-    
-    let container: NSPersistentContainer
-    
-    
     @Published var templatesSavedEntities: [TemplatesEntity] = [] //최근을 위한 Template배열
     @Published var pairsSavedEntities: [PairSet] = [] //보관함을 위한 PairSet([Template,Card]) 배열
-    
-    
+    @Published var currentCaptureImage: Data = (UIImage(named: "FullyEditableTemplate0")?.pngData())!
+
+    let container: NSPersistentContainer
     
     // container 초기화
     init() {
@@ -36,7 +30,6 @@ class CoreDataViewModel: ObservableObject {
         // container 초기화할 때 각 Entity fetch해주기
         fetchTemplates()
         fetchPairs()
-        
     }
     
     // ---------- Mark : 최근에 들어있는 Template에 대한 함수들 총4가지 [시작] ----------------
@@ -65,7 +58,7 @@ class CoreDataViewModel: ObservableObject {
         }
         
         // tempalte저장 entity가져오기
-        let newTemplate = TemplatesEntity(context: container.viewContext)
+        // let newTemplate = TemplatesEntity(context: container.viewContext)
         
         // tempalteView 이미지 rendering
         let renderingtemplateView = ImageRenderer(content: templateImageD)
@@ -76,12 +69,11 @@ class CoreDataViewModel: ObservableObject {
         //tempalteView를 Rendering한다음 UiImage로 변환
         if let TemplateViewUimage = renderingtemplateView.uiImage {
             // UiImage를 data로 변환해서 TemplatesEntity의 templateImageD에 담아주기
-            newTemplate.templateImageD = TemplateViewUimage.pngData()
+            // newTemplate.templateImageD = TemplateViewUimage.pngData()
+            currentCaptureImage = TemplateViewUimage.pngData()!
         }
         // data저장
-        saveData()
-        
-        
+        //saveData()
     }
     
     // 3. Temaplte 삭제

@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var templateSelectViewModel = TemplateSelectViewModel()
+    @EnvironmentObject var templateSelectViewModel: TemplateSelectViewModel
     @EnvironmentObject var templateEditViewModel: TemplateEditViewModel
+    @EnvironmentObject var coreDataViewModel: CoreDataViewModel
     
-    @State var isOpenArr: [Bool] = [false, true, false, false, false]
-    @State var yAxisArr: [Double] = [0, 0, UIScreen.main.bounds.height * 0.46, UIScreen.main.bounds.height * 0.6, UIScreen.main.bounds.height * 0.6]
     @State var firstNaviLinkActive = false
-    
-    @State private var currentSelectedIndex: Int = 1
     @State private var offset: CGFloat = -UIScreen.main.bounds.height * 0.102
     @State private var opacity: Double = 1.0
+    @State private var selection: Int = 0
     
     let colorArr: [Color] = [.pointGreen, .pointOrange, .pointYellow, .pointBlue, .pointGray]
     let height: CGFloat = UIScreen.main.bounds.height
@@ -46,6 +44,9 @@ struct MainView: View {
                                 
                                 NavigationLink {
                                     StorageView()
+                                        .environmentObject(templateEditViewModel)
+                                        .environmentObject(templateSelectViewModel)
+                                        .environmentObject(coreDataViewModel)
                                 } label: {
                                     ZStack {
                                         RoundedRectangle(cornerRadius: 18)
@@ -109,9 +110,10 @@ struct MainView: View {
                         
                         ZStack {
                             ForEach(0..<5) { index in
-                                FolderView(isOpenArr: $isOpenArr, yAxisArr: $yAxisArr, firstNaviLinkAction: $firstNaviLinkActive, color: colorArr[index], imageName: "folder\(index)", index: index)
-                                    .offset(y: Double(Double(index) * height * 0.102) + yAxisArr[index])
-                                    .animation(.easeInOut(duration: 0.3), value: yAxisArr)
+                                FolderView(firstNaviLinkAction: $firstNaviLinkActive, color: colorArr[index], imageName: "folder\(index)", index: index)
+                                    .environmentObject(templateSelectViewModel)
+                                    .offset(y: Double(Double(index) * height * 0.102) + templateSelectViewModel.yAxisArr[index])
+                                    .animation(.easeInOut(duration: 0.3), value: templateSelectViewModel.yAxisArr)
                             }
                         }
                         .padding(.horizontal, 16)
@@ -119,23 +121,23 @@ struct MainView: View {
                     }
                     .offset(y: offset)
                     .animation(.easeInOut(duration: 0.3), value: offset)
-                    .onChange(of: isOpenArr, perform: { newValue in
-                        if isOpenArr[0] {
-                            currentSelectedIndex = 0
+                    .onChange(of: templateSelectViewModel.isOpenArr, perform: { newValue in
+                        if templateSelectViewModel.isOpenArr[0] {
+                            templateSelectViewModel.currentSelectedIndex = 0
                             opacity = 1
-                        } else if isOpenArr[1] {
+                        } else if templateSelectViewModel.isOpenArr[1] {
                             offset = -height * 0.102
-                            currentSelectedIndex = 1
+                            templateSelectViewModel.currentSelectedIndex = 1
                             opacity = 1
-                        } else if isOpenArr[2] {
+                        } else if templateSelectViewModel.isOpenArr[2] {
                             offset = -height * 0.204
-                            currentSelectedIndex = 2
+                            templateSelectViewModel.currentSelectedIndex = 2
                             opacity = 1
-                        } else if isOpenArr[3] {
+                        } else if templateSelectViewModel.isOpenArr[3] {
                             offset = -height * 0.306
-                            currentSelectedIndex = 3
+                            templateSelectViewModel.currentSelectedIndex = 3
                             opacity = 1
-                        } else if !isOpenArr.contains(true) {
+                        } else if !templateSelectViewModel.isOpenArr.contains(true) {
                             offset = 0
                             opacity = 0
                         }
@@ -146,12 +148,13 @@ struct MainView: View {
                 .scrollDisabled(true)
                 .zIndex(0)
                 
-                TabView {
-                    ForEach(templateSelectViewModel.templates[currentSelectedIndex], id: \.self) { arr in
-                        Image(arr)
+                TabView(selection: $selection) {
+                    ForEach(0..<templateSelectViewModel.templates[templateSelectViewModel.currentSelectedIndex].count, id: \.self) { index in
+                        Image(templateSelectViewModel.templates[templateSelectViewModel.currentSelectedIndex][index])
                             .resizable()
                             .scaleEffect(y: opacity == 1 ? 1 : 0, anchor: .top)
                             .animation(.easeInOut(duration: 0.2), value: opacity)
+                            .id(index)
                     }
                 }
                 .frame(width: width - 40, height: (width - 40) * ratio)
@@ -164,6 +167,8 @@ struct MainView: View {
                 NavigationLink(isActive: $firstNaviLinkActive) {
                     TemplateEditView(firstNaviLinkActive: $firstNaviLinkActive)
                         .environmentObject(templateEditViewModel)
+                        .environmentObject(templateSelectViewModel)
+                        .environmentObject(coreDataViewModel)
                 } label: {
                     Text("바로 날리기")
                         .modifier(ButtonModifier())
@@ -176,7 +181,7 @@ struct MainView: View {
                 firstNaviLinkActive = false
             }
             .onDisappear {
-                // isOpenArr = [false, true, false, false, false]
+                templateSelectViewModel.selectedTemplate = templateSelectViewModel.templates[templateSelectViewModel.currentSelectedIndex][selection]
             }
         } // NavigationView
     }
@@ -189,9 +194,9 @@ struct MainView_Previews: PreviewProvider {
 }
 
 struct FolderView: View {
-    @Binding var isOpenArr: [Bool]
-    @Binding var yAxisArr: [Double]
+    @EnvironmentObject var templateSelectViewModel: TemplateSelectViewModel
     @Binding var firstNaviLinkAction: Bool
+    
     var color: Color
     var imageName: String
     var index: Int
@@ -219,7 +224,8 @@ struct FolderView: View {
                             .resizable()
                             .scaledToFit()
                             .onTapGesture {
-                                isOpenArr[index].toggle()
+                                templateSelectViewModel.isOpenArr[index].toggle()
+                                templateSelectViewModel.currentSelectedIndex = index
                             }
                             .zIndex(1)
                     }
@@ -234,7 +240,7 @@ struct FolderView: View {
                     .padding(.horizontal, 20)
                     .zIndex(2)
                     
-                    if isOpenArr[index] {
+                    if templateSelectViewModel.isOpenArr[index] {
                         HStack {
                             Text(script[index])
                                 .font(.custom("SFPro-Regular", size: 13))
@@ -278,8 +284,8 @@ struct FolderView: View {
                     } else {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(color)
-                            .frame(height: isOpenArr[index] ? height * 0.7 : height * 0.18)
-                            .animation(.easeInOut(duration: isOpenArr[index] ? 0.1 : 0.4), value: isOpenArr[index])
+                            .frame(height: templateSelectViewModel.isOpenArr[index] ? height * 0.7 : height * 0.18)
+                            .animation(.easeInOut(duration: templateSelectViewModel.isOpenArr[index] ? 0.1 : 0.4), value: templateSelectViewModel.isOpenArr[index])
                             .scaleEffect(anchor: .top)
                     }
                 }
@@ -288,19 +294,19 @@ struct FolderView: View {
             }
             .zIndex(0)
         }
-        .onChange(of: isOpenArr[index]) { _ in
-            if isOpenArr[index] {
+        .onChange(of: templateSelectViewModel.isOpenArr[index]) { _ in
+            if templateSelectViewModel.isOpenArr[index] {
                 let min = index + 1
                 
                 for i in min...4 {
                     if i == min {
-                        yAxisArr[i] = UIScreen.main.bounds.height * 0.46
+                        templateSelectViewModel.yAxisArr[i] = UIScreen.main.bounds.height * 0.46
                     } else {
-                        yAxisArr[i] = UIScreen.main.bounds.height * 0.6
+                        templateSelectViewModel.yAxisArr[i] = UIScreen.main.bounds.height * 0.6
                     }
                 }
             } else {
-                yAxisArr = [0, 0, 0, 0, 0]
+                templateSelectViewModel.yAxisArr = [0, 0, 0, 0, 0]
             }
         }
     }

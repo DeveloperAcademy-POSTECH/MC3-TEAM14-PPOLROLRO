@@ -16,8 +16,9 @@ struct ColorPicker: View {
         HStack {
             ForEach(colors, id: \.self) { color in
                 Circle()
-                    .foregroundColor(color)
-                    .frame(width: 40, height: 40)
+                    .fill(color)
+                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                    .frame(width: 30, height: 30)
                     .opacity(color == templateEditViewModel.selectColor ? 0.5 : 1.0)
                     .scaleEffect(color == templateEditViewModel.selectColor ? 1.1 : 1.0)
                     .onTapGesture {

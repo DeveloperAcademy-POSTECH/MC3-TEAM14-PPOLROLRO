@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct DartView: View {
     @State private var isMessagePresented = true
-
+    @StateObject private var dartScene = DartScene()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
-            SpriteKitContainer(scene: DartScene())
+            SpriteKitContainer(scene: dartScene)
                 .ignoresSafeArea()
             ZStack{
                 HStack(alignment: .bottom) {
-                    ThrownCount()
+                    ThrownCount(count: dartScene.throwingCount)
                     Spacer()
                     GuageBar()
                 }

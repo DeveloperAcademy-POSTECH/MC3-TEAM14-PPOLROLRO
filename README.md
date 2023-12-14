@@ -52,7 +52,7 @@ Shoong!은 당신의 상상을 앱으로 만들었습니다. 가짜 사직서를
 |![인터렉션 - 다트](https://github.com/DeveloperAcademy-POSTECH/MC3-TEAM14-PPOLROLRO/assets/100858136/2f3d106e-aa7b-4f45-a77d-798ae72569ea)|![인터렉션 - 볼링공](https://github.com/DeveloperAcademy-POSTECH/MC3-TEAM14-PPOLROLRO/assets/100858136/61bf216c-f7be-47f0-913e-1557f051bda3)|![보상 카드 - 앞](https://github.com/DeveloperAcademy-POSTECH/MC3-TEAM14-PPOLROLRO/assets/100858136/d33fee9e-c1a8-4c10-90ff-70b3d37b9dd0)|
 ## 👫 Team Member
 
-|[고경섭(SSup)](https://github.com/Suppppppp)|[금가경(Miya)](https://github.com/ge-um)|[진준호(Zerom)](https://github.com/jincode93)
+|[고경섭(Ssup)](https://github.com/Suppppppp)|[금가경(Miya)](https://github.com/ge-um)|[진준호(Zerom)](https://github.com/jincode93)
 |:-:|:-:|:-:|
 |Developer|Developer|Developer|Developer|
 |고승빈(GUGGIM)|이예은(Yelson)||
